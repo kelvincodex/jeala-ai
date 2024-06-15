@@ -1,0 +1,35 @@
+$primary_color_100: hsla(219, 89%, 66%, 1);
+$light_black_100: hsla(231, 19%, 20%, 1);
+$dark_100: hsla(0, 0%, 0%, 0.63);
+
+$black_100: hsla(0, 0%, 0%, 1);
+$black_200: hsla(231, 76%, 10%, 1);
+
+$dark_blue_100: hsla(231, 76%, 10%, 1);
+$shade_gray_100: hsla(224, 30%, 73%, 1);
+$dark_green_100: hsla(124, 55%, 24%, 1);
+$white: hsla(0, 0%, 100%, 1);
+$white-100: hsla(29, 100%, 98%, 1);
+$deep_blue_100: hsla(212, 100%, 14%, 1);
+
+//background color
+.pri-bg-color{
+  background-color: $primary_color_100;
+}
+.jb-bg-color{
+  background-color: $dark_100;
+}
+.white-bg-color{
+  background-color: $white;
+}
+
+
+
+//text color
+.pri-text-color{
+  color: $primary_color_100;
+}
+
+.white--color{
+  background-color: $white;
+}
