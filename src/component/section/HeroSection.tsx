@@ -44,7 +44,7 @@ export const HeroSection = () => {
         <section className={'h-svh flex flex-col w-full'}>
             <DefaultHeader  />
             <div
-                className={'flex flex-col  flex-grow '}
+                className={'flex flex-col flex-grow '}
             >
                 <div
                     className={'container-responsive items-center'}>
@@ -53,7 +53,7 @@ export const HeroSection = () => {
                         solutions with <br/> Jeala AI
                     </h2>
 
-                    <p className={'text-[36px] leading-[45px] text-center font-urbanist mt-20 font-light'}>
+                    <p className={'text-[34px] leading-[45px] text-center font-urbanist mt-20 font-light'}>
                         Whether you're streamlining business operations, enhancing customer <br/> experiences, or
                         exploring
                         new realms of creativity, Jeala AI is here to <br/> elevate your journey in all works of life.

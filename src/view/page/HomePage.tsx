@@ -8,6 +8,8 @@ import {FeedbackSection} from "@/component/section/FeedbackSection.tsx";
 import {PricingSection} from "@/component/section/PricingSection.tsx";
 
 export const HomePage = () => {
+
+
   return(
       <DefaultLayout>
           <HeroSection />

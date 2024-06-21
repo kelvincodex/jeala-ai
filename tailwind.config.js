@@ -19,6 +19,8 @@ export default {
       },
       colors:{
         'primary-100': 'hsla(219, 89%, 66%, 1)',
+        'primary-150': 'hsla(211, 91%, 65%, 1)',
+        'primary-200': 'hsla(270, 82%, 56%, 1)',
         'black-200': 'hsla(231, 76%, 10%, 1)',
         'dark-100': 'hsla(0, 0%, 0%, 0.63)',
         'dark-200': 'hsla(231, 19%, 20%, 1)',
