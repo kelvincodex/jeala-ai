@@ -3,16 +3,18 @@ import {imports} from "@/util/imports.ts";
 
 export const PricingSection = ()=>{
     return (
-        <section className={'container-responsive'}>
+        <section className={'container-responsive py-24'}>
 
-            <h2 className={'text-center font-semibold'}>
+            <h2 className={'text-center font-semibold mb-10'}>
 
-                Go <span className={'text-primary-100'}>Premium</span>
+                <span className={'text-primary-100'}>Pricing</span>& Plans
 
             </h2>
 
-            <div className={'border w-[500px] min-h-[700px] flex flex-col rounded-lg p-14 gap-0'}>
-                <div className={'mb-20'}>
+
+
+            <div className={'border w-[500px] min-h-[500px] flex flex-col rounded-lg p-5 gap-0'}>
+                <div className={'mb-14'}>
                     <h2 className={'text-[48px] my-10 font-poppins leading-[31.5px]'}>
                         Free
                     </h2>

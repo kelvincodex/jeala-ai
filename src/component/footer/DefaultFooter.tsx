@@ -106,14 +106,14 @@ export const DefaultFooter = () => {
     ]
     return(
         <footer className={'container-responsive py-20 '}>
-            <div className={'grid grid-cols-4   justify-center border'}>
+            <div className={'grid grid-cols-4'}>
                 {
                     items.map((value, index)=> (
                         <ul key={index} className={' font-[200] font-poppins text-[28px] '}>
-                            <li className={'text-[21px] leading-[60px]'}>{value.title}</li>
+                            <li className={'text-[21px] font-poppins-medium font-semibold leading-[50px]'}>{value.title}</li>
                             {
                                 value.subitems.map((subitems, index)=> (
-                                    <li key={index} className={'font-light text-[19px] leading-[40px]'}><Link to={subitems.route ?? '/'}>{subitems.label}</Link></li>
+                                    <li key={index} className={'font-light text-[18px] leading-[40px]'}><Link to={subitems.route ?? '/'}>{subitems.label}</Link></li>
                                 ))
                             }
 

@@ -13,10 +13,10 @@ export const PartnershipSection = ()=>{
         imports.image.attentive,
     ]
     return (
-        <section className={'overflow-x-auto flex gap-32 my-20 items-center justify-center '}>
+        <section className={'overflow-x-auto flex gap-24 my-20 px-10 items-center justify-center pl-32'}>
             {
                 logos.map(logo=> (
-                    <img className={'w-[228.1px] h-[47.69px]'} alt={''} src={logo} />
+                    <img className={'w-[200px] h-[44px]'} alt={''} src={logo} />
                 ))
             }
         </section>

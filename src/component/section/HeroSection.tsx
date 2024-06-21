@@ -60,7 +60,7 @@ export const HeroSection = () => {
                     </p>
                 </div>
 
-                <div className={'h-[291px] w-full flex   gap-5 overflow-auto '}>
+                <div className={'h-[291px] w-full flex  gap-5 overflow-auto '}>
                     {items.map((item, i) => (
                         <div key={i} className={'min-w-[513px] rounded-lg border h-full flex flex-col px-5 justify-center gap-5'}>
                             <h2 className={'text-[32px] font-light leading-[26.88px]'}>{item.title}</h2>

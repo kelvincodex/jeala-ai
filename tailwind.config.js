@@ -9,15 +9,16 @@ export default {
     extend: {
       fontFamily: {
         sans: ['lexend', ...defaultTheme.fontFamily.sans],
-        'poppins-b': 'poppins-bold',
+        'poppins-bold': 'poppins-bold',
         'poppins': 'poppins',
         'lexend': 'lexend',
-        'poppins-m': 'poppins-m',
-        'manjari-b': 'manjari-b',
+        'poppins-medium': 'poppins-medium',
+        'manjari-bold': 'manjari-bold',
         'manjari': 'manjari',
         'urbanist': 'urbanist',
       },
       colors:{
+        'primary-50': 'hsla(226, 87%, 69%, 1)',
         'primary-100': 'hsla(219, 89%, 66%, 1)',
         'primary-150': 'hsla(211, 91%, 65%, 1)',
         'primary-200': 'hsla(270, 82%, 56%, 1)',

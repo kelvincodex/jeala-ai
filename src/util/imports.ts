@@ -10,11 +10,12 @@ import rocket from '@/assets/image/rocket.png'
 
 //icon
 import preview from '@/assets/icon/preview.svg'
+import starOutline from '@/assets/icon/star-outline.svg'
 import humanRelation from '@/assets/icon/human-relation.svg'
 import customiseMark from '@/assets/icon/customise-mark.svg'
 
 
 export const imports = {
-    image: {upwork,meta,attentive, health, education, engineer, gaming,rocket },
-    icon: {preview, humanRelation, customiseMark}
+    image: {upwork,meta,attentive, health, education, engineer, gaming,rocket},
+    icon: {preview, humanRelation, customiseMark,starOutline}
 }
