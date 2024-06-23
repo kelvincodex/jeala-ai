@@ -24,8 +24,8 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
   },
-  "include": ["src"],
+  "include": ["declaration.d.ts","src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
