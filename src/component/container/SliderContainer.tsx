@@ -1,11 +1,9 @@
 import {ForwardedRef, forwardRef, ReactNode} from "react";
 import Slider from "react-slick";
-// const  SlickSliderImport = import("react-slick")
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// const SlickSlider = lazy(()=> SlickSliderImport)
 
 interface SliderContainerProps {
     settings?: object,
@@ -54,10 +52,8 @@ export const SliderContainer = forwardRef(({settings, containerClassName, childr
     const final_settings = Object.assign(init_settings, settings)
 
     return(
-        // <Suspense>
             <Slider className={`${containerClassName}`} ref={ref} {...final_settings}>
                 {children}
             </Slider>
-        // </Suspense>
     )
 })

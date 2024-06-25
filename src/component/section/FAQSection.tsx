@@ -1,15 +1,19 @@
-import {Button, Input} from "@mui/material";
+import {DefaultAccordion} from "@/component/accordion/DefaultAccordion.tsx";
 
 export const FAQSection = ()=>{
     return (
-        <section className={'flex flex-col items-center bg-primary-100 py-24'}>
-            <h2 className={'text-center font-urbanist font-semibold mb-20 text-white text-[60px] leading-[70px]'}>
-                secure your spot on the <br/> Jeala AI waitlist!
-            </h2>
-
-            <div className={'w-[70%] h-[120px] flex justify-between items-center px-10 overflow-hidden rounded-[27px] border'}>
-                <Input  placeholder={'Email Address'} className={'flex-grow'} />
-                <Button className={'w-[212px] h-[70px] rounded'} variant={'contained'}>Join waitlist</Button>
+        <section className={'flex flex-col items-center py-24 bg-faq'}>
+            <div className={'w-[50%] m-auto'}>
+                <h2 className={' font-urbanist font-semibold mb-20  text-[60px] leading-[70px]'}>
+                    Frequently Asked Question
+                </h2>
+                <div className={'w-full'}>
+                    <DefaultAccordion title={'What is Jeala AI?'}/>
+                    <DefaultAccordion title={'How does Jeala AI work?'} />
+                    <DefaultAccordion title={'How accurate is Jeala AI?'} />
+                    <DefaultAccordion title={'How does Jeala AI handle data privacy?'} />
+                    <DefaultAccordion title={'What kind of support is available for Jeala AI users?'} />
+                </div>
             </div>
         </section>
     )

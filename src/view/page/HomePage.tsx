@@ -7,6 +7,7 @@ import {DefaultFooter} from "@/component/footer/DefaultFooter.tsx";
 import {FeedbackSection} from "@/component/section/FeedbackSection.tsx";
 import {PricingSection} from "@/component/section/PricingSection.tsx";
 import {FAQSection} from "@/component/section/FAQSection.tsx";
+import {WaitlistSection} from "@/component/section/WaitlistSection.tsx";
 
 export const HomePage = () => {
 
@@ -19,6 +20,7 @@ export const HomePage = () => {
           <UseCaseSection />
           <PricingSection />
           <FeedbackSection />
+          <WaitlistSection />
           <FAQSection />
           <DefaultFooter />
       </DefaultLayout>
