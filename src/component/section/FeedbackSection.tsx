@@ -6,13 +6,12 @@ import {useRef} from "react";
 import Slider from "react-slick";
 
 export const FeedbackSection = ()=>{
-    const sliderRef = useRef<Slider>(null)
+    let sliderRef = useRef<Slider>(null)
 
     const settings = {
         dots: false,
         slidesToShow: 2.5,
         slidesToScroll: 2.5,
-        // className:'gap-20'
     }
 
 
@@ -24,7 +23,7 @@ export const FeedbackSection = ()=>{
         (sliderRef as any).slickNext();
     }
     return(
-        <section className={'w-full py-18'}>
+        <section className={'w-full py-20'}>
             <div className={'flex justify-center mb-16'}>
                 <span className={'text-[60px] font-urbanist font-semibold rotate-12'}>"</span>
                 <h2 className={'text-center leading-[70px] mt-5 ml-5 bg-clip-text text-transparent bg-gradient-to-r from-primary-150 to-primary-200 text-[60px] font-urbanist font-semibold'}>
@@ -35,14 +34,14 @@ export const FeedbackSection = ()=>{
 
             {/*<div className={'overflow-x-auto flex gap-10  items-center justify-center w-full pl-24'}>*/}
                 <SliderContainer
-                    ref={sliderRef}
+                    ref={slider => sliderRef = slider}
                  settings={settings}
                 >
                     {
                         Array(5).fill('').map((_, index) => {
 
                             return (
-                                <div key={index} className={'h-[400px] w-[611px] border border-red-500 p-8 '}>
+                                <div key={index} className={'h-[400px] w-[611px] border p-8'}>
                                     <h2 className={'text-[24px] font-lexend font-normal leading-[29px]'}>
                                         Head of Research at Datacorp
                                     </h2>
@@ -51,9 +50,11 @@ export const FeedbackSection = ()=>{
                                     </p>
                                     <div className={'flex'}>
                                         {
-                                            Array(5).fill('').map((_, index) => <img key={index}
-                                                                                     src={imports.icon.starOutline}
-                                                                                     alt={''}/>)
+                                            Array(5).fill('').map((_, index) => {
+                                                return (
+                                                    <imports.icon.starOutline key={index} />
+                                                )
+                                            })
                                         }
                                     </div>
 

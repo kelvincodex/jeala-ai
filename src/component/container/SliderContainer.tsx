@@ -1,10 +1,11 @@
-import {ForwardedRef, forwardRef, lazy, ReactNode, Suspense} from "react";
-const  SlickSliderImport = import("react-slick")
+import {ForwardedRef, forwardRef, ReactNode} from "react";
+import Slider from "react-slick";
+// const  SlickSliderImport = import("react-slick")
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const SlickSlider = lazy(()=> SlickSliderImport)
+// const SlickSlider = lazy(()=> SlickSliderImport)
 
 interface SliderContainerProps {
     settings?: object,
@@ -21,6 +22,7 @@ export const SliderContainer = forwardRef(({settings, containerClassName, childr
         slidesToShow: 4,
         slidesToScroll: 4,
         initialSlide: 0,
+
         responsive: [
             {
                 breakpoint: 1024,
@@ -52,10 +54,10 @@ export const SliderContainer = forwardRef(({settings, containerClassName, childr
     const final_settings = Object.assign(init_settings, settings)
 
     return(
-        <Suspense>
-            <SlickSlider className={`${containerClassName}`} ref={ref} {...final_settings}>
+        // <Suspense>
+            <Slider className={`${containerClassName}`} ref={ref} {...final_settings}>
                 {children}
-            </SlickSlider>
-        </Suspense>
+            </Slider>
+        // </Suspense>
     )
 })

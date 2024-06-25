@@ -26,7 +26,7 @@ const ApiClient = (others: GetThunkAPI<ThunkApiConfig>) => {
     axiosInstance.interceptors.request.use(function (config) {
         config.headers.Authorization =  `${token}`
         console.log("Headers ===> ", config.headers)
-        console.log("Url ===> ", config.baseURL + config.url)
+        console.log("Url ===> ", config.baseURL! + config.url!)
         console.log("Request ===> ", config.data)
         return config;
     }, function (error) {

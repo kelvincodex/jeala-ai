@@ -51,7 +51,7 @@ export const CapabilitiesSection=()=>{
                             className={`min-w-[560px] bg-white border ${(index == 0 || index == (items.length - 1)) && 'row-span-1'} rounded-lg flex flex-col  justify-center px-14 py-10 gap-5`}>
                             {
                                 item.icon && (
-                                    <img className={`w-[69.12px] h-[69.12px] self-end `} src={item.icon} alt={''}/>
+                                    <item.icon className={'w-[69.12px] h-[69.12px] self-end'}  />
                                 )
                             }
 

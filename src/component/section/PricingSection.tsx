@@ -27,28 +27,28 @@ export const PricingSection = ()=>{
                         variant="contained">Current plan</Button>
 
                 <div className={'flex items-start pr-10 my-5'}>
-                    <img src={imports.icon.customiseMark} alt={''}/>
+                    <imports.icon.customiseMark />
                     <p>
                         Access to essential AI features
                     </p>
                 </div>
 
                 <div className={'flex items-start pr-10 my-5'}>
-                    <img src={imports.icon.customiseMark} alt={''}/>
+                    <imports.icon.customiseMark />
                     <p>
                         Access to essential AI features
                     </p>
                 </div>
 
                 <div className={'flex items-start pr-10 my-5'}>
-                    <img src={imports.icon.customiseMark} alt={''}/>
+                    <imports.icon.customiseMark />
                     <p>
                         Access to essential AI features
                     </p>
                 </div>
 
                 <div className={'flex items-start pr-10 my-5'}>
-                    <img src={imports.icon.customiseMark} alt={''}/>
+                    <imports.icon.customiseMark />
                     <p>
                         Access to essential AI features
                     </p>
