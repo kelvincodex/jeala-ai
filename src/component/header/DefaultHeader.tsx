@@ -8,10 +8,10 @@ export const DefaultHeader = ()=>{
 
     return (
         <nav className={'container-responsive flex justify-between items-center'}>
-            <h2 className={'text-[30px] font-semibold '}><Link to={RoutesConstant.page.home}>Jeala AI</Link></h2>
+            <h2 className={`md:text-[30px] text-[16px] font-semibold  `}><Link to={RoutesConstant.page.home}>Jeala AI</Link></h2>
             {
                 isTabletOrMobile ?
-                    <MenuIcon  className={'w-[32px] h-[32px] cursor-pointer'} /> :
+                    <MenuIcon  className={'w-[30px] h-[30px] cursor-pointer'} /> :
                     <ul className={'flex items-center gap-5 text-[20px] leading-[32px] font-poppins font-light'}>
                         <li><Link to={RoutesConstant.page.home}>Overview</Link></li>
                         <li><Link to={RoutesConstant.page.home}>Resources</Link></li>

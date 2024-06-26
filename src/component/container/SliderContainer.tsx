@@ -9,6 +9,7 @@ interface SliderContainerProps {
     settings?: object,
     children: ReactNode,
     containerClassName?: string,
+    // containerClassName?: HTMLProps<HTMLElement>["className"],
     infinite?: boolean,
 }
 export const SliderContainer = forwardRef(({settings, containerClassName, children, infinite}: SliderContainerProps, ref: ForwardedRef<any> ) => {

@@ -1,4 +1,5 @@
 import {imports} from "@/util/imports.ts";
+import {SliderContainer} from "@/component/container/SliderContainer.tsx";
 
 export const PartnershipSection = ()=>{
     const logos =[
@@ -13,12 +14,17 @@ export const PartnershipSection = ()=>{
         imports.image.attentive,
     ]
     return (
-        <section className={'overflow-x-auto flex gap-24 my-20 px-10 items-center justify-center pl-32'}>
-            {
-                logos.map((logo, index)=> (
-                    <img key={index} className={'w-[200px] h-[44px]'} alt={''} src={logo} />
-                ))
-            }
+        <section className={'my-20 w-full'}>
+        {/*<section className={'overflow-x-auto flex gap-24 my-20 px-10  pl-32'}>*/}
+            <SliderContainer>
+                {
+                    logos.map((logo, index)=> (
+                        <div key={index}>
+                            <img  className={'w-[200px] h-[44px]'} alt={''} src={logo}/>
+                        </div>
+                    ))
+                }
+            </SliderContainer>
         </section>
     )
 }
