@@ -1,6 +1,9 @@
 import {imports} from "@/util/imports.ts";
+import {useMediaQuery} from "react-responsive";
+import {CapabilitiesCard} from "@/component/card/CapabilitiesCard.tsx";
 
 export const CapabilitiesSection=()=>{
+    const isTabletOrMobile = useMediaQuery({ maxWidth: 1224 })
 
     const items = [
         {
@@ -37,8 +40,8 @@ export const CapabilitiesSection=()=>{
     ]
     return (
         <section className={'container-responsive flex flex-col gap-20 py-24'}>
-            <h2 className={'text-center'}>
-                AI Capabilities That Transform <br/> Your Workflow
+            <h2 className={`text-center ${isTabletOrMobile && 'text-[30px] leading-[45px]'}`}>
+                AI Capabilities That Transform {/*<br/>*/} Your Workflow
             </h2>
 
             {/*index === 0 ? 'row-span-2 col-start-1' :*/}
@@ -47,32 +50,12 @@ export const CapabilitiesSection=()=>{
             {/*index === 3 ? 'row-start-3 col-start-2' : ''*/}
 
             {/*items-center justify-center*/}
-            <div className={'grid grid-cols-2 grid-flow-row-dense '}>
+
+
+            <div className={'grid md:grid-cols-2 grid-cols-1 grid-flow-row-dense '}>
                 {
                     items.map((item, index)=> (
-                        <div
-                            key={index}
-                            // className={`min-w-[560px] bg-white border ${(index == 0 || index == (items.length - 1)) ? 'row-span-2' : 'row-span-2'} rounded-lg flex flex-col  justify-center px-14 py-10 gap-5`}>
-                            className={`min-w-[560px] bg-white border ${
-                                index === 0 ? 'row-span-2 col-start-1' :
-                                    index === 1 ? ' col-start-2 row-start-1' :
-                                        index === 2 ? 'row-start-3 col-start-1' :
-                                            index === 3 ? 'row-span-2 row-start-3 col-start-2' : ''
-                            }  rounded-lg flex flex-col  justify-center px-14 py-10 gap-5`}>
-
-                            {
-                                item.icon && (
-                                    <item.icon className={'w-[69.12px] h-[69.12px] self-end'}  />
-                                )
-                            }
-
-                            <h2 className={'text-[36px] leading-[35px]'}>
-                                {item.title}
-                            </h2>
-                            <p className={'text-[26px] font-[200] leading-[37px]  text-black-200'}>
-                                {item.subTitle}
-                            </p>
-                        </div>
+                        <CapabilitiesCard index={index} item={item} />
                     ))
                 }
             </div>

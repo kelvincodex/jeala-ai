@@ -13,14 +13,21 @@ export const PartnershipSection = ()=>{
         imports.image.attentive,
         imports.image.attentive,
     ]
+
+    const settings = {
+        dots: false,
+        slidesToShow: 5.5,
+        slidesToScroll: 5.5,
+
+    }
     return (
         <section className={'my-20 w-full'}>
         {/*<section className={'overflow-x-auto flex gap-24 my-20 px-10  pl-32'}>*/}
-            <SliderContainer>
+            <SliderContainer settings={settings}>
                 {
                     logos.map((logo, index)=> (
                         <div key={index}>
-                            <img  className={'w-[200px] h-[44px]'} alt={''} src={logo}/>
+                            <img  className={'w-[200px] h-[44px] m-auto'} alt={''} src={logo}/>
                         </div>
                     ))
                 }
