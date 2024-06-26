@@ -50,7 +50,7 @@ export const HeroSection = () => {
             >
                 <div
                     className={'container-responsive items-center'}>
-                    <h2 className={`text-center ${isTabletOrMobile ? 'text-[50px] leading-[60px]': ''}`}>
+                    <h2 className={`text-center ${isTabletOrMobile ? 'text-[30px] leading-[60px]': ''}`}>
                         <span className={'text-primary-100'}>Discover and explore</span> the future <br/> of intelligent
                         solutions with <br/> Jeala AI
                     </h2>
