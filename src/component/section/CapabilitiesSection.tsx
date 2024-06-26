@@ -51,7 +51,6 @@ export const CapabilitiesSection=()=>{
 
             {/*items-center justify-center*/}
 
-
             <div className={'grid md:grid-cols-2 grid-cols-1 grid-flow-row-dense '}>
                 {
                     items.map((item, index)=> (

@@ -12,6 +12,7 @@ export const CapabilitiesCard = ({index, item}: CapabilitiesCardProps)=>{
     //                    index === 2 ? 'row-start-3 col-start-1' :
     //                        index === 3 ? 'row-span-2 row-start-3 col-start-2' : ''
     //        }
+
     return (
         <div
             key={index}
