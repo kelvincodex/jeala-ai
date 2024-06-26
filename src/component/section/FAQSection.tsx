@@ -2,7 +2,7 @@ import {DefaultAccordion} from "@/component/accordion/DefaultAccordion.tsx";
 
 export const FAQSection = ()=>{
     return (
-        <section className={'flex flex-col items-center py-24 bg-faq'}>
+        <section className={'flex flex-col items-center py-24 bg-faq mt-20'}>
             <div className={'w-[50%] m-auto'}>
                 <h2 className={' font-urbanist font-semibold mb-20  text-[60px] leading-[70px]'}>
                     Frequently Asked Question

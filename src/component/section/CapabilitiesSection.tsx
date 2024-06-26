@@ -41,20 +41,30 @@ export const CapabilitiesSection=()=>{
                 AI Capabilities That Transform <br/> Your Workflow
             </h2>
 
+            {/*index === 0 ? 'row-span-2 col-start-1' :*/}
+            {/*index === 1 ? 'row-span-2 col-start-2 row-start-1' :*/}
+            {/*index === 2 ? 'row-start-3 col-start-1' :*/}
+            {/*index === 3 ? 'row-start-3 col-start-2' : ''*/}
 
-
-            <div className={'grid grid-cols-2 items-center justify-center gap-5'}>
+            {/*items-center justify-center*/}
+            <div className={'grid grid-cols-2 grid-flow-row-dense '}>
                 {
                     items.map((item, index)=> (
                         <div
                             key={index}
-                            className={`min-w-[560px] bg-white border ${(index == 0 || index == (items.length - 1)) && 'row-span-1'} rounded-lg flex flex-col  justify-center px-14 py-10 gap-5`}>
+                            // className={`min-w-[560px] bg-white border ${(index == 0 || index == (items.length - 1)) ? 'row-span-2' : 'row-span-2'} rounded-lg flex flex-col  justify-center px-14 py-10 gap-5`}>
+                            className={`min-w-[560px] bg-white border ${
+                                index === 0 ? 'row-span-2 col-start-1' :
+                                    index === 1 ? ' col-start-2 row-start-1' :
+                                        index === 2 ? 'row-start-3 col-start-1' :
+                                            index === 3 ? 'row-span-2 row-start-3 col-start-2' : ''
+                            }  rounded-lg flex flex-col  justify-center px-14 py-10 gap-5`}>
+
                             {
                                 item.icon && (
                                     <item.icon className={'w-[69.12px] h-[69.12px] self-end'}  />
                                 )
                             }
-
 
                             <h2 className={'text-[36px] leading-[35px]'}>
                                 {item.title}

@@ -1,6 +1,8 @@
 import {DefaultHeader} from "@/component/header/DefaultHeader.tsx";
+import {useMediaQuery} from "react-responsive";
 
 export const HeroSection = () => {
+    const isTabletOrMobile = useMediaQuery({ maxWidth: 1224 })
 
     const items = [
         {
@@ -48,12 +50,12 @@ export const HeroSection = () => {
             >
                 <div
                     className={'container-responsive items-center'}>
-                    <h2 className={'text-center'}>
+                    <h2 className={`text-center ${isTabletOrMobile ? 'text-[50px] leading-[60px]': ''}`}>
                         <span className={'text-primary-100'}>Discover and explore</span> the future <br/> of intelligent
                         solutions with <br/> Jeala AI
                     </h2>
 
-                    <p className={'text-[34px] leading-[45px] text-center font-urbanist mt-20 font-light'}>
+                    <p className={`text-[34px] leading-[45px] ${isTabletOrMobile ? 'text-[25px] leading-[35px] mt-14': 'mt-20'} text-center font-urbanist  font-light`}>
                         Whether you're streamlining business operations, enhancing customer <br/> experiences, or
                         exploring
                         new realms of creativity, Jeala AI is here to <br/> elevate your journey in all works of life.
