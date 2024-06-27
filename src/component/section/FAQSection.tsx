@@ -1,18 +1,22 @@
 import {DefaultAccordion} from "@/component/accordion/DefaultAccordion.tsx";
+import {FAQData} from "@/util/data/FAQData.ts";
 
 export const FAQSection = ()=>{
     return (
-        <section className={'flex flex-col items-center py-24 bg-faq mt-20'}>
-            <div className={'w-[50%] m-auto'}>
-                <h2 className={' font-urbanist font-semibold mb-20  text-[60px] leading-[70px]'}>
+        <section className={'py-20 bg-faq h-auto'}>
+            <div className={'container-responsive flex flex-col items-center'}>
+                <h2 className={'font-urbanist font-semibold mb-5  text-[40px] leading-[60px]'}>
                     Frequently Asked Question
                 </h2>
-                <div className={'w-full'}>
-                    <DefaultAccordion title={'What is Jeala AI?'}/>
-                    <DefaultAccordion title={'How does Jeala AI work?'} />
-                    <DefaultAccordion title={'How accurate is Jeala AI?'} />
-                    <DefaultAccordion title={'How does Jeala AI handle data privacy?'} />
-                    <DefaultAccordion title={'What kind of support is available for Jeala AI users?'} />
+
+                <div className={'w-[50%] m-auto'}>
+                    {
+                        FAQData.map((value,index)=>{
+                            return (
+                                <DefaultAccordion key={index} text={value.text} title={value.title}/>
+                            )
+                        })
+                    }
                 </div>
             </div>
         </section>

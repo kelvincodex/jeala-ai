@@ -2,7 +2,7 @@ import {imports} from "@/util/imports.ts";
 
 export const FeedbackContainerCard = ()=>{
     return (
-        <div  className={'h-[400px] w-[611px] border p-8'}>
+        <div  className={'h-[400px] border px-8 py-10 mx-4'}>
             <h2 className={'text-[24px] font-lexend font-normal leading-[29px]'}>
                 Head of Research at Datacorp
             </h2>

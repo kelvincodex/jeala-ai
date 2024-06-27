@@ -1,19 +1,18 @@
-import {DefaultLayout} from "@/view/layout/DefaultLayout.tsx";
 import {HeroSection} from "@/component/section/HeroSection.tsx";
 import {PartnershipSection} from "@/component/section/PartnershipSection.tsx";
 import {CapabilitiesSection} from "@/component/section/CapabilitiesSection.tsx";
 import {UseCaseSection} from "@/component/section/UseCaseSection.tsx";
-import {DefaultFooter} from "@/component/footer/DefaultFooter.tsx";
 import {FeedbackSection} from "@/component/section/FeedbackSection.tsx";
 import {PricingSection} from "@/component/section/PricingSection.tsx";
 import {FAQSection} from "@/component/section/FAQSection.tsx";
 import {WaitlistSection} from "@/component/section/WaitlistSection.tsx";
+import {PageLayout} from "@/view/layout/PageLayout.tsx";
 
 export const HomePage = () => {
 
 
   return(
-      <DefaultLayout>
+      <PageLayout>
           <HeroSection />
           <PartnershipSection />
           <CapabilitiesSection />
@@ -22,7 +21,6 @@ export const HomePage = () => {
           <FeedbackSection />
           <WaitlistSection />
           <FAQSection />
-          <DefaultFooter />
-      </DefaultLayout>
+      </PageLayout>
   )
 }

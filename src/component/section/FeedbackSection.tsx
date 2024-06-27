@@ -6,22 +6,23 @@ import Slider from "react-slick";
 import {FeedbackContainerCard} from "@/component/card/FeedbackContainerCard.tsx";
 
 export const FeedbackSection = ()=>{
-    let sliderRef = useRef<Slider>(null)
+    const sliderRef = useRef<Slider>(null)
 
     const settings = {
         dots: false,
-        slidesToShow: 2.5,
-        slidesToScroll: 2.5,
+        slidesToShow: 2,
+        slidesToScroll: 2,
     }
 
 
     function prev() {
-        (sliderRef as any).slickPrev();
+        sliderRef.current?.slickPrev();
     }
 
     function next() {
-        (sliderRef as any).slickNext();
+        sliderRef.current?.slickNext();
     }
+
     return(
         <section className={'w-full py-20'}>
             <div className={'flex justify-center mb-16'}>
@@ -34,7 +35,7 @@ export const FeedbackSection = ()=>{
 
             {/*<div className={'overflow-x-auto flex gap-10  items-center justify-center w-full pl-24'}>*/}
                 <SliderContainer
-                    ref={slider => sliderRef = slider}
+                    ref={sliderRef}
                  settings={settings}
                 >
                     {
@@ -49,8 +50,8 @@ export const FeedbackSection = ()=>{
                     }
                 </SliderContainer>
             <div className={'flex gap-10 w-full justify-end pt-10 pr-10'}>
-                <ChevronLeft onClick={prev} className={'cursor-pointer'} color={'black'} />
-                <ChevronRight onClick={next} className={'cursor-pointer'} color={'black'} />
+                <ChevronLeft onClick={prev} className={'cursor-pointer text-primary-100'}  />
+                <ChevronRight onClick={next} className={'cursor-pointer text-primary-100'}  />
             </div>
 
                 {/*</div>*/}

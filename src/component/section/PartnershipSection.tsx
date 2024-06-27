@@ -21,13 +21,15 @@ export const PartnershipSection = ()=>{
 
     }
     return (
-        <section className={'my-20 w-full'}>
+        <section className={' w-full'}>
         {/*<section className={'overflow-x-auto flex gap-24 my-20 px-10  pl-32'}>*/}
             <SliderContainer settings={settings}>
                 {
                     logos.map((logo, index)=> (
                         <div key={index}>
-                            <img  className={'w-[200px] h-[44px] m-auto'} alt={''} src={logo}/>
+                                <div className={'w-[200px] h-[50px] m-auto'}>
+                                <img className={'w-full h-full'} alt={''} src={logo}/>
+                            </div>
                         </div>
                     ))
                 }

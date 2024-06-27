@@ -1,49 +1,41 @@
 import {Button} from "@mui/material";
 import {imports} from "@/util/imports.ts";
+import {PriceData} from "@/util/data/PriceData.ts";
 
-export const PriceCard = ()=>{
+interface PriceCardProps {
+    item: PriceData
+}
+
+export const PriceCard = ({item}: PriceCardProps)=>{
 
     return (
-        <div className={'border w-[500px] min-h-[500px] flex flex-col rounded-lg p-5 gap-0'}>
-            <div className={'mb-14'}>
-                <h2 className={'text-[48px] my-10 font-poppins leading-[31.5px]'}>
-                    Free
+        <div className={'border min-h-[500px] flex flex-col rounded-lg  p-7 gap-0'}>
+            <div className={''}>
+                <h2 className={'text-[28px]  font-poppins leading-[31.5px] capitalize'}>
+                    {item.title}
                 </h2>
-                <h2 className={'text-primary-100 font-lexend font-normal leading-[51.84px] text-[48px]'}>
-                    USD $0 / Month
+                <h2 className={'text-primary-100 font-lexend font-normal leading-[51.84px] text-[28px] capitalize'}>
+                    USD ${item.price}
                 </h2>
             </div>
 
-            <Button className={'!bg-primary-100 !h-[80px] !w-full !text-[36px] !font-poppins !leading-[54px]'}
+            <Button size={'medium'} className={'!py-4 !my-8'}
                     variant="contained">Current plan</Button>
 
-            <div className={'flex items-start pr-10 my-5'}>
-                <imports.icon.customiseMark/>
-                <p>
-                    Access to essential AI features
-                </p>
-            </div>
+            {
+                item.tags?.map((value, index)=>{
+                    return (
+                        <div key={index} className={'flex items-start  my-2'}>
+                            <imports.icon.customiseMark className={'min-w-10 min-h-10'}/>
+                            <p className={'text-[18px]'}>
+                                {value}
+                            </p>
+                        </div>
+                    )
+                })
+            }
 
-            <div className={'flex items-start pr-10 my-5'}>
-                <imports.icon.customiseMark/>
-                <p>
-                    Access to essential AI features
-                </p>
-            </div>
 
-            <div className={'flex items-start pr-10 my-5'}>
-                <imports.icon.customiseMark/>
-                <p>
-                    Access to essential AI features
-                </p>
-            </div>
-
-            <div className={'flex items-start pr-10 my-5'}>
-                <imports.icon.customiseMark/>
-                <p>
-                    Access to essential AI features
-                </p>
-            </div>
         </div>
     )
 }
