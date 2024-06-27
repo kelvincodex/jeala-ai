@@ -3,9 +3,9 @@ import {FAQData} from "@/util/data/FAQData.ts";
 
 export const FAQSection = ()=>{
     return (
-        <section className={'py-20 bg-faq h-auto'}>
-            <div className={'container-responsive flex flex-col items-center'}>
-                <h2 className={'font-urbanist font-semibold mb-5  text-[40px] leading-[60px]'}>
+        <section className={'py-20 h-[800px] bg-faq overflow-y-scroll'}>
+            <div className={'container-responsive flex flex-col items-center justify-center'}>
+                <h2 className={'font-urbanist font-semibold mb-5'}>
                     Frequently Asked Question
                 </h2>
 

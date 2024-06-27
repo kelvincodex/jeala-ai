@@ -17,7 +17,7 @@ export const SliderContainer = forwardRef(({settings, containerClassName, childr
     const init_settings = {
         dots: true,
         infinite: infinite ?? false,
-        speed: 500,
+        speed: 1000,
         slidesToShow: 4,
         slidesToScroll: 4,
         initialSlide: 0,
@@ -26,27 +26,35 @@ export const SliderContainer = forwardRef(({settings, containerClassName, childr
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    initialSlide: 2
+                    // infinite: true,
+                    // dots: true
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    initialSlide: 1
                 }
-            }
+            },
+            // {
+            //     breakpoint: 600,
+            //     settings: {
+            //         slidesToShow: 1,
+            //         slidesToScroll: 1,
+            //         initialSlide: 1
+            //     }
+            // },
+            // {
+            //     breakpoint: 480,
+            //     settings: {
+            //         slidesToShow: 1,
+            //         slidesToScroll: 1
+            //     }
+            // }
         ]
     };
 

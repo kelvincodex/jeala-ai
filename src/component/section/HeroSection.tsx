@@ -1,11 +1,8 @@
-// import {DefaultHeader} from "@/component/header/DefaultHeader.tsx";
-// import {useMediaQuery} from "react-responsive";
 import {SliderContainer} from "@/component/container/SliderContainer.tsx";
 import {heroConfigData} from "@/util/data/HeroConfigData.ts";
 import {HeroCard} from "@/component/card/HeroCard.tsx";
 
 export const HeroSection = () => {
-    // const isTabletOrMobile = useMediaQuery({ maxWidth: 1224 })
 
 
     const settings = {
@@ -17,10 +14,10 @@ export const HeroSection = () => {
     return (
         <section className={'w-full'}>
                 <div
-                    className={'flex flex-col w-full min-h-[calc(100vh-100px)] py-20 gap-20'}
+                    className={'flex flex-col w-full justify-center  min-h-[calc(100vh-100px)] py-20 gap-20'}
                 >
                     <div
-                        className={'container-responsive items-center'}>
+                        className={''}>
                         <h2 className={`text-center capitalize  font-semibold`}>
                             <span className={'text-primary-100'}>Discover and explore</span> The <br/> Future of intelligent
                             solutions <br/> with Jeala AI

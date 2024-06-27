@@ -1,19 +1,20 @@
 import {UseCaseData} from "@/util/data/UseCaseData.ts";
+// import {useMediaQuery} from "react-responsive";
 
 export const UseCaseSection = ()=>{
-
+    // const isMobileAndTablet = useMediaQuery({query: {}})
 
     return (
         <section className={'py-10 '}>
-            <div className={'flex flex-col justify-center items-center container-responsive'}>
-                <div className={' grid grid-cols-4 gap-10'}>
+            <div className={'container-responsive flex flex-col justify-center items-center'}>
+                <div className={'grid lg:grid-cols-2 grid-cols-1 md:grid-cols-1 gap-5 w-full'}>
                     {
                         UseCaseData.map((item, index) => (
                             <div key={index}
-                                 className="h-[400px] w-[600px] col-span-2 flex flex-col justify-end relative">
-                                <img src={item.image} className={'object-cover absolute w-full h-full z-[-999]'}
+                                 className="h-[400px]  w-full flex flex-col justify-end relative">
+                                <img src={item.image} className={'object-cover absolute w-full h-full z-[-]'}
                                      alt={''}/>
-                                <h2 className={'z-[999] text-white-100 font-poppins-b font-bold text-[70px] leading-[105px] ml-3'}>
+                                <h2 className={'z-[1] text-white-100 font-poppins-b font-bold text-[40px] leading-[55px] ml-3'}>
                                     {item.title}
                                 </h2>
                             </div>

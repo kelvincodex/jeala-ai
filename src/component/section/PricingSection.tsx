@@ -12,7 +12,7 @@ export const PricingSection = ()=>{
                 </h2>
 
 
-                <div className={'w-full grid grid-cols-3 gap-10'}>
+                <div className={'w-full grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-10'}>
                     {
                         priceData.map((value, index) => {
                             return (

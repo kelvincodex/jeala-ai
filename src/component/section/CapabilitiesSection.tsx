@@ -10,7 +10,7 @@ export const CapabilitiesSection=()=>{
                     AI Capabilities That Transform <br/> Your Workflow
                 </h2>
 
-                <div className={'grid grid-cols-2 grid-flow-row gap-5 w-[80%] m-auto'}>
+                <div className={'grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 grid-flow-row gap-5 md:w-[90%] m-auto'}>
                     {
                         CapabilitiesData.map((item, index) =>
                         {

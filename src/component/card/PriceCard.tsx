@@ -11,7 +11,7 @@ export const PriceCard = ({item}: PriceCardProps)=>{
     return (
         <div className={'border min-h-[500px] flex flex-col rounded-lg  p-7 gap-0'}>
             <div className={''}>
-                <h2 className={'text-[28px]  font-poppins leading-[31.5px] capitalize'}>
+                <h2 className={'text-[28px]   font-poppins-bold leading-[31.5px] capitalize'}>
                     {item.title}
                 </h2>
                 <h2 className={'text-primary-100 font-lexend font-normal leading-[51.84px] text-[28px] capitalize'}>

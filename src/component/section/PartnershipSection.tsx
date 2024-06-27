@@ -27,7 +27,7 @@ export const PartnershipSection = ()=>{
                 {
                     logos.map((logo, index)=> (
                         <div key={index}>
-                                <div className={'w-[200px] h-[50px] m-auto'}>
+                            <div className={'w-[200px] h-[50px] '}>
                                 <img className={'w-full h-full'} alt={''} src={logo}/>
                             </div>
                         </div>
