@@ -10,6 +10,9 @@ export default {
   ],
   theme: {
     extend: {
+      transitionProperty:{
+        'left': 'left'
+      },
       fontFamily: {
         sans: ['lexend', ...defaultTheme.fontFamily.sans],
         'poppins-bold': 'poppins-bold',

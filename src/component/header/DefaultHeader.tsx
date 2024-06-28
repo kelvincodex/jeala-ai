@@ -24,6 +24,7 @@ export const DefaultHeader = ()=>{
             }
         );
     }, [isClose, staggerMenuItems]);
+
     return (
         <nav className={'border-b sticky top-0 bg-white z-50 w-full transition-all duration-300 ease-in-out h-[80px] md:h-[100px] '}>
             <div className={'flex justify-between h-full items-center container-responsive relative'}>
@@ -45,12 +46,12 @@ export const DefaultHeader = ()=>{
             </div>
             {/*${toggleMenu ? 'left-0' : '-left-[100%]'}*/}
             {/*todo mobile*/}
-            <ul className={`lg:hidden mobile-lg text-[20px] pt-10 absolute bg-white top-20 gap-5 pl-14 min-w-full ${isClose ? 'left-0' : '-left-[100%]'} transition-all duration-150  h-svh w-full flex flex-col items-left`}>
-                <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Overview</Link></li>
-                <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Resources</Link></li>
-                <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Pricing</Link></li>
-                <li className={hoverClassName}><Link to={RoutesConstant.page.home}>FAQ</Link></li>
-                <li className={'text-primary-100'}><Link to={RoutesConstant.page.home}>Get
+            <ul className={`lg:hidden  text-[20px] pt-10 absolute bg-white top-20 gap-5 pl-14 min-w-full ${isClose ? 'left-0' : '-left-[100%]'} transition-left duration-150  h-svh w-full flex flex-col items-left`}>
+                <li  className={`${hoverClassName} mobile-lg`}><Link to={RoutesConstant.page.home}>Overview</Link></li>
+                <li className={`${hoverClassName} mobile-lg`}><Link to={RoutesConstant.page.home}>Resources</Link></li>
+                <li className={`${hoverClassName} mobile-lg`}><Link to={RoutesConstant.page.home}>Pricing</Link></li>
+                <li className={`${hoverClassName} mobile-lg`}><Link to={RoutesConstant.page.home}>FAQ</Link></li>
+                <li className={'text-primary-100 mobile-lg'}><Link to={RoutesConstant.page.home}>Get
                     Started</Link></li>
             </ul>
         </nav>
