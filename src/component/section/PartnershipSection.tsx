@@ -18,16 +18,24 @@ export const PartnershipSection = ()=>{
         dots: false,
         slidesToShow: 5.5,
         slidesToScroll: 5.5,
-
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2.5,
+                    slidesToScroll: 2.5,
+                    initialSlide: 1
+                }
+            }
+        ]
     }
     return (
-        <section className={' w-full'}>
-        {/*<section className={'overflow-x-auto flex gap-24 my-20 px-10  pl-32'}>*/}
+        <section className={'w-full'}>
             <SliderContainer settings={settings}>
                 {
                     logos.map((logo, index)=> (
                         <div key={index}>
-                            <div className={'w-[200px] h-[50px] '}>
+                            <div className={'md:w-[200px] w-[100px] md:h-[50px] h-[40px] m-auto'}>
                                 <img className={'w-full h-full'} alt={''} src={logo}/>
                             </div>
                         </div>
