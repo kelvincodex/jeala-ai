@@ -1,20 +1,12 @@
 import {Link} from "react-router-dom";
 import {FooterData} from "@/util/data/FooterData.ts";
-import {FramerConfigUtil} from "@/util/FramerConfigUtil.ts";
 import { motion } from "framer-motion";
 
 export const DefaultFooter = () => {
 
     return(
-        <footer className={'py-16 bg-black-200'}>
-            <motion.div
-                variants={FramerConfigUtil.scroll}
-                initial={'initial'}
-                whileInView={'view'}
-                transition={{duration: 1, delay: 0.2}}
-                viewport={{once:true}}
-
-                className={'container-responsive flex flex-col items-center '}>
+        <motion.footer className={'py-16 bg-black-200'}>
+            <div className={'container-responsive flex flex-col items-center '}>
                 <div className={'grid md:grid-cols-4 grid-cols-2 md:gap-40 gap-10'}>
                     {
                         FooterData.map((value, index) => (
@@ -30,7 +22,7 @@ export const DefaultFooter = () => {
                         ))
                     }
                 </div>
-            </motion.div>
-        </footer>
+            </div>
+        </motion.footer>
     )
 }
