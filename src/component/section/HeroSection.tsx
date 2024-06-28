@@ -43,10 +43,7 @@ export const HeroSection = () => {
 
                     <img  className={'md:w-[200px] lg:w-[250px] w-[100px] md:h-[60px] lg:h-[60px] h-[200px] absolute top-0 left-24 lg:left-24 md:left-0  object-bottom'} src={importsUtil.image.heroTop} alt={''}/>
                     <img  className={'md:w-[200px] lg:w-[300px] w-[100px] md:h-[400px]  lg:h-[600px] h-[200px] absolute top-0 right-0'} src={importsUtil.image.heroLeft} alt={''}/>
-                    <motion.div
-                        variants={FramerConfigUtil.base}
-                        initial={'hidden'}
-                        whileInView={'show'}
+                    <div
                         className={'md:mt-10 w-full'}>
                         <SliderContainer containerClassName={'md:mt-10 w-full'} settings={settings}>
                             {heroConfigData.map((item, i) => (
@@ -57,7 +54,7 @@ export const HeroSection = () => {
                                 </div>
                             ))}
                         </SliderContainer>
-                    </motion.div>
+                    </div>
 
                 </div>
         </section>
