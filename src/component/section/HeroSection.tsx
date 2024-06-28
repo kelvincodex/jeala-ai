@@ -20,8 +20,8 @@ export const HeroSection = () => {
                 >
                     <motion.div
                         variants={FramerConfigUtil.scroll}
-                        initial={'initial'}
-                        whileInView={'view'}
+                        initial={'hidden'}
+                        whileInView={'show'}
                         transition={{duration: 1, delay: 0}}
                         viewport={{once:true}}
                         className={''}>
@@ -42,12 +42,14 @@ export const HeroSection = () => {
 
                     <motion.div
                         variants={FramerConfigUtil.base}
-                        initial={'initial'}
-                        whileInView={'view'}
+                        initial={'hidden'}
+                        whileInView={'show'}
                         className={'md:mt-10 w-full'}>
                         <SliderContainer containerClassName={'md:mt-10 w-full'} settings={settings}>
                             {heroConfigData.map((item, i) => (
-                                <div key={i}>
+                                <div
+                                    key={i}
+                                >
                                     <HeroCard item={item} />
                                 </div>
                             ))}

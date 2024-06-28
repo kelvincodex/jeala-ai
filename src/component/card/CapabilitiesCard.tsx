@@ -1,3 +1,7 @@
+// import { LazyLoadImage } from "react-lazy-load-image-component";
+
+import { motion } from "framer-motion"
+import {FramerConfigUtil} from "@/util/FramerConfigUtil.ts";
 
 interface CapabilitiesCardProps {
     index: number,
@@ -7,7 +11,10 @@ interface CapabilitiesCardProps {
 export const CapabilitiesCard = ({ item, containerClassName}: CapabilitiesCardProps)=>{
 
     return (
-        <div
+        <motion.div
+            variants={FramerConfigUtil.item2}
+            whileHover={'show'}
+
             className={`bg-white border rounded-lg flex flex-col  justify-center md:px-20 px-10 py-10 gap-5 ${containerClassName}`}>
             {
                 item.icon && (
@@ -20,6 +27,6 @@ export const CapabilitiesCard = ({ item, containerClassName}: CapabilitiesCardPr
             <p className={'md:text-[20px] text-[18px]  font-[200] md:leading-[37px] leading-[30px] text-black-200'}>
                 {item.subTitle}
             </p>
-        </div>
+        </motion.div>
     )
 }

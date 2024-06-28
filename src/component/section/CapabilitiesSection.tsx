@@ -16,11 +16,10 @@ export const CapabilitiesSection=()=>{
                 </h2>
 
                 <motion.div
-                    variants={FramerConfigUtil.scroll}
-                    initial={'initial'}
-                    whileInView={'view'}
-                    transition={{duration: 1, delay: 0}}
-                    viewport={{once:true}}
+                    variants={FramerConfigUtil.base}
+                    viewport={{ once: true }}
+                    whileInView="show"
+                    initial="hidden"
 
                     className={'grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 grid-flow-row gap-5 md:w-[90%] m-auto'}>
                     {

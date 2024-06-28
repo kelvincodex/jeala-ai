@@ -1,7 +1,7 @@
 export class FramerConfigUtil {
     static base = {
-        initial: { opacity: 0 },
-        view: {
+        hidden: { opacity: 0 },
+        show: {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1,
@@ -10,15 +10,23 @@ export class FramerConfigUtil {
     }
 
     static scroll = {
-        initial: { opacity: 0, x: -100 },
-        view: {opacity: 1, x: 0},
+        hidden: { opacity: 0, x: -100 },
+        show: {opacity: 1, x: 0},
 
     }
 
     static item = {
-        initial: { opacity: 0, x: -1000 },
-        view: { opacity: 1, x: 0 },
+        hidden: { opacity: 0, x: -1000 },
+        show: { opacity: 1, x: 0 },
         exit: { opacity: 0, x: 1000 },
+    }
+
+    static item2 = {
+        show: {
+            y: -10,
+            opacity: 0.8,
+            transition: { duration: 0.1 },
+        },
     }
 
 }

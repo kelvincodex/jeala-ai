@@ -20,10 +20,10 @@ export const UseCaseSection = ()=>{
                     {
                         UseCaseData.map((item, index) => (
                             <div key={index}
-                                 className="md:h-[400px] h-[250px] w-full flex flex-col justify-end relative">
-                                <img src={item.image} className={'object-cover absolute w-full h-full z-[-]'}
+                                 className="md:h-[400px] h-[250px] w-full flex flex-col justify-end relative ">
+                                <img src={item.image} className={'object-cover  absolute w-full h-full z-0  duration-300 hover:scale-[]'}
                                      alt={''}/>
-                                <h2 className={'z-[1] text-white-100 font-poppins-b font-bold text-[40px] leading-[55px] ml-3'}>
+                                <h2 className={'z-10 text-white-100 font-poppins-b font-bold text-[40px] leading-[55px] ml-3'}>
                                     {item.title}
                                 </h2>
                             </div>
