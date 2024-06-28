@@ -11,7 +11,7 @@ export const FAQSection = ()=>{
                 variants={FramerConfigUtil.scroll}
                 initial={'initial'}
                 whileInView={'view'}
-                transition={{duration: 1, delay: 0.2}}
+                transition={{duration: 1, delay: 0}}
                 viewport={{once:true}}
 
                 className={'container-responsive flex flex-col items-center h-full justify-center '}>

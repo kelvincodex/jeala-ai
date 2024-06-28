@@ -11,7 +11,9 @@ export const UseCaseSection = ()=>{
             variants={FramerConfigUtil.scroll}
             initial={'initial'}
             whileInView={'view'}
-            transition={{duration: 1, delay: 0.2}}
+            transition={{duration: 1, delay: 0}}
+            viewport={{once: true}}
+
             className={'py-10 '}>
             <div className={'container-responsive flex flex-col justify-center items-center'}>
                 <div className={'grid lg:grid-cols-2 grid-cols-1 md:grid-cols-1 gap-5 w-full'}>

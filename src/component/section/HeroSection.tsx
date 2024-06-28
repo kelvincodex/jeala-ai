@@ -22,7 +22,7 @@ export const HeroSection = () => {
                         variants={FramerConfigUtil.scroll}
                         initial={'initial'}
                         whileInView={'view'}
-                        transition={{duration: 1, delay: 0.2}}
+                        transition={{duration: 1, delay: 0}}
                         viewport={{once:true}}
                         className={''}>
                         <h2 className={`text-center capitalize  font-semibold`}>

@@ -10,7 +10,7 @@ export const WaitlistSection = ()=>{
                 variants={FramerConfigUtil.scroll}
                 initial={'initial'}
                 whileInView={'view'}
-                transition={{duration: 1, delay: 0.2}}
+                transition={{duration: 1, delay: 0}}
                 viewport={{once:true}}
 
                 className={'flex flex-col items-center container-responsive'}>
