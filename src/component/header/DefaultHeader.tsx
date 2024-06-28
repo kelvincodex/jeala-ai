@@ -18,7 +18,7 @@ export const DefaultHeader = ()=>{
                         <MenuIcon onClick={()=> setIsClose(!isClose)} className={'w-[30px] h-[30px] cursor-pointer lg:hidden'}/> :
                         <CloseIcon onClick={()=> setIsClose(!isClose)} className={'w-[30px] h-[30px] cursor-pointer lg:hidden'}/>
                 }
-                    <ul className={' items-center gap-5 text-[20px] leading-[32px] md:hidden lg:flex hidden font-poppins font-light'}>
+                    <ul className={' items-center gap-5 md:text-[20px] text-[18px] leading-[32px] md:hidden lg:flex hidden font-poppins font-light'}>
                         <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Overview</Link></li>
                         <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Resources</Link></li>
                         <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Pricing</Link></li>
