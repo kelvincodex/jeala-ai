@@ -4,7 +4,7 @@ import {priceData} from "@/util/data/PriceData.ts";
 
 export const PricingSection = ()=>{
     return (
-        <section className={' py-24'}>
+        <section className={' md:py-24 py-10'}>
             <div className={'container-responsive relative flex flex-col items-center justify-center'}>
                     <img className={'w-[200px] md:w-[400px] h-[200px] md:h-[400px] absolute -top-16 md:-top-40 md:left-40 -left-10'} src={imports.image.rocket} alt={''}/>
                 <h2 className={'text-center font-semibold mb-10'}>
