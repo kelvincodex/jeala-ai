@@ -6,8 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>%VITE_APP_NAME%</title>
+    <style>
+      .display-none{
+        display: none;
+      }
+      .display{
+        display: flex;
+      }
+      .preloader{
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        position: fixed;
+        z-index: 9999999;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+      }
+      .preloader > .loader{
+        position: relative;
+        width: 120px;
+        height: 120px;
+        display: grid;
+        place-content: center;
+
+      }
+      .preloader > .loader > img{
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+      }
+
+      .preloader > .loader::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        animation: spin 1s linear infinite;
+        width: 100%;
+        height: 100%;
+        border: 6px solid;
+        border-radius: 100px;
+        border-color: hsla(226, 87%, 69%, 1)  hsla(226, 87%, 69%, 1) transparent hsla(226, 87%, 69%, 1);
+      }
+
+      @keyframes spin {
+        to{
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
   </head>
   <body>
+  <div class="preloader display" >
+    <div class="loader">
+<!--      <img src="" alt=""/>-->
+      JEAlA AI
+    </div>
+  </div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

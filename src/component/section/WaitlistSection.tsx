@@ -1,4 +1,4 @@
-import {Button, Input} from "@mui/material";
+import {Button} from "@mui/material";
 
 export const WaitlistSection = ()=>{
     return (
@@ -9,9 +9,9 @@ export const WaitlistSection = ()=>{
                 </h2>
 
                 <div
-                    className={'w-[70%] h-[90px] flex justify-between items-center px-10 overflow-hidden rounded-[20px] border gap-10'}>
-                    <Input  placeholder={'Email Address'} className={'flex-grow !border-b-0'}/>
-                    <Button className={'w-[212px] h-[70px] rounded'} variant={'contained'}>Join waitlist</Button>
+                    className={'w-full md:w-[70%] md:h-[90px] h-[80px] flex justify-between items-center bg-white  px-10 overflow-hidden rounded-[20px] border gap-10'}>
+                    <input  placeholder={'Email Address'} className={'flex-grow h-full bg-transparent outline-0 placeholder:text-black'} />
+                    <Button className={'!py-5 !px-10  rounded text-[28px]'} variant={'contained'}>Join waitlist</Button>
                 </div>
             </div>
         </section>
