@@ -35,6 +35,21 @@ export const PartnershipSection = ()=>{
                     slidesToScroll: 2.5,
                     initialSlide: 1
                 }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
         ]
     }
@@ -44,8 +59,8 @@ export const PartnershipSection = ()=>{
                 {
                     logos.map((logo, index)=> (
                         <div key={index}>
-                            <div className={'md:w-[200px] w-[100px] md:h-[50px] h-[40px] m-auto'}>
-                                <img className={'w-full h-full'} alt={''} src={logo}/>
+                            <div className={'md:w-[200px] max-w-[150px] md:h-[50px] max-h-[40px] mx m-auto'}>
+                                <img className={'w-full h-full '} alt={''} src={logo}/>
                             </div>
                         </div>
                     ))

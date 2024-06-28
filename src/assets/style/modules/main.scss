@@ -69,3 +69,8 @@ p{
 .slick-prev{
   left: 0 !important;
 }
+
+.slick-next:before{
+  content: '' !important;
+
+}
