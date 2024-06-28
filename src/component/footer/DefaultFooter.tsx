@@ -10,10 +10,10 @@ export const DefaultFooter = () => {
                     {
                         FooterData.map((value, index) => (
                             <ul key={index} className={'font-[200] font-poppins text-white'}>
-                                <li className={'text-[20px] font-poppins-medium font-bold leading-[30px] '}>{value.title}</li>
+                                <li className={'md:text-[20px] text-[18px] font-poppins-medium font-bold md:leading-[30px] leading-[20px]'}>{value.title}</li>
                                 {
                                     value.subitems.map((subitems, index) => (
-                                        <li key={index} className={'font-light text-[16px] leading-[25px] my-3'}><Link
+                                        <li key={index} className={'font-light md:text-[16px] text-[14px] md:leading-[25px] leading-[20px] md:my-3 my-2'}><Link
                                             to={subitems.route ?? '/'}>{subitems.label}</Link></li>
                                     ))
                                 }
