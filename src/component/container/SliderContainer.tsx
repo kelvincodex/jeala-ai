@@ -12,12 +12,12 @@ interface SliderContainerProps {
     // containerClassName?: HTMLProps<HTMLElement>["className"],
     infinite?: boolean,
 }
-export const SliderContainer = forwardRef(({settings, containerClassName, children, infinite}: SliderContainerProps, ref: ForwardedRef<any> ) => {
+export const SliderContainer = forwardRef(({settings, containerClassName, children}: SliderContainerProps, ref: ForwardedRef<any> ) => {
 
     const init_settings = {
         dots: true,
-        infinite: infinite ?? false,
-        speed: 1000,
+        infinite: false,
+        speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
         initialSlide: 0,

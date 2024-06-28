@@ -20,9 +20,9 @@ html{
 ::-webkit-scrollbar {
   display: none;
 }
-::-webkit-scrollbar-thumb {
-  background: #FF0000;
-}
+//::-webkit-scrollbar-thumb {
+//  background: #FF0000;
+//}
 
 //fonts
 @font-face {
@@ -60,4 +60,12 @@ h1, h2, h3, h4, h5, h6{
 
 p{
   @apply font-lexend font-light md:text-[20px] text-[18px] text-black-200 md:leading-[35px] leading-[25px];
+}
+
+.slick-next{
+  right: 0 !important;
+}
+
+.slick-prev{
+  left: 0 !important;
 }

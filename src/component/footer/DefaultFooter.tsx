@@ -1,11 +1,10 @@
 import {Link} from "react-router-dom";
 import {FooterData} from "@/util/data/FooterData.ts";
-import { motion } from "framer-motion";
 
 export const DefaultFooter = () => {
 
     return(
-        <motion.footer className={'py-16 bg-black-200'}>
+        <footer className={'py-16 bg-black-200'}>
             <div className={'container-responsive flex flex-col items-center '}>
                 <div className={'grid md:grid-cols-4 grid-cols-2 md:gap-40 gap-10'}>
                     {
@@ -23,6 +22,6 @@ export const DefaultFooter = () => {
                     }
                 </div>
             </div>
-        </motion.footer>
+        </footer>
     )
 }

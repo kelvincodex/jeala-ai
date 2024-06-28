@@ -45,7 +45,7 @@ export const HeroSection = () => {
                         initial={'initial'}
                         whileInView={'view'}
                         className={'md:mt-10 w-full'}>
-                        <SliderContainer containerClassName={'md:mt-10'} settings={settings}>
+                        <SliderContainer containerClassName={'md:mt-10 w-full'} settings={settings}>
                             {heroConfigData.map((item, i) => (
                                 <div key={i}>
                                     <HeroCard item={item} />

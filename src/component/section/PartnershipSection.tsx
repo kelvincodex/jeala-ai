@@ -20,6 +20,15 @@ export const PartnershipSection = ()=>{
         slidesToScroll: 5.5,
         responsive: [
             {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    // infinite: true,
+                    // dots: true
+                }
+            },
+            {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 2.5,

@@ -9,7 +9,7 @@ interface PriceCardProps {
 export const PriceCard = ({item}: PriceCardProps)=>{
 
     return (
-        <div className={'border min-h-[500px] flex flex-col rounded-lg  p-7 gap-0'}>
+        <div className={'border min-h-[500px]  flex flex-col rounded-lg  p-7 gap-0'}>
             <div className={''}>
                 <h2 className={'md:text-[28px] text-[23px] font-poppins-medium  md:leading-[31px] leading-[25px] capitalize'}>
                     {item.title}
