@@ -55,17 +55,9 @@ html{
 }
 
 h1, h2, h3, h4, h5, h6{
-  @apply font-urbanist;
-  font-weight: 400;
-  font-size: 70px;
-  color: theme.$black_100;
-  line-height: 80px;
+  @apply font-urbanist font-normal text-[30px] md:text-[70px] text-dark-200 leading-[45px] md:leading-[80px];
 }
 
 p{
-  @apply font-lexend;
-  font-weight: 300;
-  font-size: 20px;
-  color: theme.$dark_blue_100;
-  line-height: 35px;
+  @apply font-lexend font-light text-[20px] text-black-200 leading-[35px];
 }
