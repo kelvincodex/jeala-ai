@@ -8,11 +8,12 @@ interface DefaultAccordionProps  {
 }
 export const DefaultAccordion = ({title, text, showText}: DefaultAccordionProps)=>{
     const [show, setShow] = useState<boolean>(false)
+
     return (
-        <div className={'my-8'}>
+        <div className={'md:my-8 my-2'}>
             <div onClick={()=> setShow(!show)} className={'flex items-center gap-3 my-2 cursor-pointer'}>
                 <RoundedPlus className={'w-6 h-6'} />
-                <p className={'text-[20px] '}>{title}</p>
+                <p className={'md:text-[20px] text-[18px] '}>{title}</p>
             </div>
             {
                 (!showText && show) && (

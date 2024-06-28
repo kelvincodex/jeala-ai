@@ -3,15 +3,16 @@ import {FAQData} from "@/util/data/FAQData.ts";
 
 export const FAQSection = ()=>{
     return (
-        <section className={'py-20 h-[800px] bg-faq overflow-y-scroll'}>
-            <div className={'container-responsive flex flex-col items-center justify-center'}>
+        <section className={'md:py-20 py-18 md:h-[800px] h-[600px] bg-faq'}>
+
+            <div
+                className={'container-responsive flex flex-col items-center h-full w-full justify-center '}>
                 <h2 className={'font-urbanist font-semibold mb-5'}>
                     Frequently Asked Question
                 </h2>
-
-                <div className={'w-[50%] m-auto'}>
+                <div className={'h-[500px] w-full overflow-y-scroll'}>
                     {
-                        FAQData.map((value,index)=>{
+                        FAQData.map((value, index) => {
                             return (
                                 <DefaultAccordion key={index} text={value.text} title={value.title}/>
                             )
