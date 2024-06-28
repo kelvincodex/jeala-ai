@@ -41,8 +41,8 @@ export const HeroSection = () => {
 
                     </motion.div>
 
-                    <img  className={'md:w-[250px] w-[100px] md:h-[60px] h-[200px] absolute top-0 left-24 object-bottom'} src={importsUtil.image.heroTop} alt={''}/>
-                    <img  className={'md:w-[300px] w-[100px] md:h-[600px] h-[200px] absolute top-0 right-0'} src={importsUtil.image.heroLeft} alt={''}/>
+                    <img  className={'md:w-[200px] lg:w-[250px] w-[100px] md:h-[60px] lg:h-[60px] h-[200px] absolute top-0 left-24 lg:left-24 md:left-0  object-bottom'} src={importsUtil.image.heroTop} alt={''}/>
+                    <img  className={'md:w-[200px] lg:w-[300px] w-[100px] md:h-[400px]  lg:h-[600px] h-[200px] absolute top-0 right-0'} src={importsUtil.image.heroLeft} alt={''}/>
                     <motion.div
                         variants={FramerConfigUtil.base}
                         initial={'hidden'}
