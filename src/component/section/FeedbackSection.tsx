@@ -37,8 +37,8 @@ export const FeedbackSection = ()=>{
             className={'w-full md:py-20 py-10'}>
             <div className={'flex justify-center md:mb-16 mb-10'}>
                 <span className={'md:text-[60px] text-[40px] font-urbanist font-semibold rotate-12'}>"</span>
-                <h2 className={'text-center font-semibold md:mt-5 mt-2 md:ml-5 ml-2 bg-clip-text text-transparent bg-gradient-to-r from-primary-150 to-primary-200'}>
-                    What Our Users Are <br/> Saying
+                <h2 className={'text-center font-semibold md:mt-5 mt-2 md:ml-5 ml-2 -mr-3 bg-clip-text text-transparent bg-gradient-to-r from-primary-150 to-primary-200'}>
+                     <span className={'text-black'}>What Our</span> Users Are <br/> Saying
                 </h2>
                 <span className={'md:text-[60px] text-[40px] font-urbanist font-semibold rotate-12  text-primary-200'}>"</span>
             </div>
