@@ -7,6 +7,9 @@ import education from '@/assets/image/education-image.png'
 import engineer from '@/assets/image/engineer-image.png'
 import gaming from '@/assets/image/gaming-image.png'
 import rocket from '@/assets/image/rocket.png'
+import heroRipple from '@/assets/image/hero-ripple.png'
+import heroLeft from '@/assets/image/hero-left.png'
+import heroTop from '@/assets/image/hero-top.png'
 
 //icon
 import preview from '@/assets/icon/preview.svg'
@@ -16,6 +19,6 @@ import customiseMark from '@/assets/icon/customise-mark.svg'
 
 
 export const importsUtil = {
-    image: {upwork,meta,attentive, health, education, engineer, gaming,rocket},
+    image: {upwork,meta,attentive, health, education, engineer, gaming,rocket, heroRipple, heroLeft, heroTop},
     icon: {preview, humanRelation, customiseMark,starOutline}
 }

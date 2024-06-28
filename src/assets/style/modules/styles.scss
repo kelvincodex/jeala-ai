@@ -6,3 +6,19 @@
   background-size: cover;
   //background-size: 100% auto;
 }
+
+.bg-capability{
+  background-image: url("@/assets/image/capability-bg.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+  //background-size: 100% auto;
+}
+
+.bg-hero{
+  background-image: url("@/assets/image/hero-ripple.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  //background-size: 100% auto;
+}

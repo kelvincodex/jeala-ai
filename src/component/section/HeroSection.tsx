@@ -14,7 +14,7 @@ export const HeroSection = () => {
     }
 
     return (
-        <section className={'w-full'}>
+        <section className={'w-full bg-hero'}>
                 <div
                     className={'flex flex-col w-full justify-center min-h-[calc(100vh-70px)] md:min-h-[calc(100vh-100px)] py-10 md:py-20 gap-10 md:gap-20'}
                 >
