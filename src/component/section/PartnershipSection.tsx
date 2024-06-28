@@ -16,8 +16,14 @@ export const PartnershipSection = ()=>{
 
     const settings = {
         dots: false,
-        slidesToShow: 5.5,
-        slidesToScroll: 5.5,
+        infinite: true,
+        autoplay: true,
+        cssEase: "linear",
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        speed: 2000,
+        autoplaySpeed: 2000,
+
         responsive: [
             {
                 breakpoint: 1024,
