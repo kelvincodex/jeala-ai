@@ -1,11 +1,18 @@
 import {UseCaseData} from "@/util/data/UseCaseData.ts";
+import { motion } from "framer-motion";
+import {FramerConfigUtil} from "@/util/FramerConfigUtil.ts";
 // import {useMediaQuery} from "react-responsive";
 
 export const UseCaseSection = ()=>{
     // const isMobileAndTablet = useMediaQuery({query: {}})
 
     return (
-        <section className={'py-10 '}>
+        <motion.section
+            variants={FramerConfigUtil.scroll}
+            initial={'initial'}
+            whileInView={'view'}
+            transition={{duration: 1, delay: 0.2}}
+            className={'py-10 '}>
             <div className={'container-responsive flex flex-col justify-center items-center'}>
                 <div className={'grid lg:grid-cols-2 grid-cols-1 md:grid-cols-1 gap-5 w-full'}>
                     {
@@ -23,6 +30,6 @@ export const UseCaseSection = ()=>{
 
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }

@@ -4,6 +4,8 @@ import  ChevronRight  from '@/assets/icon/chevron-right.svg'
 import {useRef} from "react";
 import Slider from "react-slick";
 import {FeedbackContainerCard} from "@/component/card/FeedbackContainerCard.tsx";
+import { motion } from "framer-motion";
+import {FramerConfigUtil} from "@/util/FramerConfigUtil.ts";
 
 export const FeedbackSection = ()=>{
     const sliderRef = useRef<Slider>(null)
@@ -24,7 +26,15 @@ export const FeedbackSection = ()=>{
     }
 
     return(
-        <section className={'w-full md:py-20 py-10'}>
+        <motion.section
+            variants={FramerConfigUtil.scroll}
+            initial={'initial'}
+            whileInView={'view'}
+            transition={{duration: 1, delay: 0.2}}
+            viewport={{once:true}}
+
+
+            className={'w-full md:py-20 py-10'}>
             <div className={'flex justify-center md:mb-16 mb-10'}>
                 <span className={'md:text-[60px] text-[40px] font-urbanist font-semibold rotate-12'}>"</span>
                 <h2 className={'text-center font-semibold md:mt-5 mt-2 md:ml-5 ml-2 bg-clip-text text-transparent bg-gradient-to-r from-primary-150 to-primary-200'}>
@@ -33,10 +43,10 @@ export const FeedbackSection = ()=>{
                 <span className={'md:text-[60px] text-[40px] font-urbanist font-semibold rotate-12  text-primary-200'}>"</span>
             </div>
 
-            {/*<div className={'overflow-x-auto flex gap-10  items-center justify-center w-full pl-24'}>*/}
+            <div className={'md:w-[90%] w-full mx-auto'}>
                 <SliderContainer
                     ref={sliderRef}
-                 settings={settings}
+                    settings={settings}
                 >
                     {
                         Array(5).fill('').map((_, index) => {
@@ -49,13 +59,12 @@ export const FeedbackSection = ()=>{
                         })
                     }
                 </SliderContainer>
-            <div className={'flex md:gap-5 gap-5 w-full justify-end pt-10 pr-10'}>
-                <ChevronLeft onClick={prev} className={'cursor-pointer text-primary-100 md:w-8 w-5 h-8'}  />
-                <ChevronRight onClick={next} className={'cursor-pointer text-primary-100 md:w-8 w-5 h-8'}  />
+                <div className={'flex md:gap-5 gap-5 w-full justify-end pt-10 pr-10'}>
+                    <ChevronLeft onClick={prev} className={'cursor-pointer text-primary-100 md:w-8 w-5 h-8'}  />
+                    <ChevronRight onClick={next} className={'cursor-pointer text-primary-100 md:w-8 w-5 h-8'}  />
+                </div>
             </div>
 
-                {/*</div>*/}
-
-        </section>
+        </motion.section>
     )
 }

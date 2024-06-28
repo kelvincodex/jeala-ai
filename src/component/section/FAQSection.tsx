@@ -1,11 +1,19 @@
 import {DefaultAccordion} from "@/component/accordion/DefaultAccordion.tsx";
 import {FAQData} from "@/util/data/FAQData.ts";
+import { motion } from "framer-motion";
+import {FramerConfigUtil} from "@/util/FramerConfigUtil.ts";
 
 export const FAQSection = ()=>{
     return (
         <section className={'md:py-20 py-18 md:h-[800px] h-[500px] bg-faq'}>
 
-            <div
+            <motion.div
+                variants={FramerConfigUtil.scroll}
+                initial={'initial'}
+                whileInView={'view'}
+                transition={{duration: 1, delay: 0.2}}
+                viewport={{once:true}}
+
                 className={'container-responsive flex flex-col items-center h-full justify-center '}>
                 <h2 className={'font-urbanist font-semibold mb-5'}>
                     Frequently Asked Question
@@ -19,7 +27,7 @@ export const FAQSection = ()=>{
                         })
                     }
                 </div>
-            </div>
+            </motion.div>
         </section>
     )
 }

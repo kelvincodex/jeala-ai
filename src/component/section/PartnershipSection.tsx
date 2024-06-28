@@ -1,17 +1,17 @@
-import {imports} from "@/util/imports.ts";
+import {importsUtil} from "@/util/importsUtil.ts";
 import {SliderContainer} from "@/component/container/SliderContainer.tsx";
 
 export const PartnershipSection = ()=>{
     const logos =[
-        imports.image.upwork,
-        imports.image.upwork,
-        imports.image.upwork,
-        imports.image.meta,
-        imports.image.meta,
-        imports.image.meta,
-        imports.image.attentive,
-        imports.image.attentive,
-        imports.image.attentive,
+        importsUtil.image.upwork,
+        importsUtil.image.upwork,
+        importsUtil.image.upwork,
+        importsUtil.image.meta,
+        importsUtil.image.meta,
+        importsUtil.image.meta,
+        importsUtil.image.attentive,
+        importsUtil.image.attentive,
+        importsUtil.image.attentive,
     ]
 
     const settings = {

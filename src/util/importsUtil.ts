@@ -15,7 +15,7 @@ import humanRelation from '@/assets/icon/human-relation.svg'
 import customiseMark from '@/assets/icon/customise-mark.svg'
 
 
-export const imports = {
+export const importsUtil = {
     image: {upwork,meta,attentive, health, education, engineer, gaming,rocket},
     icon: {preview, humanRelation, customiseMark,starOutline}
 }

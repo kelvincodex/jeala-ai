@@ -1,20 +1,20 @@
-import {imports} from "@/util/imports.ts";
+import {importsUtil} from "@/util/importsUtil.ts";
 
 export const  UseCaseData = [
     {
-        image: imports.image.education,
+        image: importsUtil.image.education,
         title: 'Health'
     },
     {
-        image: imports.image.gaming,
+        image: importsUtil.image.gaming,
         title: 'Education'
     },
     {
-        image: imports.image.engineer,
+        image: importsUtil.image.engineer,
         title: 'Gaming'
     },
     {
-        image: imports.image.health,
+        image: importsUtil.image.health,
         title: 'Engineering'
     },
 ]

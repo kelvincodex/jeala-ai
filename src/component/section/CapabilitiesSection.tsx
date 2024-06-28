@@ -1,5 +1,7 @@
 import {CapabilitiesCard} from "@/component/card/CapabilitiesCard.tsx";
 import {CapabilitiesData} from "@/util/data/CapabilitiesData.ts";
+import { motion } from "framer-motion";
+import {FramerConfigUtil} from "@/util/FramerConfigUtil.ts";
 
 export const CapabilitiesSection=()=>{
 
@@ -13,7 +15,14 @@ export const CapabilitiesSection=()=>{
                     AI Capabilities That <br/> Transform Your Workflow
                 </h2>
 
-                <div className={'grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 grid-flow-row gap-5 md:w-[90%] m-auto'}>
+                <motion.div
+                    variants={FramerConfigUtil.scroll}
+                    initial={'initial'}
+                    whileInView={'view'}
+                    transition={{duration: 1, delay: 0.2}}
+                    viewport={{once:true}}
+
+                    className={'grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 grid-flow-row gap-5 md:w-[90%] m-auto'}>
                     {
                         CapabilitiesData.map((item, index) =>
                         {
@@ -31,7 +40,7 @@ export const CapabilitiesSection=()=>{
                             )
                         })
                     }
-                </div>
+                </motion.div>
             </div>
         </section>
     )

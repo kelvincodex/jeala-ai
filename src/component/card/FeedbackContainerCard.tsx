@@ -1,4 +1,4 @@
-import {imports} from "@/util/imports.ts";
+import {importsUtil} from "@/util/importsUtil.ts";
 
 export const FeedbackContainerCard = ()=>{
     return (
@@ -13,7 +13,7 @@ export const FeedbackContainerCard = ()=>{
                 {
                     Array(5).fill('').map((_, index) => {
                         return (
-                            <imports.icon.starOutline key={index}/>
+                            <importsUtil.icon.starOutline key={index}/>
                         )
                     })
                 }

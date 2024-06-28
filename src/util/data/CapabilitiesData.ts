@@ -1,4 +1,4 @@
-import {imports} from "@/util/imports.ts";
+import {importsUtil} from "@/util/importsUtil.ts";
 
 export const CapabilitiesData =  [
     {
@@ -8,7 +8,7 @@ export const CapabilitiesData =  [
             "                            insights \n across numerous sources. Provide in-depth summaries and critical evaluations\n" +
             "                            to\n" +
             "                            accelerate literature reviews for research projects.",
-        icon: imports.icon.preview
+        icon: importsUtil.icon.preview
     },
     {
         title: 'Data Analysis',
@@ -23,7 +23,7 @@ export const CapabilitiesData =  [
         title: 'Human Resource',
         subTitle: "Develop and deliver customized training programs and materials. Use Jeala AI to recommend" +
             " personalized career development paths and training programs for employees, enhancing job satisfaction and retention.",
-        icon: imports.icon.humanRelation
+        icon: importsUtil.icon.humanRelation
 
     },
     {

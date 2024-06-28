@@ -1,4 +1,4 @@
-import {imports} from "@/util/imports.ts";
+import {importsUtil} from "@/util/importsUtil.ts";
 import {PriceData} from "@/util/data/PriceData.ts";
 import {DefaultButton} from "@/component/button/DefaultButton.tsx";
 
@@ -28,7 +28,7 @@ export const PriceCard = ({item}: PriceCardProps)=>{
                 item.tags?.map((value, index)=>{
                     return (
                         <div key={index} className={'flex items-start  my-2'}>
-                            <imports.icon.customiseMark className={'md:min-w-10 min-w-5 md:min-h-10 min-h-5'}/>
+                            <importsUtil.icon.customiseMark className={'md:min-w-10 min-w-5 md:min-h-10 min-h-5'}/>
                             <p className={'md:text-[18px] text-[14px]'}>
                                 {value}
                             </p>

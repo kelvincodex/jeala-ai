@@ -2,12 +2,28 @@ import {Link} from "react-router-dom";
 import {RoutesConstant} from "@/util/constant/RoutesConstant.ts";
 import MenuIcon from '@/assets/icon/menu-close.svg'
 import CloseIcon from '@/assets/icon/close-md.svg'
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import {animate, stagger} from "framer-motion";
 
 export const DefaultHeader = ()=>{
     const [isClose, setIsClose] = useState<boolean>(false)
+    const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
 
     const hoverClassName = 'hover:border-b hover:text-primary-100 hover:border-b-primary-100  transition-all duration-300'
+
+
+    useEffect(() => {
+        animate(
+            "li",
+            !isClose
+                ? { opacity: 1, scale: 1, filter: "blur(0px)" }
+                : { opacity: 0, scale: 0.3, filter: "blur(20px)" },
+            {
+                duration: 0.2,
+                delay: !isClose ? staggerMenuItems : 0,
+            }
+        );
+    }, []);
     return (
         <nav className={'border-b sticky top-0 bg-white z-50 w-full transition-all duration-300 ease-in-out h-[80px] md:h-[100px] '}>
             <div className={'flex justify-between h-full items-center container-responsive relative'}>
