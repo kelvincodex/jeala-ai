@@ -14,7 +14,7 @@ export const PricingSection = ()=>{
                 transition={{duration: 1, delay: 0.2}}
                 viewport={{once:true}}
                 className={'container-responsive relative flex flex-col items-center justify-center'}>
-                    <img className={'w-[200px] md:w-[400px] h-[200px] md:h-[400px] absolute -top-16 md:-top-40 md:left-40 lg:-top-40 -left-10 lg:-left-16'} src={importsUtil.image.rocket} alt={''}/>
+                    <img className={'w-[200px] md:w-[400px] h-[200px] md:h-[400px] absolute -top-16 md:-top-40 md:-left-32 lg:-top-40 -left-10 lg:-left-16'} src={importsUtil.image.rocket} alt={''}/>
                 <h2 className={'text-center font-semibold mb-10'}>
                     <span className={'text-primary-100'}>Go</span> Premium
                 </h2>

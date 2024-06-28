@@ -19,7 +19,7 @@ export const CapabilitiesSection=()=>{
                     variants={FramerConfigUtil.scroll}
                     initial={'initial'}
                     whileInView={'view'}
-                    transition={{duration: 1, delay: 0}}
+                    transition={{duration: 1, delay: 0.2}}
                     viewport={{once:true}}
 
                     className={'grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 grid-flow-row gap-5 md:w-[90%] m-auto'}>
