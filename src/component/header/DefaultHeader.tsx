@@ -1,15 +1,23 @@
 import {Link} from "react-router-dom";
 import {RoutesConstant} from "@/util/constant/RoutesConstant.ts";
 import MenuIcon from '@/assets/icon/menu-close.svg'
+import CloseIcon from '@/assets/icon/close-md.svg'
+import {useState} from "react";
 
 export const DefaultHeader = ()=>{
+    const [isClose, setIsClose] = useState<boolean>(false)
 
-
+    const hoverClassName = 'hover:border-b hover:text-primary-100 hover:border-b-primary-100  transition-all duration-300'
     return (
         <nav className={'border-b sticky top-0 bg-white z-50 w-full transition-all duration-300 ease-in-out h-[80px] md:h-[100px] '}>
-            <div className={'flex justify-between h-full items-center container-responsive'}>
+            <div className={'flex justify-between h-full items-center container-responsive relative'}>
                 <h2 className={`md:text-[30px] text-[25px]  font-semibold`}><Link to={RoutesConstant.page.home}>Jeala AI</Link></h2>
-                    <MenuIcon className={'w-[30px] h-[30px] cursor-pointer lg:hidden'}/>
+
+                {
+                    !isClose ?
+                        <MenuIcon onClick={()=> setIsClose(!isClose)} className={'w-[30px] h-[30px] cursor-pointer lg:hidden'}/> :
+                        <CloseIcon onClick={()=> setIsClose(!isClose)} className={'w-[30px] h-[30px] cursor-pointer lg:hidden'}/>
+                }
                     <ul className={' items-center gap-5 text-[20px] leading-[32px] md:hidden lg:flex hidden font-poppins font-light'}>
                         <li><Link to={RoutesConstant.page.home}>Overview</Link></li>
                         <li><Link to={RoutesConstant.page.home}>Resources</Link></li>
@@ -19,6 +27,16 @@ export const DefaultHeader = ()=>{
                             Started</Link></li>
                     </ul>
             </div>
+            {/*${toggleMenu ? 'left-0' : '-left-[100%]'}*/}
+            {/*todo mobile*/}
+            <ul className={`lg:hidden text-[20px] pt-10 absolute bg-white top-20 gap-5 pl-14 min-w-full ${isClose ? 'left-0' : '-left-[100%]'} transition-all duration-300  h-svh w-full flex flex-col items-left`}>
+                <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Overview</Link></li>
+                <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Resources</Link></li>
+                <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Pricing</Link></li>
+                <li className={hoverClassName}><Link to={RoutesConstant.page.home}>FAQ</Link></li>
+                <li className={'text-primary-100 underline'}><Link to={RoutesConstant.page.home}>Get
+                    Started</Link></li>
+            </ul>
         </nav>
     )
 }

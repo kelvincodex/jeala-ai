@@ -11,7 +11,7 @@ export const UseCaseSection = ()=>{
                     {
                         UseCaseData.map((item, index) => (
                             <div key={index}
-                                 className="h-[400px]  w-full flex flex-col justify-end relative">
+                                 className="md:h-[400px] h-[250px] w-full flex flex-col justify-end relative">
                                 <img src={item.image} className={'object-cover absolute w-full h-full z-[-]'}
                                      alt={''}/>
                                 <h2 className={'z-[1] text-white-100 font-poppins-b font-bold text-[40px] leading-[55px] ml-3'}>
