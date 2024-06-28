@@ -24,13 +24,13 @@ export const FeedbackSection = ()=>{
     }
 
     return(
-        <section className={'w-full py-20'}>
-            <div className={'flex justify-center mb-16'}>
-                <span className={'text-[60px] font-urbanist font-semibold rotate-12'}>"</span>
-                <h2 className={'text-center font-semibold mt-5 ml-5 bg-clip-text text-transparent bg-gradient-to-r from-primary-150 to-primary-200'}>
+        <section className={'w-full md:py-20 py-10'}>
+            <div className={'flex justify-center md:mb-16 mb-10'}>
+                <span className={'md:text-[60px] text-[40px] font-urbanist font-semibold rotate-12'}>"</span>
+                <h2 className={'text-center font-semibold md:mt-5 mt-2 md:ml-5 ml-2 bg-clip-text text-transparent bg-gradient-to-r from-primary-150 to-primary-200'}>
                     What Our Users Are <br/> Saying
                 </h2>
-                <span className={'text-[60px] font-urbanist font-semibold rotate-12  text-primary-200'}>"</span>
+                <span className={'md:text-[60px] text-[40px] font-urbanist font-semibold rotate-12  text-primary-200'}>"</span>
             </div>
 
             {/*<div className={'overflow-x-auto flex gap-10  items-center justify-center w-full pl-24'}>*/}
@@ -49,9 +49,9 @@ export const FeedbackSection = ()=>{
                         })
                     }
                 </SliderContainer>
-            <div className={'flex gap-10 w-full justify-end pt-10 pr-10'}>
-                <ChevronLeft onClick={prev} className={'cursor-pointer text-primary-100'}  />
-                <ChevronRight onClick={next} className={'cursor-pointer text-primary-100'}  />
+            <div className={'flex md:gap-5 gap-5 w-full justify-end pt-10 pr-10'}>
+                <ChevronLeft onClick={prev} className={'cursor-pointer text-primary-100 md:w-8 w-5 h-8'}  />
+                <ChevronRight onClick={next} className={'cursor-pointer text-primary-100 md:w-8 w-5 h-8'}  />
             </div>
 
                 {/*</div>*/}

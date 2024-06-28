@@ -11,23 +11,23 @@ export const PriceCard = ({item}: PriceCardProps)=>{
     return (
         <div className={'border min-h-[500px] flex flex-col rounded-lg  p-7 gap-0'}>
             <div className={''}>
-                <h2 className={'text-[28px]   font-poppins-bold leading-[31.5px] capitalize'}>
+                <h2 className={'md:text-[28px] text-[20px] font-poppins-bold md:leading-[31px] leading-[25px] capitalize'}>
                     {item.title}
                 </h2>
-                <h2 className={'text-primary-100 font-lexend font-normal leading-[51.84px] text-[28px] capitalize'}>
+                <h2 className={'text-primary-100 font-lexend font-normal md:leading-[45px] leading-[35px] md:text-[28px] text-[20px] capitalize'}>
                     USD ${item.price}
                 </h2>
             </div>
 
-            <Button size={'medium'} className={'!py-4 !my-8'}
+            <Button  className={'md:!py-4 !py-2 md:!my-8 !my-5 !text-[28px] !font-poppins'}
                     variant="contained">Current plan</Button>
 
             {
                 item.tags?.map((value, index)=>{
                     return (
                         <div key={index} className={'flex items-start  my-2'}>
-                            <imports.icon.customiseMark className={'min-w-10 min-h-10'}/>
-                            <p className={'text-[18px]'}>
+                            <imports.icon.customiseMark className={'md:min-w-10 min-w-5 md:min-h-10 min-h-5'}/>
+                            <p className={'md:text-[18px] text-[14px]'}>
                                 {value}
                             </p>
                         </div>

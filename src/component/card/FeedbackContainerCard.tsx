@@ -2,11 +2,11 @@ import {imports} from "@/util/imports.ts";
 
 export const FeedbackContainerCard = ()=>{
     return (
-        <div  className={'h-[400px] border px-8 py-10 mx-4'}>
-            <h2 className={'text-[24px] font-lexend font-normal leading-[29px]'}>
+        <div  className={'md:h-[400px] h-[300px] border px-8 py-10 mx-4 rounded-xl'}>
+            <h2 className={'md:text-[24px] text-[18px] font-lexend font-normal md:leading-[29px] leading-[25px] mb-2'}>
                 Head of Research at Datacorp
             </h2>
-            <p>
+            <p className={'font-light md:text-[24px] text-[18px] md:leading-[29px] leading-[25px]'}>
                 Dr, Morah Thankgod
             </p>
             <div className={'flex'}>
@@ -19,11 +19,11 @@ export const FeedbackContainerCard = ()=>{
                 }
             </div>
 
-            <h2 className={'text-[18px] font-lexend font-light leading-[24px] text-primary-50 my-5'}>
+            <h2 className={'md:text-[18px] text-[14px] font-lexend font-light md:leading-[24px] leading-[20px] text-primary-50 md:my-5 my-3'}>
                 Data Analytics Transformed
             </h2>
 
-            <p className={'text-[18px] font-lexend font-light '}>
+            <p className={'md:text-[18px] text-[14px] font-lexend font-light leading-6'}>
                 Our AI solutions have revolutionized our data analysis capabilities, enabling
                 deeper
                 insights

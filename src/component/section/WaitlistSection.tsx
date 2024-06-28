@@ -2,9 +2,9 @@ import {Button, Input} from "@mui/material";
 
 export const WaitlistSection = ()=>{
     return (
-        <section className={' bg-primary-100 py-24'}>
+        <section className={' bg-primary-100 md:py-24 py-20'}>
             <div className={'flex flex-col items-center container-responsive'}>
-                <h2 className={'text-center font-urbanist font-semibold mb-20 text-white capitalize text-[60px] '}>
+                <h2 className={'text-center font-urbanist font-semibold mb-20 text-white capitalize  '}>
                     secure your spot on <br/> the Jeala AI waitlist!
                 </h2>
 
