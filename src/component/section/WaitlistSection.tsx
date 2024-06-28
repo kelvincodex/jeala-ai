@@ -9,9 +9,9 @@ export const WaitlistSection = ()=>{
                 </h2>
 
                 <div
-                    className={'w-full md:w-[70%] md:h-[90px] h-[80px] flex justify-between items-center bg-white  px-10 overflow-hidden rounded-[20px] border gap-10'}>
-                    <input  placeholder={'Email Address'} className={'flex-grow h-full bg-transparent outline-0 placeholder:text-black'} />
-                    <Button className={'!py-5 !px-10  rounded text-[28px]'} variant={'contained'}>Join waitlist</Button>
+                    className={'w-full md:w-[70%] md:h-[90px] h-[70px] flex justify-between items-center bg-white px-5 md:px-10 overflow-hidden rounded-[20px] border gap-10'}>
+                    <input  placeholder={'Email Address'} className={'flex-grow h-full  bg-transparent  outline-0 placeholder:text-black'} />
+                    <Button className={'md:!py-5 !py-2 md:!px-10 !px-5  rounded !text-[10px] md:!text-[18px]'} variant={'contained'}>Join waitlist</Button>
                 </div>
             </div>
         </section>
