@@ -6,7 +6,7 @@ export const DefaultFooter = () => {
     return(
         <footer className={'py-16 bg-black-200'}>
             <div className={'container-responsive flex flex-col items-center '}>
-                <div className={'grid md:grid-cols-4 grid-cols-2 md:gap-40 gap-10'}>
+                <div className={'grid md:grid-cols-2 lg:grid-cols-4  grid-cols-2 md:gap-20 lg:gap-40 gap-10'}>
                     {
                         FooterData.map((value, index) => (
                             <ul key={index} className={'font-[200] font-poppins text-white'}>

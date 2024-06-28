@@ -19,7 +19,7 @@ export const WaitlistSection = ()=>{
                 </h2>
 
                 <div
-                    className={'w-full md:w-[70%] md:h-[90px] h-[70px] flex justify-between items-center  bg-white  md:px-10 overflow-hidden rounded-[20px] border gap-3'}>
+                    className={'w-full md:w-full lg:w-[70%] md:h-[90px] h-[70px] flex justify-between items-center  bg-white  md:px-10 overflow-hidden rounded-[20px] border gap-3'}>
                     <BaseInput leftIcon={EmailIcon} className={'flex-grow h-full  bg-transparent placeholder:text-primary-100'} placeholder={'Email Address'} />
                     {/*<Button className={'md:!py-5 !py-2 md:!px-10 !px-5  rounded !text-[10px] md:!text-[18px]'} variant={'contained'}></Button>*/}
                     <DefaultButton  className={'md:btn-lg btn-md'}>Join waitlist</DefaultButton>
