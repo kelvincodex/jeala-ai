@@ -14,7 +14,7 @@ export const HeroSection = () => {
     return (
         <section className={'w-full'}>
                 <div
-                    className={'flex flex-col w-full justify-center  min-h-[calc(100vh-100px)] py-20 gap-20'}
+                    className={'flex flex-col w-full justify-center min-h-[calc(100vh-70px)] md:min-h-[calc(100vh-100px)] py-10 md:py-20 gap-10 md:gap-20'}
                 >
                     <div
                         className={''}>
@@ -23,7 +23,7 @@ export const HeroSection = () => {
                             solutions <br/> with Jeala AI
                         </h2>
 
-                        <p className={`text-[28px]  leading-[40px]  text-center font-urbanist mt-10  font-light`}>
+                        <p className={`md:text-[28px] text-[20px]  md:leading-[40px] leading-[30    px] text-center font-urbanist mt-10  font-light`}>
                             Whether you're streamlining business operations, enhancing customer <br/> experiences,
                             or
                             exploring
@@ -32,7 +32,7 @@ export const HeroSection = () => {
                         </p>
 
                     </div>
-                    <SliderContainer containerClassName={'mt-10'} settings={settings}>
+                    <SliderContainer containerClassName={'md:mt-10'} settings={settings}>
                         {heroConfigData.map((item, i) => (
                             <div key={i}>
                                 <HeroCard item={item} />

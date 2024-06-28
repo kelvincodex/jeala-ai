@@ -6,9 +6,9 @@ export const DefaultHeader = ()=>{
 
 
     return (
-        <nav className={'border-b sticky top-0 bg-white z-50 w-full transition-all duration-300 ease-in-out h-[100px]'}>
-            <div className={'flex justify-between items-center container-responsive'}>
-                <h2 className={`text-[30px]  font-semibold`}><Link to={RoutesConstant.page.home}>Jeala AI</Link></h2>
+        <nav className={'border-b sticky top-0 bg-white z-50 w-full transition-all duration-300 ease-in-out h-[80px] md:h-[100px] '}>
+            <div className={'flex justify-between h-full items-center container-responsive'}>
+                <h2 className={`md:text-[30px] text-[25px]  font-semibold`}><Link to={RoutesConstant.page.home}>Jeala AI</Link></h2>
                     <MenuIcon className={'w-[30px] h-[30px] cursor-pointer lg:hidden'}/>
                     <ul className={' items-center gap-5 text-[20px] leading-[32px] md:hidden lg:flex hidden font-poppins font-light'}>
                         <li><Link to={RoutesConstant.page.home}>Overview</Link></li>

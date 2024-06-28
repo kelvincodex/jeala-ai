@@ -59,5 +59,5 @@ h1, h2, h3, h4, h5, h6{
 }
 
 p{
-  @apply font-lexend font-light text-[20px] text-black-200 leading-[35px];
+  @apply font-lexend font-light md:text-[20px] text-[18px] text-black-200 md:leading-[35px] leading-[25px];
 }

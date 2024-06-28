@@ -27,7 +27,7 @@ export const FeedbackSection = ()=>{
         <section className={'w-full py-20'}>
             <div className={'flex justify-center mb-16'}>
                 <span className={'text-[60px] font-urbanist font-semibold rotate-12'}>"</span>
-                <h2 className={'text-center leading-[70px] mt-5 ml-5 bg-clip-text text-transparent bg-gradient-to-r from-primary-150 to-primary-200 text-[60px] font-urbanist font-semibold'}>
+                <h2 className={'text-center font-semibold mt-5 ml-5 bg-clip-text text-transparent bg-gradient-to-r from-primary-150 to-primary-200'}>
                     What Our Users Are <br/> Saying
                 </h2>
                 <span className={'text-[60px] font-urbanist font-semibold rotate-12  text-primary-200'}>"</span>
