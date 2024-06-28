@@ -60,7 +60,7 @@ export const PartnershipSection = ()=>{
         ]
     }
     return (
-        <section className={'w-full'}>
+        <section className={'w-full py-10 md:py-24'}>
             <SliderContainer settings={settings}>
                 {
                     logos.map((logo, index)=> (
