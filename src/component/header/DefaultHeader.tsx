@@ -19,11 +19,11 @@ export const DefaultHeader = ()=>{
                         <CloseIcon onClick={()=> setIsClose(!isClose)} className={'w-[30px] h-[30px] cursor-pointer lg:hidden'}/>
                 }
                     <ul className={' items-center gap-5 text-[20px] leading-[32px] md:hidden lg:flex hidden font-poppins font-light'}>
-                        <li><Link to={RoutesConstant.page.home}>Overview</Link></li>
-                        <li><Link to={RoutesConstant.page.home}>Resources</Link></li>
-                        <li><Link to={RoutesConstant.page.home}>Pricing</Link></li>
-                        <li><Link to={RoutesConstant.page.home}>FAQ</Link></li>
-                        <li className={'text-primary-100 underline'}><Link to={RoutesConstant.page.home}>Get
+                        <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Overview</Link></li>
+                        <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Resources</Link></li>
+                        <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Pricing</Link></li>
+                        <li className={hoverClassName}><Link to={RoutesConstant.page.home}>FAQ</Link></li>
+                        <li className={'text-primary-100 border-b hover:text-deep-blue-100'}><Link to={RoutesConstant.page.home}>Get
                             Started</Link></li>
                     </ul>
             </div>
@@ -34,7 +34,7 @@ export const DefaultHeader = ()=>{
                 <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Resources</Link></li>
                 <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Pricing</Link></li>
                 <li className={hoverClassName}><Link to={RoutesConstant.page.home}>FAQ</Link></li>
-                <li className={'text-primary-100 underline'}><Link to={RoutesConstant.page.home}>Get
+                <li className={'text-primary-100'}><Link to={RoutesConstant.page.home}>Get
                     Started</Link></li>
             </ul>
         </nav>
