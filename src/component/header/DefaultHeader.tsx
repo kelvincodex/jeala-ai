@@ -45,7 +45,7 @@ export const DefaultHeader = ()=>{
             </div>
             {/*${toggleMenu ? 'left-0' : '-left-[100%]'}*/}
             {/*todo mobile*/}
-            <ul className={`lg:hidden mobile-lg text-[20px] pt-10 absolute bg-white top-20 gap-5 pl-14 min-w-full ${isClose ? 'left-0' : '-left-[100%]'} transition-all duration-300  h-svh w-full flex flex-col items-left`}>
+            <ul className={`lg:hidden mobile-lg text-[20px] pt-10 absolute bg-white top-20 gap-5 pl-14 min-w-full ${isClose ? 'left-0' : '-left-[100%]'} transition-all duration-150  h-svh w-full flex flex-col items-left`}>
                 <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Overview</Link></li>
                 <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Resources</Link></li>
                 <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Pricing</Link></li>
