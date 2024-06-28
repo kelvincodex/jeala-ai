@@ -15,9 +15,9 @@ export const HeroSection = () => {
     }
 
     return (
-        <section className={'w-full bg-hero'}>
+        <section className={'w-full'}>
                 <div
-                    className={'flex flex-col w-full justify-center min-h-[calc(100vh-70px)] md:min-h-[calc(100vh-100px)] relative py-10 md:py-20 gap-10 md:gap-20'}
+                    className={'flex flex-col bg-hero w-full justify-center min-h-[calc(100svh-70px)] overflow-hidden md:min-h-[calc(100vh-100px)] relative py-10 md:py-20 gap-10 md:gap-20'}
                 >
                     <motion.div
                         variants={FramerConfigUtil.scroll}

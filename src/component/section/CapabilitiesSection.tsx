@@ -4,7 +4,7 @@ import {CapabilitiesData} from "@/util/data/CapabilitiesData.ts";
 export const CapabilitiesSection=()=>{
 
     return (
-        <section className={'w-full md:py-24 py-10 md:mt-32 mt-16 bg-capability'}>
+        <section className={'w-full md:py-24 py-10  bg-capability'}>
             <div className={'container-responsive flex flex-col md:gap-20 gap-10 items-center'}>
                 <h2 className={`text-center hidden md:block`}>
                     AI Capabilities That Transform <br/> Your Workflow
