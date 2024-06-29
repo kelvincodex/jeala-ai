@@ -1,7 +1,7 @@
 import React, { InputHTMLAttributes, SVGProps} from "react";
 
 interface BaseInputProps  {
-    leftIcon: React.FC<SVGProps<any>>,
+    leftIcon: React.FC<SVGProps<SVGSVGElement>>,
     className?: string,
     iconSize: string
 }

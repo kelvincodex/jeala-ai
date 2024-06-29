@@ -7,6 +7,15 @@ declare module "*.svg" {
     const ReactComponent: React.FunctionComponent<
         React.SVGProps<SVGSVGElement> & { title?: string }
     >;
-
     export default ReactComponent;
+}
+
+import 'quill';
+declare module 'quill' {
+    interface Quill {
+        history: {
+            undo: () => void;
+            redo: () => void;
+        };
+    }
 }

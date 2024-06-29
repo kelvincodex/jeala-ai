@@ -36,7 +36,7 @@ export const DefaultHeader = ()=>{
                         <CloseIcon onClick={()=> setIsClose(!isClose)} className={'w-[30px] h-[30px] cursor-pointer block lg:hidden'}/>
                 }
                     <ul className={' items-center gap-5 md:text-[20px] text-[18px] leading-[32px]  lg:flex hidden font-poppins font-light'}>
-                        <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Overview</Link></li>
+                        <li className={hoverClassName}><Link to={RoutesConstant.dashboard.overview}>Overview</Link></li>
                         <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Resources</Link></li>
                         <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Pricing</Link></li>
                         <li className={hoverClassName}><Link to={RoutesConstant.page.home}>FAQ</Link></li>
@@ -47,7 +47,7 @@ export const DefaultHeader = ()=>{
             {/*${toggleMenu ? 'left-0' : '-left-[100%]'}*/}
             {/*todo mobile*/}
             <ul className={`lg:hidden text-[20px] pt-10 absolute bg-white top-20 gap-5 pl-14 min-w-full ${isClose ? 'left-0' : '-left-[100%]'} transition-left duration-150  h-svh w-full flex flex-col items-left`}>
-                <li  className={`${hoverClassName} mobile-lg`}><Link to={RoutesConstant.page.home}>Overview</Link></li>
+                <li  className={`${hoverClassName} mobile-lg`}><Link to={RoutesConstant.dashboard.overview}>Overview</Link></li>
                 <li className={`${hoverClassName} mobile-lg`}><Link to={RoutesConstant.page.home}>Resources</Link></li>
                 <li className={`${hoverClassName} mobile-lg`}><Link to={RoutesConstant.page.home}>Pricing</Link></li>
                 <li className={`${hoverClassName} mobile-lg`}><Link to={RoutesConstant.page.home}>FAQ</Link></li>

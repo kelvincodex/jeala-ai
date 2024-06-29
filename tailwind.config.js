@@ -3,6 +3,8 @@ import daisyui from "daisyui";
 /** @type {import('tailwindcss').Config} */
 import defaultTheme from "tailwindcss/defaultTheme";
 
+import generated from "@tailwindcss/typography";
+
 export default {
   content: [
     "./index.html",
@@ -41,7 +43,7 @@ export default {
       }
     },
   },
-  plugins: [daisyui],
+  plugins: [generated, daisyui],
   daisyui: {
     themes: false, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
     darkTheme: "light", // name of one of the included themes for dark mode

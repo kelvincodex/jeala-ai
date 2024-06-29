@@ -5,5 +5,8 @@ export const RoutesConstant = {
     page: {
         notFound: '*',
         home: '/',
+    },
+    dashboard: {
+        overview: '/overview'
     }
 }
