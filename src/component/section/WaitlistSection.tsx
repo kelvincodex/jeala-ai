@@ -1,6 +1,7 @@
 import {DefaultButton} from "@/component/button/DefaultButton.tsx";
 import {BaseInput} from "@/component/input/BaseInput.tsx";
 import EmailIcon from "@/assets/icon/light-email.svg"
+
 export const WaitlistSection = ()=>{
     return (
         <section className={' bg-primary-100 md:py-24 py-20'}>
