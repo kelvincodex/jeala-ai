@@ -12,6 +12,9 @@ export const DefaultHeader = ()=>{
 
     const hoverClassName = 'hover:border-b hover:text-primary-100 hover:border-b-primary-100  transition-all duration-300'
 
+    function night(){
+
+    }
 
     useEffect(() => {
         animate(
@@ -43,18 +46,21 @@ export const DefaultHeader = ()=>{
                         <li className={hoverClassName}><Link to={RoutesConstant.page.home}>FAQ</Link></li>
                         <li className={'text-primary-100 border-b hover:text-deep-blue-100'}><Link to={RoutesConstant.page.home}>Get
                             Started</Link></li>
-                        <li><MoonIcon className={'w-[40px] h-[40px]'} /></li>
+                        <li><MoonIcon onClick={night} className={'w-[40px] h-[40px]'} /></li>
                     </ul>
             </div>
             {/*${toggleMenu ? 'left-0' : '-left-[100%]'}*/}
             {/*todo mobile*/}
             <ul className={`lg:hidden text-[20px] pt-10 absolute bg-white top-20 gap-5 pl-14 min-w-full ${isClose ? 'left-0' : '-left-[100%]'} transition-left duration-150  h-svh w-full flex flex-col items-left`}>
-                <li  className={`${hoverClassName} mobile-lg`}><Link to={RoutesConstant.dashboard.overview}>Overview</Link></li>
+                <li className={`${hoverClassName} mobile-lg`}><Link
+                    to={RoutesConstant.dashboard.overview}>Overview</Link></li>
                 <li className={`${hoverClassName} mobile-lg`}><Link to={RoutesConstant.page.home}>Resources</Link></li>
                 <li className={`${hoverClassName} mobile-lg`}><Link to={RoutesConstant.page.home}>Pricing</Link></li>
                 <li className={`${hoverClassName} mobile-lg`}><Link to={RoutesConstant.page.home}>FAQ</Link></li>
                 <li className={'text-primary-100 mobile-lg'}><Link to={RoutesConstant.page.home}>Get
                     Started</Link></li>
+                <li><MoonIcon onClick={night} className={'w-[30px] h-[30px]'}/></li>
+
             </ul>
         </nav>
     )
