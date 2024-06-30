@@ -22,7 +22,7 @@ export const UseCaseSection = ()=>{
                                 variants={FramerConfigUtil.stagChildren}
                                 key={index}
                                  className="md:h-[400px] h-[250px] w-full flex flex-col justify-end relative rounded-xl overflow-hidden">
-                                <img src={item.image} className={'object-cover  absolute w-full h-full z-0  duration-300 hover:scale-[]'}
+                                <img src={item.image} className={'object-cover  absolute w-full h-full z-0  duration-300 hover:scale-[1.1]'}
                                      alt={''}/>
                                 <h2 className={'z-10 text-white-100 font-poppins-b font-bold text-[40px] leading-[55px] ml-3'}>
                                     {item.title}

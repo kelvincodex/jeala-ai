@@ -5,6 +5,7 @@ import CloseIcon from '@/assets/icon/close-md.svg'
 import MoonIcon from '@/assets/icon/moon.svg'
 import {useEffect, useState} from "react";
 import {animate, stagger} from "framer-motion";
+import {importsUtil} from "@/util/importsUtil.ts";
 
 export const DefaultHeader = ()=>{
     const [isClose, setIsClose] = useState<boolean>(false)
@@ -32,21 +33,28 @@ export const DefaultHeader = ()=>{
     return (
         <nav className={'shadow sticky top-0 bg-white z-50 w-full transition-all duration-300 ease-in-out h-[80px] md:h-[100px] '}>
             <div className={'flex justify-between h-full items-center container-responsive relative'}>
-                <h2 className={`md:text-[30px] text-[25px]  font-semibold`}><Link to={RoutesConstant.page.home}>Jeala AI</Link></h2>
+                <img
+                    className={'md:w-[200px] lg:w-[250px] w-[100px] md:h-[100px] lg:h-[100px] h-[200px] absolute top-0 left-24 lg:left-0 md:left-0 object-top'}
+                    src={importsUtil.image.heroTop} alt={''}/>
+                <h2 className={`md:text-[30px] text-[25px]  font-semibold`}><Link to={RoutesConstant.page.home}>Jeala
+                    AI</Link></h2>
                 {
                     !isClose ?
-                        <MenuIcon onClick={()=> setIsClose(!isClose)} className={'w-[30px] h-[30px] cursor-pointer block lg:hidden'}/> :
-                        <CloseIcon onClick={()=> setIsClose(!isClose)} className={'w-[30px] h-[30px] cursor-pointer block lg:hidden'}/>
+                        <MenuIcon onClick={() => setIsClose(!isClose)}
+                                  className={'w-[30px] h-[30px] cursor-pointer block lg:hidden'}/> :
+                        <CloseIcon onClick={() => setIsClose(!isClose)}
+                                   className={'w-[30px] h-[30px] cursor-pointer block lg:hidden'}/>
                 }
-                    <ul className={' items-center gap-5 md:text-[20px] text-[18px] leading-[32px]  lg:flex hidden font-poppins font-light'}>
-                        <li className={hoverClassName}><Link to={RoutesConstant.dashboard.overview}>Overview</Link></li>
-                        <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Resources</Link></li>
-                        <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Pricing</Link></li>
-                        <li className={hoverClassName}><Link to={RoutesConstant.page.home}>FAQ</Link></li>
-                        <li className={'text-primary-100 border-b hover:text-deep-blue-100'}><Link to={RoutesConstant.page.home}>Get
-                            Started</Link></li>
-                        <li><MoonIcon onClick={night} className={'w-[40px] h-[40px]'} /></li>
-                    </ul>
+                <ul className={' items-center gap-5 md:text-[20px] text-[18px] leading-[32px]  lg:flex hidden font-poppins font-light'}>
+                    <li className={hoverClassName}><Link to={RoutesConstant.dashboard.overview}>Overview</Link></li>
+                    <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Resources</Link></li>
+                    <li className={hoverClassName}><Link to={RoutesConstant.page.home}>Pricing</Link></li>
+                    <li className={hoverClassName}><Link to={RoutesConstant.page.home}>FAQ</Link></li>
+                    <li className={'text-primary-100 border-b hover:text-deep-blue-100'}><Link
+                        to={RoutesConstant.page.home}>Get
+                        Started</Link></li>
+                    <li><MoonIcon onClick={night} className={'w-[40px] h-[40px]'}/></li>
+                </ul>
             </div>
             {/*todo mobile*/}
             <ul className={`lg:hidden text-[20px] pt-10 absolute bg-white top-20 gap-5 pl-14 min-w-full ${isClose ? 'left-0' : '-left-[100%]'} transition-left duration-150  h-svh w-full flex flex-col items-left`}>
