@@ -31,10 +31,10 @@ export const DefaultHeader = ()=>{
     }, [isClose, staggerMenuItems]);
 
     return (
-        <nav className={'shadow sticky top-0 bg-white z-50 w-full transition-all duration-300 ease-in-out h-[80px] md:h-[100px] '}>
+        <nav className={'shadow sticky top-0 bg-white z-50 w-full transition-all duration-300 ease-in-out h-[80px] md:h-[100px] overflow-hidden'}>
             <div className={'flex justify-between h-full items-center container-responsive relative'}>
                 <img
-                    className={'md:w-[200px] lg:w-[250px] w-[100px] md:h-[100px] lg:h-[100px] h-[200px] absolute top-0 left-24 lg:left-0 md:left-0 object-top'}
+                    className={'md:w-[300px] w-[100px] h-[200px] absolute object-bottom bottom-0 md:-bottom-[100px]'}
                     src={importsUtil.image.heroTop} alt={''}/>
                 <h2 className={`md:text-[30px] text-[25px]  font-semibold`}><Link to={RoutesConstant.page.home}>Jeala
                     AI</Link></h2>

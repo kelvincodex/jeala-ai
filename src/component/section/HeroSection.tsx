@@ -19,8 +19,12 @@ export const HeroSection = () => {
             <div
                 className={'flex flex-col bg-hero w-full justify-center min-h-[calc(100svh-70px)] overflow-hidden md:min-h-[calc(100vh-100px)] relative py-10 md:py-20 gap-10 md:gap-20'}
             >
+                {/*<img*/}
+                {/*    className={'md:w-[200px] lg:w-[250px] w-[100px] md:h-[100px] lg:h-[100px] h-[200px] absolute top-0 left-24 md:-top-[30px] lg:left-[190px] md:left-0  object-bottom'}*/}
+                {/*    src={importsUtil.image.heroTop} alt={''}/>*/}
+
                 <img
-                    className={'md:w-[200px] lg:w-[250px] w-[100px] md:h-[100px] lg:h-[100px] h-[200px] absolute top-0 left-24 lg:left-[50px] md:left-0  object-bottom'}
+                    className={'md:w-[300px] w-[100px] h-[200px] absolute object-bottom -top-[50px] md:left-52 '}
                     src={importsUtil.image.heroTop} alt={''}/>
 
                 <motion.div
