@@ -1,6 +1,8 @@
 import {importsUtil} from "@/util/importsUtil.ts";
 import {PriceData} from "@/util/data/PriceData.ts";
 import {DefaultButton} from "@/component/button/DefaultButton.tsx";
+import { motion } from "framer-motion";
+import {FramerConfigUtil} from "@/util/FramerConfigUtil.ts";
 
 interface PriceCardProps {
     item: PriceData
@@ -9,7 +11,9 @@ interface PriceCardProps {
 export const PriceCard = ({item}: PriceCardProps)=>{
 
     return (
-        <div className={'border min-h-[500px]  flex flex-col rounded-lg  p-7 gap-0'}>
+        <motion.div
+            variants={FramerConfigUtil.stagChildren}
+            className={'border min-h-[500px]  flex flex-col rounded-lg  p-7 gap-0'}>
             <div className={''}>
                 <h2 className={'md:text-[28px] text-[23px] font-poppins-medium  md:leading-[31px] leading-[25px] capitalize'}>
                     {item.title}
@@ -38,6 +42,6 @@ export const PriceCard = ({item}: PriceCardProps)=>{
             }
 
 
-        </div>
+        </motion.div>
     )
 }

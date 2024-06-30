@@ -8,7 +8,7 @@ export const Router = () => {
               {
                   routes.map((value, index)=>{
                       return (
-                          <Route key={index}  path={value.path} element={<value.component></value.component>} {...value.options} />
+                          <Route key={index}  path={value.path} element={<value.component></value.component>}  {...value.options} />
                       )
                   })
               }

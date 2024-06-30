@@ -20,12 +20,14 @@ export const HeroSection = () => {
                     className={'flex flex-col bg-hero w-full justify-center min-h-[calc(100svh-70px)] overflow-hidden md:min-h-[calc(100vh-100px)] relative py-10 md:py-20 gap-10 md:gap-20'}
                 >
                     <motion.div
-                        variants={FramerConfigUtil.scroll}
+                        variants={FramerConfigUtil.fadeDown}
                         initial={'hidden'}
                         whileInView={'show'}
-                        transition={{duration: 1, delay: 0}}
+                        transition={{duration: 1, delay: 0.2, ease:'easeOut'}}
                         viewport={{once:true}}
-                        className={''}>
+
+                        className={''}
+                    >
                         <h2 className={`text-center capitalize  font-semibold`}>
                             <span className={'text-primary-100'}>Discover and explore</span> The <br/> Future of intelligent
                             solutions <br/> with Jeala AI
@@ -43,7 +45,12 @@ export const HeroSection = () => {
 
                     <img  className={'md:w-[200px] lg:w-[250px] w-[100px] md:h-[60px] lg:h-[60px] h-[200px] absolute top-0 left-24 lg:left-24 md:left-0  object-bottom'} src={importsUtil.image.heroTop} alt={''}/>
                     <img  className={'md:w-[200px] lg:w-[300px] w-[100px] md:h-[400px]  lg:h-[600px] h-[200px] absolute top-0 right-0'} src={importsUtil.image.heroLeft} alt={''}/>
-                    <div
+
+                    <motion.div
+                        variants={FramerConfigUtil.stagParent}
+                        initial={'hidden'}
+                        whileInView={'show'}
+
                         className={'md:mt-10 w-full'}>
                         <SliderContainer containerClassName={'md:mt-10 w-full'} settings={settings}>
                             {heroConfigData.map((item, i) => (
@@ -54,7 +61,7 @@ export const HeroSection = () => {
                                 </div>
                             ))}
                         </SliderContainer>
-                    </div>
+                    </motion.div>
 
                 </div>
         </section>

@@ -1,12 +1,10 @@
-import {Router} from "@/router";
-import  "@/assets/style/index.scss"
-import { useEffect} from "react";
-import { Provider } from "react-redux";
+import  { useEffect} from "react";
+import {Provider} from "react-redux";
 import {persistor, store} from "@/store";
-import {PersistGate} from "redux-persist/integration/react";
-import { MotionConfig } from "framer-motion";
+import { PersistGate } from "redux-persist/integration/react";
+import {Router} from "@/router";
 
-
+import  "@/assets/style/index.scss"
 
 export const AppLayout = () => {
 
@@ -15,16 +13,15 @@ export const AppLayout = () => {
     preloader?.classList.replace('display-none', 'display')
     setTimeout(()=>{
       preloader?.classList.replace('display', 'display-none')
-    }, 800);
+    }, 100);
   }, []);
 
-  return(
+
+  return (
       <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-            <MotionConfig transition={{ duration: 1000 }}>
-                 <Router />
-            </MotionConfig>
-        </PersistGate>
+          <PersistGate loading={null} persistor={persistor}>
+            <Router />
+          </PersistGate>
       </Provider>
   )
 }

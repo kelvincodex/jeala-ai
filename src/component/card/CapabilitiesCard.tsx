@@ -12,8 +12,7 @@ export const CapabilitiesCard = ({ item, containerClassName}: CapabilitiesCardPr
 
     return (
         <motion.div
-            variants={FramerConfigUtil.item2}
-            whileHover={'show'}
+            variants={FramerConfigUtil.stagChildren}
 
             className={`bg-white border rounded-lg flex flex-col  justify-center md:px-20 px-10 py-10 gap-5 ${containerClassName}`}>
             {

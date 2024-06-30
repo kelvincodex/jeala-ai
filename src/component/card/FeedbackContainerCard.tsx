@@ -1,8 +1,12 @@
 import {importsUtil} from "@/util/importsUtil.ts";
+import { motion } from "framer-motion";
+import {FramerConfigUtil} from "@/util/FramerConfigUtil.ts";
 
 export const FeedbackContainerCard = ()=>{
     return (
-        <div  className={'md:h-[400px] h-[300px] border px-8 py-10 mx-4 rounded-xl'}>
+        <motion.div
+            variants={FramerConfigUtil.stagChildren}
+            className={'md:h-[400px] h-[300px] border px-8 py-10 mx-4 rounded-xl'}>
             <h2 className={'md:text-[24px] text-[18px] font-lexend font-normal md:leading-[29px] leading-[25px] mb-2'}>
                 Head of Research at Datacorp
             </h2>
@@ -32,6 +36,6 @@ export const FeedbackContainerCard = ()=>{
                 analytics.
             </p>
 
-        </div>
+        </motion.div>
     )
 }

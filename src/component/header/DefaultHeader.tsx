@@ -2,6 +2,7 @@ import {Link} from "react-router-dom";
 import {RoutesConstant} from "@/util/constant/RoutesConstant.ts";
 import MenuIcon from '@/assets/icon/menu-close.svg'
 import CloseIcon from '@/assets/icon/close-md.svg'
+import MoonIcon from '@/assets/icon/moon.svg'
 import {useEffect, useState} from "react";
 import {animate, stagger} from "framer-motion";
 
@@ -42,6 +43,7 @@ export const DefaultHeader = ()=>{
                         <li className={hoverClassName}><Link to={RoutesConstant.page.home}>FAQ</Link></li>
                         <li className={'text-primary-100 border-b hover:text-deep-blue-100'}><Link to={RoutesConstant.page.home}>Get
                             Started</Link></li>
+                        <li><MoonIcon className={'w-[40px] h-[40px]'} /></li>
                     </ul>
             </div>
             {/*${toggleMenu ? 'left-0' : '-left-[100%]'}*/}
