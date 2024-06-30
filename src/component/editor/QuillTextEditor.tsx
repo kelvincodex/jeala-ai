@@ -1,10 +1,6 @@
 import QuillEditor, {Quill, ReactQuillProps} from "react-quill";
-import "react-quill/dist/quill.snow.css";
 import {useCallback, useMemo, useRef} from "react";
-
-
-
-
+import "react-quill/dist/quill.snow.css";
 
 export const QuillTextEditor = ({...props}: ReactQuillProps)=>{
     const quillRef = useRef<QuillEditor>(null);
