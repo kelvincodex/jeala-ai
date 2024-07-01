@@ -70,7 +70,7 @@ export const DefaultHeader = ()=>{
                     <li className={'text-primary-100 border-b hover:text-deep-blue-100'}><Link
                         to={RoutesConstant.page.home}>Get
                         Started</Link></li>
-                    <li><MoonIcon onClick={night} className={'w-[40px] h-[40px]'}/></li>
+                    <li><MoonIcon onClick={night} className={'w-[30px] h-[30px]'}/></li>
                 </ul>
             </motion.div>
 
