@@ -15,7 +15,7 @@ export const HeroSection = () => {
     }
 
     return (
-        <section id={'overview'} className={'w-full border'}>
+        <section id={'overview'} className={'w-full'}>
             <div className={'container-responsive relative border  -top-10 -left-16'}>
                 <img
                     className={'md:w-[300px] w-[100px] h-[200px] absolute object-bottom '}
