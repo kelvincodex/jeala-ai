@@ -1,6 +1,6 @@
 export const FooterData = [
     {
-        title: 'Jeala Ai',
+        title: 'Jeala AI',
         subitems:[
             {
                 icon: null,
