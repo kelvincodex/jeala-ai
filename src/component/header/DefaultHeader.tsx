@@ -64,7 +64,7 @@ export const DefaultHeader = ()=>{
                     <li className={hoverClassName}><a href={'/#useCase' }>Use Case</a></li>
                     <li className={hoverClassName}><a href={'/#pricing'}>Pricing</a></li>
                     <li className={hoverClassName}><a href={'/#waitlist'}>Waitlist</a></li>
-                    <li className={hoverClassName}><a href={'/#faq'}>FAQ</a></li>
+                    <li className={hoverClassName}><a href={'/#faq'}>FAQs</a></li>
                     <li className={'text-primary-100 border-b hover:text-deep-blue-100'}><Link
                         to={RoutesConstant.page.home}>Get
                         Started</Link></li>
@@ -80,7 +80,7 @@ export const DefaultHeader = ()=>{
                 <li className={`${hoverClassName} mobile-lg`}><a href={'/#useCase'}>Use Case</a></li>
                 <li className={`${hoverClassName} mobile-lg`}><a href={'/#pricing'}>Pricing</a></li>
                 <li className={`${hoverClassName} mobile-lg`}><a href={'/#waitlist'}>Waitlist</a></li>
-                <li className={`${hoverClassName} mobile-lg`}><a href={'/#faq'}>FAQ</a></li>
+                <li className={`${hoverClassName} mobile-lg`}><a href={'/#faq'}>FAQs</a></li>
                 <li className={'text-primary-100 mobile-lg'}><Link to={RoutesConstant.page.home}>Get
                     Started</Link></li>
                 <li><MoonIcon onClick={night} className={'w-[30px] h-[30px]'}/></li>
