@@ -6,9 +6,9 @@ import {FramerConfigUtil} from "@/util/FramerConfigUtil.ts";
 export const CapabilitiesSection=()=>{
 
     return (
-        <section className={'w-full md:py-24 py-10  bg-capability'}>
-            <div className={'container-responsive flex flex-col md:gap-20 gap-10 items-center'}>
+        <section id={'capabilities'} className={'w-full md:py-18 py-10  bg-capability'}>
 
+            <div className={'container-responsive flex flex-col md:gap-20 gap-10 items-center'}>
                 <motion.div
                  variants={FramerConfigUtil.fadeDown}
                  initial={'hidden'}

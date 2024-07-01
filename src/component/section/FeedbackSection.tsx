@@ -27,7 +27,8 @@ export const FeedbackSection = ()=>{
 
     return(
         <section
-            className={'w-full md:py-20 py-10'}>
+            id={'feedback'}
+            className={'w-full md:py-18 py-10'}>
             <motion.div
                 variants={FramerConfigUtil.fadeDown}
                 initial={'hidden'}
@@ -54,7 +55,6 @@ export const FeedbackSection = ()=>{
                 >
                     {
                         Array(5).fill('').map((_, index) => {
-
                             return (
                                 <div
                                     key={index}>

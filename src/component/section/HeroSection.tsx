@@ -15,41 +15,66 @@ export const HeroSection = () => {
     }
 
     return (
-        <section className={'w-full'}>
+        <section id={'overview'} className={'w-full border'}>
+            <div className={'container-responsive relative border  -top-10 -left-16'}>
+                <img
+                    className={'md:w-[300px] w-[100px] h-[200px] absolute object-bottom '}
+                    src={importsUtil.image.heroTop} alt={''}/>
+            </div>
             <div
-                className={'flex flex-col bg-hero w-full justify-center min-h-[calc(100svh-70px)] overflow-hidden md:min-h-[calc(100vh-100px)] relative py-10 md:py-20 gap-10 md:gap-20'}
+                className={'flex flex-col w-full justify-center min-h-[calc(100svh-70px)] overflow-hidden md:min-h-[calc(100vh-100px)] relative pt-10 gap-10 md:gap-20'}
             >
                 {/*<img*/}
                 {/*    className={'md:w-[200px] lg:w-[250px] w-[100px] md:h-[100px] lg:h-[100px] h-[200px] absolute top-0 left-24 md:-top-[30px] lg:left-[190px] md:left-0  object-bottom'}*/}
                 {/*    src={importsUtil.image.heroTop} alt={''}/>*/}
 
-                <img
-                    className={'md:w-[300px] w-[100px] h-[200px] absolute object-bottom -top-[50px] md:left-52 '}
-                    src={importsUtil.image.heroTop} alt={''}/>
+                <motion.img
+                    initial={{opacity: 0.5, y: -100}}
+                    animate={{opacity: 1, y: 0}}
+                    // animate={{
+                        // x: [0, 100, 100, 0, -100, -100, 0],
+                        // y: [0, 100, -100, -100, -100, 100, 0],
+                        // scale: [1, 2, 1],
+                        // rotate: [0, 360, 0],
+                        // borderRadius: ['10%', '50%', '10%']
+                    // }}
+                    transition={{
+                        duration: 5,
+                        ease: 'easeInOut',
+                        repeat: Infinity,
+                        repeatDelay: 1
+                    }}
+                    className={'absolute '} src={importsUtil.image.heroRipple} alt={''}/>
 
-                <motion.div
-                    variants={FramerConfigUtil.fadeDown}
-                    initial={'hidden'}
-                    whileInView={'show'}
-                    transition={{duration: 1, delay: 0.2, ease: 'easeOut'}}
-                    viewport={{once: true}}
-                >
+                <div className={''}>
 
-                    <h2 className={`text-center capitalize  font-semibold`}>
+                    <motion.h2
+                        variants={FramerConfigUtil.fadeDown}
+                        initial={'hidden'}
+                        whileInView={'show'}
+                        transition={{ease:'easeOut', duration: 1, delay: 0.2}}
+
+                        className={`text-center capitalize  font-semibold`}>
                         <span className={'text-primary-100'}>Discover and explore</span> The <br/> Future of
                         intelligent
                         solutions <br/> with Jeala AI
-                    </h2>
+                    </motion.h2>
 
-                    <p className={`md:text-[28px] text-[20px]  md:leading-[40px] leading-[30    px] text-center font-urbanist mt-10  font-light`}>
+                    <motion.p
+                        variants={FramerConfigUtil.fadeUp}
+                        initial={'hidden'}
+                        whileInView={'show'}
+                        transition={{ease:'easeOut', duration: 1, delay: 0.2}}
+
+                        className={`md:text-[28px] text-[20px]  md:leading-[40px] leading-[30    px] text-center font-urbanist mt-10  font-light`}>
                         Whether you're streamlining business operations, enhancing customer <br/> experiences,
                         or
                         exploring
                         new realms of creativity, Jeala AI is here to <br/> elevate your journey in all works of
                         life.
-                    </p>
+                    </motion.p>
 
-                </motion.div>
+                </div>
 
                 <img
                     className={'md:w-[200px] lg:w-[300px] w-[100px] md:h-[400px]  lg:h-[600px] h-[200px] absolute top-0 right-0'}

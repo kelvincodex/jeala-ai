@@ -6,7 +6,7 @@ import {FramerConfigUtil} from "@/util/FramerConfigUtil.ts";
 
 export const WaitlistSection = ()=>{
     return (
-        <section className={' bg-primary-100 md:py-24 py-20'}>
+        <section id={'waitlist'} className={' bg-primary-100 md:py-24 py-20'}>
             <div
 
                 className={'flex flex-col items-center container-responsive'}>

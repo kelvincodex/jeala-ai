@@ -6,7 +6,7 @@ import {FramerConfigUtil} from "@/util/FramerConfigUtil.ts";
 
 export const PricingSection = ()=>{
     return (
-        <section className={' md:py-24 py-10'}>
+        <section id={'pricing'} className={'md:py-24 py-10'}>
             <div
 
                 className={'container-responsive relative flex flex-col items-center justify-center'}>

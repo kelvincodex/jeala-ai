@@ -2,10 +2,16 @@ import {DefaultAccordion} from "@/component/accordion/DefaultAccordion.tsx";
 import {FAQData} from "@/util/data/FAQData.ts";
 import { motion } from "framer-motion";
 import {FramerConfigUtil} from "@/util/FramerConfigUtil.ts";
+import {useState} from "react";
 
 export const FAQSection = ()=>{
+    const [selectedItem, setSelectedItem] = useState<number>(0)
+
+    function handleSubmit(index: number){
+        setSelectedItem(index)
+    }
     return (
-        <section className={'md:py-20 py-18 md:h-[800px] h-[500px] bg-faq'}>
+        <section id={'faq'} className={'md:py-18 py-10 md:min-h-[800px] max-h-full min-h-[500px] bg-faq'}>
 
             <div
                 className={'container-responsive flex flex-col items-center h-full justify-center '}>
@@ -19,15 +25,20 @@ export const FAQSection = ()=>{
                         Frequently Asked Question
                     </motion.h2>
 
-                <div className={'md:h-[500px] h-[350px] md:w-[80%] w-full overflow-y-scroll'}>
+                <motion.div
+                    variants={FramerConfigUtil.stagParent}
+                    initial={'hidden'}
+                    whileInView={'show'}
+
+                    className={'h-full w-full'}>
                 {
                         FAQData.map((value, index) => {
                             return (
-                                <DefaultAccordion key={index} text={value.text} title={value.title}/>
+                                <DefaultAccordion onPress={()=>handleSubmit(index)} showText={selectedItem == index} key={index} text={value.text} title={value.title}/>
                             )
                         })
                     }
-                </div>
+                </motion.div>
             </div>
         </section>
     )

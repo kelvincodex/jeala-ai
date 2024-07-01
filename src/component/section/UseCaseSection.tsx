@@ -8,7 +8,8 @@ export const UseCaseSection = ()=>{
 
     return (
         <section
-            className={'py-10 '}>
+            id={'useCase'}
+            className={'py-10 md:py-18'}>
             <div className={'container-responsive flex flex-col justify-center items-center'}>
                 <motion.div
                     variants={FramerConfigUtil.stagParent}
