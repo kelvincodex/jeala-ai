@@ -26,12 +26,12 @@ export const DefaultAccordion = ({title, text, onPress, showText}: DefaultAccord
                         <RoundedMinus  className={'max-w-6 max-h-6'} /> :
                         <RoundedPlus  className={'max-w-6 max-h-6'} />
                 }
-                <p className={'md:text-[20px] text-[18px] '}>{title}</p>
+                <p className={'lg:text-[20px] md:text-[18px] text-[14px] text-left'}>{title}</p>
             </button>
             {
                 (showText && show) && (
                     <div className={'ml-7 transition-all duration-300'}>
-                        <p className={'text-[18px] leading-[30px]'}>{text}</p>
+                        <p className={'lg:text-[18px] md:text-[14px] text-[12px]  leading-[30px]'}>{text}</p>
                     </div>
                 )
             }
