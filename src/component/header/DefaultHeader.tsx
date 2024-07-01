@@ -6,7 +6,6 @@ import MoonIcon from '@/assets/icon/moon.svg'
 import {useEffect, useState} from "react";
 import {animate, motion, stagger} from "framer-motion";
 import {importsUtil} from "@/util/importsUtil.ts";
-import {FramerConfigUtil} from "@/util/FramerConfigUtil.ts";
 
 export const DefaultHeader = ()=>{
     const [isClose, setIsClose] = useState<boolean>(false)
