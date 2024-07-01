@@ -1,4 +1,4 @@
-import {Link, useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {RoutesConstant} from "@/util/constant/RoutesConstant.ts";
 import MenuIcon from '@/assets/icon/menu-close.svg'
 import CloseIcon from '@/assets/icon/close-md.svg'
@@ -64,7 +64,7 @@ export const DefaultHeader = ()=>{
                 <ul className={'items-center gap-5 md:text-[20px] text-[18px] leading-[32px]  xl:flex hidden font-poppins font-light'}>
                     <li className={hoverClassName}><a href={'/#overview'} onClick={()=> handleNavigation() }>Overview</a></li>
                     <li className={hoverClassName}><a href={'/#capabilities'} onClick={()=> handleNavigation() }>Capabilities</a></li>
-                    <li className={hoverClassName}><a href={'/#resources'} onClick={()=> handleNavigation() }>Resources</a></li>
+                    <li className={hoverClassName}><a href={'/#feedback'} onClick={()=> handleNavigation() }>Review</a></li>
                     <li className={hoverClassName}><a href={'/#useCase'} onClick={()=> handleNavigation() }>Use Case</a></li>
                     <li className={hoverClassName}><a href={'/#pricing'} onClick={()=> handleNavigation()}>Pricing</a></li>
                     <li className={hoverClassName}><a href={'/#waitlist'} onClick={()=> handleNavigation()}>Waitlist</a></li>
@@ -80,7 +80,7 @@ export const DefaultHeader = ()=>{
             <ul className={`xl:hidden text-[20px] pt-10 absolute bg-white top-20 gap-5 pl-14 min-w-full ${isClose ? 'left-0' : '-left-[100%]'} transition-left duration-150  h-svh w-full flex flex-col items-left`}>
                 <li className={`${hoverClassName} mobile-lg`}><a href={'/#overview'} onClick={()=> handleNavigation()}>Overview</a></li>
                 <li className={`${hoverClassName} mobile-lg`}><a href={'/#capabilities'} onClick={()=> handleNavigation()}>Capabilities</a></li>
-                <li className={`${hoverClassName} mobile-lg`}><a href={'/#resources'} onClick={()=> handleNavigation()}>Resources</a></li>
+                <li className={`${hoverClassName} mobile-lg`}><a href={'/#feedback'} onClick={()=> handleNavigation()}>Review</a></li>
                 <li className={`${hoverClassName} mobile-lg`}><a href={'/#useCase'} onClick={()=> handleNavigation()}>Use Case</a></li>
                 <li className={`${hoverClassName} mobile-lg`}><a href={'/#pricing'} onClick={()=> handleNavigation()}>Pricing</a></li>
                 <li className={`${hoverClassName} mobile-lg`}><a href={'/#waitlist'} onClick={()=> handleNavigation()}>Waitlist</a></li>
