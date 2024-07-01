@@ -24,20 +24,9 @@ export const HeroSection = () => {
             <div
                 className={'flex flex-col w-full justify-center min-h-[calc(100svh-70px)] overflow-hidden md:min-h-[calc(100vh-100px)] relative pt-10 gap-10 md:gap-20'}
             >
-                {/*<img*/}
-                {/*    className={'md:w-[200px] lg:w-[250px] w-[100px] md:h-[100px] lg:h-[100px] h-[200px] absolute top-0 left-24 md:-top-[30px] lg:left-[190px] md:left-0  object-bottom'}*/}
-                {/*    src={importsUtil.image.heroTop} alt={''}/>*/}
-
                 <motion.img
                     initial={{opacity: 0.5, y: -100}}
                     animate={{opacity: 1, y: 0}}
-                    // animate={{
-                        // x: [0, 100, 100, 0, -100, -100, 0],
-                        // y: [0, 100, -100, -100, -100, 100, 0],
-                        // scale: [1, 2, 1],
-                        // rotate: [0, 360, 0],
-                        // borderRadius: ['10%', '50%', '10%']
-                    // }}
                     transition={{
                         duration: 5,
                         ease: 'easeInOut',
