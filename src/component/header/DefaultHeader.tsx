@@ -38,10 +38,9 @@ export const DefaultHeader = ()=>{
     return (
         <nav className={'shadow sticky top-0 bg-white z-50 w-full transition-all duration-300 ease-in-out h-[80px] md:h-[100px] '}>
             <motion.div
-                variants={FramerConfigUtil.fadeDown}
-                initial={'hidden'}
-                whileInView={'show'}
-                transition={{ease:'easeOut', duration: 1, delay: 0.2}}
+                initial={{ opacity: 0, y: -10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ease:'easeOut', duration: 1, delay: 0}}
 
                 className={'flex justify-between h-full items-center container-responsive relative'}>
 
