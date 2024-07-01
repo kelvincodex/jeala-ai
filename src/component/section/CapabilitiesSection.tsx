@@ -28,7 +28,7 @@ export const CapabilitiesSection=()=>{
                     initial={'hidden'}
                     whileInView={'show'}
 
-                    className={'grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 grid-flow-row gap-5 md:w-[90%] m-auto'}>
+                    className={'grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 grid-flow-row lg:grid-rows-2 gap-5 md:w-[90%] m-auto'}>
                 {
                         CapabilitiesData.map((item, index) =>
                         {
@@ -37,10 +37,10 @@ export const CapabilitiesSection=()=>{
                             const isThird = index === 2
                             const isLast = index === (CapabilitiesData.length - 1)
 
-                            const firstClass: string = 'col-start-1 row-span-2'
+                            const firstClass: string = 'col-start-1 row-span-3 '
                             const lastClass: string = ''
                             const secondClass: string = ''
-                            const thirdClass: string = 'row-span-2'
+                            const thirdClass: string = 'row-span-3'
                             return (
                                 <CapabilitiesCard key={index} containerClassName={`${isFirst ? firstClass : isLast ? lastClass : isSecond ?  secondClass : isThird ? thirdClass :  '' }`} index={index} item={item}/>
                             )

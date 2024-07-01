@@ -6,7 +6,7 @@ export const FeedbackContainerCard = ()=>{
     return (
         <motion.div
             variants={FramerConfigUtil.stagChildren}
-            className={'md:h-[400px] h-[300px] border px-8 py-10 mx-4 rounded-xl'}>
+            className={'md:h-[400px] h-[300px] shadow border px-8 py-10 mx-4 rounded-xl'}>
             <h2 className={'md:text-[24px] text-[18px] font-lexend font-normal md:leading-[29px] leading-[25px] mb-2'}>
                 Head of Research at Datacorp
             </h2>

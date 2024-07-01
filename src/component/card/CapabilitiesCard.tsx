@@ -14,7 +14,7 @@ export const CapabilitiesCard = ({ item, containerClassName}: CapabilitiesCardPr
         <motion.div
             variants={FramerConfigUtil.stagChildren}
 
-            className={`bg-white border rounded-lg flex flex-col  justify-center md:px-20 px-10 py-10 gap-5 ${containerClassName}`}>
+            className={`bg-white shadow rounded-2xl  flex flex-col  justify-center lg:px-20 px-10 py-10 gap-5 ${containerClassName}`}>
             {
                 item.icon && (
                     <item.icon className={'md:w-[40px] w-[30px] md:h-[40px] h-[30px] self-end'}/>

@@ -16,7 +16,7 @@ export const UseCaseSection = ()=>{
                     initial={'hidden'}
                     whileInView={'show'}
 
-                    className={'grid lg:grid-cols-2 grid-cols-1 md:grid-cols-1 gap-5 w-full'}>
+                    className={'grid lg:grid-cols-2 grid-cols-1 md:grid-cols-2 gap-5 w-full'}>
                     {
                         UseCaseData.map((item, index) => (
                             <motion.div

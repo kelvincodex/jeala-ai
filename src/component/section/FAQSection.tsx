@@ -21,7 +21,7 @@ export const FAQSection = ()=>{
                         initial={'hidden'}
                         whileInView={'show'}
                         transition={{duration: 1, ease: 'easeOut', delay:0.2}}
-                        className={'font-urbanist font-semibold mb-5'}>
+                        className={'font-urbanist font-semibold mb-5 text-center '}>
                         Frequently Asked Question
                     </motion.h2>
 

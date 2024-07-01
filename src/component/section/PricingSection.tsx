@@ -31,9 +31,7 @@ export const PricingSection = ()=>{
                     variants={FramerConfigUtil.stagParent}
                     initial={'hidden'}
                     whileInView={'show'}
-                    // transition={{duration: 1, ease:'easeOut', delay: 0.2}}
-
-                    className={'w-full grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10'}>
+                    className={'w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-5'}>
                     {
                         priceData.map((value, index) => {
                             return (
