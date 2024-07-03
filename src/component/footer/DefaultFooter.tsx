@@ -1,7 +1,6 @@
 import {Link} from "react-router-dom";
 import {FooterData} from "@/util/data/FooterData.ts";
 import { motion } from "framer-motion";
-import {FramerConfigUtil} from "@/util/FramerConfigUtil.ts";
 
 export const DefaultFooter = () => {
     const hoverClassName = 'hover:border-b hover:text-primary-100 hover:border-b-primary-100  transition-all duration-300'
@@ -9,9 +8,8 @@ export const DefaultFooter = () => {
     return(
         <footer className={'py-16 bg-black-200'}>
             <motion.div
-                variants={FramerConfigUtil.fadeDown}
-                initial={'hidden'}
-                whileInView={'show'}
+                initial={{ opacity: 0, y: -10 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ease:'easeOut', duration: 1, delay: 0.2}}
 
                 className={'container-responsive flex flex-col items-center '}>
