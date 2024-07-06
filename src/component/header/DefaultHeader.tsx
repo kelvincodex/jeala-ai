@@ -84,7 +84,7 @@ export const DefaultHeader = ()=>{
                         to={RoutesConstant.page.home}>Get
                         Started</Link></li>
 
-                    <li className={'border'}><MoonIcon onClick={night} className={''}/></li>
+                    <li className={''}><MoonIcon onClick={night} className={''}/></li>
                 </ul>
             </motion.div>
 
