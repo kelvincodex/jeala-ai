@@ -10,8 +10,8 @@ import {importsUtil} from "@/util/importsUtil.ts";
 export const DefaultHeader = ()=>{
     const [isClose, setIsClose] = useState<boolean>(false)
     const staggerMenuItems = stagger(0.1, { startDelay: 0.10 });
-    const hoverClassName = 'hover:border-b hover:text-primary-100 hover:border-b-primary-100  transition-all duration-300'
-
+    // const hoverClassName = 'hover:border-b hover:text-primary-100 hover:border-b-primary-100  transition-all duration-300'
+    const hoverClassName = ""
     function night(){
         console.log('logging')
     }
