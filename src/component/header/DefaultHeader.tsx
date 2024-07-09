@@ -98,8 +98,8 @@ export const DefaultHeader = ()=>{
                     <li className={''}><a href={'#'} onClick={themeChange}>
                         {
                             themeState.theme == 'light' ?
-                                <MoonIcon className={''}/> :
-                                <SunIcon className={''}/>
+                                <MoonIcon width={30} height={30} className={''}/> :
+                                <SunIcon width={30} height={30} className={''}/>
                         }
                     </a></li>
                 </ul>
@@ -116,7 +116,13 @@ export const DefaultHeader = ()=>{
                 <li className={`${hoverClassName} mobile-lg`}><a href={'/#faq'} onClick={()=> handleNavigation()}>FAQs</a></li>
                 <li className={'text-primary-100 mobile-lg'}><Link to={RoutesConstant.page.home}>Get
                     Started</Link></li>
-                {/*<li><MoonIcon onClick={night} className={'w-[30px] h-[30px]'}/></li>*/}
+                <li className={''}><a href={'#'} onClick={themeChange}>
+                    {
+                        themeState.theme == 'light' ?
+                            <MoonIcon width={30} height={30} className={''}/> :
+                            <SunIcon width={30} height={30} className={''}/>
+                    }
+                </a></li>
             </ul>
         </nav>
     )
