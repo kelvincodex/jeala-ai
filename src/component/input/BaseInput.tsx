@@ -15,7 +15,7 @@ export const BaseInput = ({leftIcon: LeftIcon, iconSize='50px', className, ...pr
                 )
             }
             <input
-                className={`outline-0 placeholder:text-black font-urbanist  ${className}`} {...props} />
+                className={`outline-0  placeholder:text-black font-urbanist  ${className}`} {...props} />
 
         </div>
     )
