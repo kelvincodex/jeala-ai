@@ -38,6 +38,11 @@ export const DefaultHeader = ()=>{
                 delay: isClose ? staggerMenuItems : 0,
             }
         );
+
+        window.addEventListener('click', ()=>{
+            setIsClose(false)
+        })
+
     }, [isClose, staggerMenuItems]);
 
 
@@ -79,7 +84,7 @@ export const DefaultHeader = ()=>{
                     <li className={hoverClassName}><a href={'/#pricing'} onClick={()=> handleNavigation()}>Pricing</a></li>
                     <li className={hoverClassName}><a href={'/#waitlist'} onClick={()=> handleNavigation()}>Waitlist</a></li>
                     <li className={``}>
-                        <details>
+                        <details open={isClose}>
                             <summary>Solution</summary>
                             <ul className={`bg-base-100 rounded-t-none p-2 ${themeState.theme == 'light' ? 'text-black bg-white' : 'text-white bg-dark-400'}`}>
                                 <li className={hoverClassName}><a href={'/#useCase'} onClick={() => handleNavigation()}>Use
