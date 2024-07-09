@@ -91,7 +91,7 @@ export const DefaultHeader = ()=>{
                         </details>
                     </li>
                     <li className={hoverClassName}><a href={'/#faq'} onClick={() => handleNavigation()}>FAQs</a></li>
-                    <li className={''}><Link className={'btn bg-primary-100 text-white'}
+                    <li className={''}><Link className={'btn border-0 bg-primary-100 text-white'}
                         to={RoutesConstant.page.home}>Get
                         Started</Link></li>
 

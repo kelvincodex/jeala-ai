@@ -16,7 +16,7 @@ export const PriceCard = ({item}: PriceCardProps)=>{
     return (
         <motion.div
             variants={FramerConfigUtil.stagChildren}
-            className={' shadow min-h-[500px]  flex flex-col rounded-lg  p-7 gap-0'}>
+            className={` ${themeState.theme == 'light' ? 'shadow' : 'shadow shadow-white'} min-h-[500px]  flex flex-col rounded-lg  p-7 gap-0`}>
             <div className={''}>
                 <h2 className={`md:text-[28px] text-[23px] font-poppins-medium ${themeState.theme == 'light' ? 'text-black' : 'text-white'}  md:leading-[31px] leading-[25px] capitalize`}>
                     {item.title}
