@@ -78,10 +78,10 @@ export const DefaultHeader = ()=>{
                     <li className={hoverClassName}><a href={'/#feedback'} onClick={()=> handleNavigation() }>Review</a></li>
                     <li className={hoverClassName}><a href={'/#pricing'} onClick={()=> handleNavigation()}>Pricing</a></li>
                     <li className={hoverClassName}><a href={'/#waitlist'} onClick={()=> handleNavigation()}>Waitlist</a></li>
-                    <li className={''}>
+                    <li className={``}>
                         <details>
                             <summary>Solution</summary>
-                            <ul className="bg-base-100 rounded-t-none p-2">
+                            <ul className={`bg-base-100 rounded-t-none p-2 ${themeState.theme == 'light' ? 'text-black bg-white' : 'text-white bg-dark-400'}`}>
                                 <li className={hoverClassName}><a href={'/#useCase'} onClick={() => handleNavigation()}>Use
                                     Case</a></li>
                                 <li className={hoverClassName}><a href={'/#capabilities'}
