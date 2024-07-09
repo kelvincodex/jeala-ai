@@ -68,9 +68,9 @@ export const DefaultHeader = ()=>{
                     AI</Link></h2>
                 {
                     !isClose ?
-                        <MenuIcon onClick={toggle} width={25} height={25}
+                        <MenuIcon color={themeState.theme == 'light' ? '#060C2C' : '#fff'} onClick={toggle} width={25} height={25}
                                   className={' cursor-pointer block xl:hidden'}/> :
-                        <CloseIcon onClick={toggle}
+                        <CloseIcon color={themeState.theme == 'light' ? '#060C2C' : '#fff'} onClick={toggle}
                                    className={'w-[30px] h-[30px] cursor-pointer block xl:hidden'}/>
                 }
                 <ul className={`menu menu-horizontal ${themeState.theme == 'light' ? 'text-black' : 'text-white'} items-center gap-5 md:text-[18px] text-[14px] leading-[32px]  xl:flex hidden font-poppins font-light`}>
@@ -106,7 +106,7 @@ export const DefaultHeader = ()=>{
             </motion.div>
 
             {/*todo mobile*/}
-            <ul className={`xl:hidden md:text-[20px] text-[14px] pt-10 absolute bg-white top-20 gap-5 pl-14 min-w-full ${isClose ? 'left-0' : '-left-[100%]'} transition-left duration-150  h-svh w-full flex flex-col items-left`}>
+            <ul className={`xl:hidden md:text-[20px] text-[14px] pt-10 absolute ${themeState.theme == 'light' ? 'bg-white text-black' : 'bg-dark-400 text-white'} top-20 gap-5 pl-14 min-w-full ${isClose ? 'left-0' : '-left-[100%]'} transition-left duration-150  h-svh w-full flex flex-col items-left`}>
                 <li className={`${hoverClassName} mobile-lg`}><a href={'/#overview'} onClick={()=> handleNavigation()}>Overview</a></li>
                 <li className={`${hoverClassName} mobile-lg`}><a href={'/#capabilities'} onClick={()=> handleNavigation()}>Capabilities</a></li>
                 <li className={`${hoverClassName} mobile-lg`}><a href={'/#feedback'} onClick={()=> handleNavigation()}>Review</a></li>
