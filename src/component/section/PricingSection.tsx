@@ -3,8 +3,12 @@ import {importsUtil} from "@/util/importsUtil.ts";
 import {priceData} from "@/util/data/PriceData.ts";
 import { motion } from "framer-motion";
 import {FramerConfigUtil} from "@/util/FramerConfigUtil.ts";
+import {useSelector} from "react-redux";
+import {RootState} from "@/store";
 
 export const PricingSection = ()=>{
+    const themeState = useSelector((state: RootState) => state.theme);
+
     return (
         <section id={'pricing'} className={'md:py-24 py-10'}>
             <div
@@ -21,7 +25,7 @@ export const PricingSection = ()=>{
                     transition={{duration: 1, delay: 0.2, ease:'easeOut'}}
                     viewport={{once:true}}
                 >
-                    <h2 className={'text-center font-semibold mb-10'}>
+                    <h2 className={`text-center font-semibold mb-10 ${themeState.theme == 'light' ? 'text-black' : 'text-white'}`}>
                         <span className={'text-primary-100'}>Go</span> Premium
                     </h2>
                 </motion.div>

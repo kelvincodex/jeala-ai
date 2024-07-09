@@ -6,9 +6,12 @@ import Slider from "react-slick";
 import {FeedbackContainerCard} from "@/component/card/FeedbackContainerCard.tsx";
 import { motion } from "framer-motion";
 import {FramerConfigUtil} from "@/util/FramerConfigUtil.ts";
+import {useSelector} from "react-redux";
+import {RootState} from "@/store";
 
 export const FeedbackSection = ()=>{
     const sliderRef = useRef<Slider>(null)
+    const themeState = useSelector((state: RootState) => state.theme);
 
     const settings = {
         dots: false,
@@ -33,15 +36,18 @@ export const FeedbackSection = ()=>{
                 variants={FramerConfigUtil.fadeDown}
                 initial={'hidden'}
                 whileInView={'show'}
-                transition={{ease:'easeOut', duration: 1, delay: 0.2}}
+                transition={{ease: 'easeOut', duration: 1, delay: 0.2}}
 
                 className={'flex justify-center md:mb-16 mb-10'}>
-                <span className={'md:text-[60px] text-[40px] font-urbanist font-semibold rotate-12'}>"</span>
+                <span className={`md:text-[60px] ${themeState.theme == 'light' ? 'text-black' : 'text-white'} text-[40px] font-urbanist font-semibold rotate-12`}>"</span>
                 <h2
                     className={'text-center font-semibold md:mt-5 mt-2 md:ml-5 ml-2 md:-mr-3 -mr-1 bg-clip-text text-transparent bg-gradient-to-r from-primary-150 to-primary-200'}>
-                     <span className={'text-black'}>What Our</span> Users Are <br/> Saying
+                    <span
+                        className={`${themeState.theme == 'light' ? 'text-black' : 'text-white'}`}>What Our</span> Users
+                    Are <br/> Saying
                 </h2>
-                <span className={'md:text-[60px] text-[40px] font-urbanist font-semibold rotate-12  text-primary-200'}>"</span>
+                <span
+                    className={'md:text-[60px] text-[40px] font-urbanist font-semibold rotate-12  text-primary-200'}>"</span>
             </motion.div>
 
             <motion.div

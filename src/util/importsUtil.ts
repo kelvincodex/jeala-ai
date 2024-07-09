@@ -2,6 +2,7 @@
 import upwork from '@/assets/image/upwork.png'
 import meta from '@/assets/image/meta.png'
 import attentive from '@/assets/image/attentive.png'
+import darkWaitList from '@/assets/image/dark-waitlist-bg.png'
 import health from '@/assets/image/health-image.png'
 import education from '@/assets/image/education-image.png'
 import engineer from '@/assets/image/engineer-image.png'
@@ -19,6 +20,6 @@ import customiseMark from '@/assets/icon/customise-mark.svg'
 
 
 export const importsUtil = {
-    image: {upwork,meta,attentive, health, education, engineer, gaming,rocket, heroRipple, heroLeft, heroTop},
+    image: {upwork,meta,attentive, health, education, engineer, gaming,rocket, heroRipple, heroLeft, heroTop, darkWaitList},
     icon: {preview, humanRelation, customiseMark,starOutline}
 }

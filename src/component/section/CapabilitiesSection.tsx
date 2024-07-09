@@ -2,8 +2,11 @@ import {CapabilitiesCard} from "@/component/card/CapabilitiesCard.tsx";
 import {CapabilitiesData} from "@/util/data/CapabilitiesData.ts";
 import { motion } from "framer-motion";
 import {FramerConfigUtil} from "@/util/FramerConfigUtil.ts";
+import {useSelector} from "react-redux";
+import {RootState} from "@/store";
 
 export const CapabilitiesSection=()=>{
+    const themeState = useSelector((state: RootState) => state.theme);
 
     return (
         <section id={'capabilities'} className={'w-full md:py-18 py-10  bg-capability'}>
@@ -15,10 +18,10 @@ export const CapabilitiesSection=()=>{
                  whileInView={'show'}
                  transition={{ease:'easeOut', duration: 1, delay: 0.2}}
                 >
-                    <h2 className={`text-center hidden md:block`}>
+                    <h2 className={`text-center hidden md:block ${themeState.theme == 'light' ? 'text-black' : 'text-white'}`}>
                         AI Capabilities That Transform <br/> Your Workflow
                     </h2>
-                    <h2 className={`text-center  md:hidden`}>
+                    <h2 className={`text-center  md:hidden ${themeState.theme == 'light' ? 'text-black' : 'text-white'}`}>
                         AI Capabilities That <br/> Transform Your Workflow
                     </h2>
                 </motion.div>

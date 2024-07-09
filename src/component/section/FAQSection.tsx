@@ -3,9 +3,12 @@ import {FAQData} from "@/util/data/FAQData.ts";
 import { motion } from "framer-motion";
 import {FramerConfigUtil} from "@/util/FramerConfigUtil.ts";
 import {useState} from "react";
+import {useSelector} from "react-redux";
+import {RootState} from "@/store";
 
 export const FAQSection = ()=>{
     const [selectedItem, setSelectedItem] = useState<number>(0)
+    const themeState = useSelector((state: RootState)=>  state.theme)
 
     function handleSubmit(index: number){
         setSelectedItem(index)
@@ -21,7 +24,7 @@ export const FAQSection = ()=>{
                         initial={'hidden'}
                         whileInView={'show'}
                         transition={{duration: 1, ease: 'easeOut', delay:0.2}}
-                        className={'font-urbanist font-semibold mb-5 text-center '}>
+                        className={`font-urbanist font-semibold mb-5 text-center ${themeState.theme == 'light' ? 'text-black' : 'text-white'}`}>
                         Frequently Asked Questions
                     </motion.h2>
 

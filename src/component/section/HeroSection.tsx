@@ -4,9 +4,11 @@ import {HeroCard} from "@/component/card/HeroCard.tsx";
 import { motion } from "framer-motion";
 import {FramerConfigUtil} from "@/util/FramerConfigUtil.ts";
 import {importsUtil} from "@/util/importsUtil.ts";
+import {useSelector} from "react-redux";
+import {RootState} from "@/store";
 
 export const HeroSection = () => {
-
+    const themeState = useSelector((state: RootState) => state.theme);
 
     const settings = {
         dots: false,
@@ -35,7 +37,7 @@ export const HeroSection = () => {
                     }}
                     className={'absolute '} src={importsUtil.image.heroRipple} alt={''}/>
 
-                <div className={''}>
+                <div className={`${themeState.theme == 'light' ? 'text-black' : 'text-white'}`}>
 
                     <motion.h2
                         variants={FramerConfigUtil.fadeDown}
@@ -43,7 +45,7 @@ export const HeroSection = () => {
                         whileInView={'show'}
                         transition={{ease:'easeOut', duration: 1, delay: 0.2}}
 
-                        className={`text-center capitalize  font-semibold`}>
+                        className={`text-center capitalize  font-semibold ${themeState.theme == 'light' ? 'text-black' : 'text-white'}`}>
                         <span className={'text-primary-100'}>Discover and explore</span> The <br/> Future of
                         intelligent
                         solutions <br/> with Jeala AI
@@ -54,8 +56,7 @@ export const HeroSection = () => {
                         initial={'hidden'}
                         whileInView={'show'}
                         transition={{ease:'easeOut', duration: 1, delay: 0.2}}
-
-                        className={`md:text-[28px] text-[20px]  md:leading-[40px] leading-[30    px] text-center font-urbanist mt-10  font-light`}>
+                        className={`md:text-[28px] text-[20px]  md:leading-[40px] leading-[30px] ${themeState.theme == 'light' ? 'text-black' : 'text-white'} text-center font-urbanist mt-10  font-light`}>
                         Whether you're streamlining business operations, enhancing customer <br/> experiences,
                         or
                         exploring

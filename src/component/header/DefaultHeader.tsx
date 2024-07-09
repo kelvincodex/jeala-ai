@@ -3,17 +3,28 @@ import {RoutesConstant} from "@/util/constant/RoutesConstant.ts";
 import MenuIcon from '@/assets/icon/menu-close.svg'
 import CloseIcon from '@/assets/icon/close-md.svg'
 import MoonIcon from '@/assets/icon/moon.svg'
+import SunIcon from '@/assets/icon/sun.svg'
 import {useEffect, useState} from "react";
 import {animate, motion, stagger} from "framer-motion";
 import {importsUtil} from "@/util/importsUtil.ts";
+import {useDispatch, useSelector} from "react-redux";
+import {RootState} from "@/store";
+import {theme} from "@/store/module/theme.ts";
 
 export const DefaultHeader = ()=>{
     const [isClose, setIsClose] = useState<boolean>(false)
     const staggerMenuItems = stagger(0.1, { startDelay: 0.10 });
+    const themeState = useSelector((state: RootState) => state.theme);
+    const dispatch = useDispatch();
     // const hoverClassName = 'hover:border-b hover:text-primary-100 hover:border-b-primary-100  transition-all duration-300'
     const hoverClassName = ""
-    function night(){
-        console.log('logging')
+    function themeChange(){
+        if (themeState.theme == "light"){
+            dispatch(theme.mutation.updateTheme("dark"))
+        }else {
+            dispatch(theme.mutation.updateTheme("light"))
+        }
+
     }
 
     useEffect(() => {
@@ -29,18 +40,18 @@ export const DefaultHeader = ()=>{
         );
     }, [isClose, staggerMenuItems]);
 
+
     function toggle(){
         setIsClose(!isClose)
     }
 
+
     function handleNavigation(){
         setIsClose(!isClose)
-        console.log('lol')
     }
 
-
     return (
-        <nav className={'shadow sticky top-0 bg-white z-50 w-full transition-all duration-300 ease-in-out h-[80px] md:h-[100px] '}>
+        <nav className={`shadow sticky top-0 z-50 w-full transition-all duration-300 ease-in-out h-[80px] md:h-[100px] ${themeState.theme == 'light' ? 'bg-white' : 'bg-dark-400'}`}>
             <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -53,16 +64,16 @@ export const DefaultHeader = ()=>{
                         className={' md:w-[400px] w-[100px] h-[200px]  object-bottom'}
                         src={importsUtil.image.heroTop} alt={''}/>
                 </div>
-                <h2 className={`md:text-[30px] text-[25px]  font-semibold`}><Link to={RoutesConstant.page.home}>Jeala
+                <h2 className={`md:text-[30px] text-[25px] ${themeState.theme == 'light' ? 'text-black' : 'text-white'} font-semibold`}><Link to={RoutesConstant.page.home}>Jeala
                     AI</Link></h2>
                 {
                     !isClose ?
-                        <MenuIcon onClick={toggle}
-                                  className={'w-[30px] h-[30px] cursor-pointer block xl:hidden'}/> :
+                        <MenuIcon onClick={toggle} width={25} height={25}
+                                  className={' cursor-pointer block xl:hidden'}/> :
                         <CloseIcon onClick={toggle}
                                    className={'w-[30px] h-[30px] cursor-pointer block xl:hidden'}/>
                 }
-                <ul className={'menu menu-horizontal items-center gap-5 md:text-[18px] text-[14px] leading-[32px]  xl:flex hidden font-poppins font-light'}>
+                <ul className={`menu menu-horizontal ${themeState.theme == 'light' ? 'text-black' : 'text-white'} items-center gap-5 md:text-[18px] text-[14px] leading-[32px]  xl:flex hidden font-poppins font-light`}>
                     <li className={hoverClassName}><a href={'/#overview'} onClick={()=> handleNavigation() }>Overview</a></li>
                     <li className={hoverClassName}><a href={'/#feedback'} onClick={()=> handleNavigation() }>Review</a></li>
                     <li className={hoverClassName}><a href={'/#pricing'} onClick={()=> handleNavigation()}>Pricing</a></li>
@@ -84,7 +95,13 @@ export const DefaultHeader = ()=>{
                         to={RoutesConstant.page.home}>Get
                         Started</Link></li>
 
-                    <li className={''}><MoonIcon onClick={night} className={''}/></li>
+                    <li className={''}><a href={'#'} onClick={themeChange}>
+                        {
+                            themeState.theme == 'light' ?
+                                <MoonIcon className={''}/> :
+                                <SunIcon className={''}/>
+                        }
+                    </a></li>
                 </ul>
             </motion.div>
 
@@ -99,7 +116,7 @@ export const DefaultHeader = ()=>{
                 <li className={`${hoverClassName} mobile-lg`}><a href={'/#faq'} onClick={()=> handleNavigation()}>FAQs</a></li>
                 <li className={'text-primary-100 mobile-lg'}><Link to={RoutesConstant.page.home}>Get
                     Started</Link></li>
-                <li><MoonIcon onClick={night} className={'w-[30px] h-[30px]'}/></li>
+                {/*<li><MoonIcon onClick={night} className={'w-[30px] h-[30px]'}/></li>*/}
             </ul>
         </nav>
     )

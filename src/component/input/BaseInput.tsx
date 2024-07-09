@@ -3,9 +3,9 @@ import React, { InputHTMLAttributes, SVGProps} from "react";
 interface BaseInputProps  {
     leftIcon: React.FC<SVGProps<SVGSVGElement>> | string,
     className?: string,
-    iconSize: string
+    iconSize?: string
 }
-export const BaseInput = ({leftIcon: LeftIcon, iconSize, className, ...props}: BaseInputProps & InputHTMLAttributes<HTMLInputElement>)=>{
+export const BaseInput = ({leftIcon: LeftIcon, iconSize='50px', className, ...props}: BaseInputProps & InputHTMLAttributes<HTMLInputElement>)=>{
 
     return (
         <div className={'w-full h-full flex items-center gap-2'}>
@@ -19,8 +19,4 @@ export const BaseInput = ({leftIcon: LeftIcon, iconSize, className, ...props}: B
 
         </div>
     )
-}
-
-BaseInput.defaultProps = {
-    iconSize: '50px'
 }
