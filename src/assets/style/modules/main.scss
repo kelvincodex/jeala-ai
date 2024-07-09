@@ -70,9 +70,8 @@ p{
   left: 0 !important;
 }
 
-.slick-next:before{
+.slick-next:before, .slick-prev:before{
   content: '' !important;
-
 }
 
 li > button {
