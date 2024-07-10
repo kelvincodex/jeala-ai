@@ -56,7 +56,7 @@ export const DefaultHeader = ()=>{
     }
 
     return (
-        <nav className={`shadow sticky top-0 z-50 w-full transition-all duration-300 ease-in-out h-[80px] md:h-[100px] ${themeState.theme == 'light' ? 'bg-white' : 'bg-dark-400'}`}>
+        <nav className={`shadow sticky top-0 z-[999999] w-full transition-all duration-300 ease-in-out h-[80px] md:h-[100px] ${themeState.theme == 'light' ? 'bg-white' : 'bg-dark-400'}`}>
             <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 whileInView={{ opacity: 1, y: 0 }}
