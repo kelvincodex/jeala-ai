@@ -27,7 +27,7 @@ export const WaitlistSection = ()=>{
 
                 {
                     themeState.theme == 'dark' && (
-                        <img className={'absolute top-0 w-[1000px] h-[1000px] '} src={importsUtil.image.darkWaitList}
+                        <img className={'absolute top-0 w-[1000px] h-[1000px] z-[-9]'} src={importsUtil.image.darkWaitList}
                              alt={''}/>
                     )
                 }

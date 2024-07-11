@@ -14,7 +14,7 @@ export const FAQSection = ()=>{
         setSelectedItem(index)
     }
     return (
-        <section id={'faq'} className={'md:py-18 py-10 md:min-h-[800px] max-h-full min-h-[500px] bg-faq'}>
+        <section id={'faq'} className={'md:py-18 py-10 md:min-h-[800px] z-[9999999] max-h-full min-h-[500px] bg-faq'}>
 
             <div
                 className={'container-responsive flex flex-col items-center h-full justify-center '}>

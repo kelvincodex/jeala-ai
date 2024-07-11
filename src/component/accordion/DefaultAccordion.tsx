@@ -21,21 +21,31 @@ export const DefaultAccordion = ({title, text, onPress=()=>{}, showText=false}: 
     function handleClick(){
         onPress()
         setShow(!show)
+        console.log('hello')
     }
     return (
-        <motion.div variants={FramerConfigUtil.stagChildren} className={'md:my-8 my-5'}>
-            <button onClick={handleClick} className={'flex items-center gap-3 my-2 cursor-pointer'}>
-                {
-                    themeState.theme == 'light' ?
-                        (showText && show) ?
-                            <RoundedMinus color={'#1C274C'}  className={'max-w-6 max-h-6'} /> :
-                            <RoundedPlus  className={'max-w-6 max-h-6'} /> :
-                        (showText && show) ?
-                            <RoundedMinus color={'white'} className={'max-w-6 max-h-6'} /> :
-                            <LightRoundedPlus  className={'max-w-6 max-h-6'} />
-                }
-                <p className={`lg:text-[20px] md:text-[18px] text-[14px] text-left ${themeState.theme == 'light' ? 'text-black' : 'text-white'}`}>{title}</p>
-            </button>
+        <motion.div variants={FramerConfigUtil.stagChildren} className={'md:my-8 my-5 '}>
+            {
+                themeState.theme == 'light' ?
+                    <button onClick={handleClick} className={'flex items-center gap-3 my-2 cursor-pointer'}>
+                        {
+                                (showText && show) ?
+                                    <RoundedMinus color={'#1C274C'} className={'max-w-6 max-h-6'}/> :
+                                    <RoundedPlus className={'max-w-6 max-h-6'}/>
+                        }
+                        <p className={`lg:text-[20px] md:text-[18px] text-[14px] text-left ${themeState.theme == 'light' ? 'text-black' : 'text-white'}`}>{title}</p>
+                    </button>
+                    :
+                    <button onClick={handleClick} className={'flex items-center gap-3 my-2 cursor-pointer'}>
+                        {
+                                (showText && show) ?
+                                    <RoundedMinus color={'white'} className={'max-w-6 max-h-6'}/> :
+                                    <LightRoundedPlus className={'max-w-6 max-h-6'}/>
+                        }
+                        <p className={`lg:text-[20px] md:text-[18px] text-[14px] text-left ${themeState.theme == 'light' ? 'text-black' : 'text-white'}`}>{title}</p>
+                    </button>
+            }
+
             {
                 (showText && show) && (
                     <div className={'ml-7 transition-all duration-300'}>
