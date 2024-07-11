@@ -6,7 +6,6 @@ import {FramerConfigUtil} from "@/util/FramerConfigUtil.ts";
 import {importsUtil} from "@/util/importsUtil.ts";
 import {useSelector} from "react-redux";
 import {RootState} from "@/store";
-import {DefaultHeader} from "@/component/header/DefaultHeader.tsx";
 
 export const HeroSection = () => {
     const themeState = useSelector((state: RootState) => state.theme);

@@ -17,6 +17,16 @@ export const FeedbackSection = ()=>{
         dots: false,
         slidesToShow: 2,
         slidesToScroll: 2,
+        responsive:[
+            {
+                breakpoint: 1045,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1
+                }
+            },
+        ]
     }
 
 
