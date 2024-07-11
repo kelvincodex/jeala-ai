@@ -10,6 +10,7 @@ import {importsUtil} from "@/util/importsUtil.ts";
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "@/store";
 import {theme} from "@/store/module/theme.ts";
+import {DefaultMenuItem} from "@/component/header/DefaultMenuItem.tsx";
 
 export const DefaultHeader = ()=>{
     const [isClose, setIsClose] = useState<boolean>(false)
@@ -38,11 +39,6 @@ export const DefaultHeader = ()=>{
                 delay: isClose ? staggerMenuItems : 0,
             }
         );
-
-        window.addEventListener('click', ()=>{
-            setIsClose(false)
-        })
-
     }, [isClose, staggerMenuItems]);
 
 
@@ -52,7 +48,7 @@ export const DefaultHeader = ()=>{
 
 
     function handleNavigation(){
-        setIsClose(!isClose)
+        setIsClose(false)
     }
 
     return (
@@ -84,16 +80,7 @@ export const DefaultHeader = ()=>{
                     <li className={hoverClassName}><a href={'/#pricing'} onClick={()=> handleNavigation()}>Pricing</a></li>
                     <li className={hoverClassName}><a href={'/#waitlist'} onClick={()=> handleNavigation()}>Waitlist</a></li>
                     <li className={``}>
-                        <details open={isClose}>
-                            <summary>Solution</summary>
-                            <ul className={`bg-base-100 rounded-t-none p-2 ${themeState.theme == 'light' ? 'text-black bg-white' : 'text-white bg-dark-400'}`}>
-                                <li className={hoverClassName}><a href={'/#useCase'} onClick={() => handleNavigation()}>Use
-                                    Case</a></li>
-                                <li className={hoverClassName}><a href={'/#capabilities'}
-                                                                  onClick={() => handleNavigation()}>Capabilities</a>
-                                </li>
-                            </ul>
-                        </details>
+                        <DefaultMenuItem   />
                     </li>
                     <li className={hoverClassName}><a href={'/#faq'} onClick={() => handleNavigation()}>FAQs</a></li>
                     <li className={''}><Link className={'btn border-0 bg-primary-100 text-white'}
@@ -111,11 +98,14 @@ export const DefaultHeader = ()=>{
             </motion.div>
 
             {/*todo mobile*/}
-            <ul className={`xl:hidden md:text-[20px] text-[14px] pt-10 absolute ${themeState.theme == 'light' ? 'bg-white text-black' : 'bg-dark-400 text-white'} top-20 gap-5 pl-14 min-w-full ${isClose ? 'left-0' : '-left-[100%]'} transition-left duration-150  h-svh w-full flex flex-col items-left`}>
+            <ul className={`xl:hidden menu  md:text-[20px] text-[14px] pt-10 absolute ${themeState.theme == 'light' ? 'bg-white text-black' : 'bg-dark-400 text-white'} top-20 gap-5 pl-14 min-w-full ${isClose ? 'left-0' : '-left-[100%]'} transition-left duration-150  h-svh w-full flex flex-col items-left`}>
                 <li className={`${hoverClassName} mobile-lg`}><a href={'/#overview'} onClick={()=> handleNavigation()}>Overview</a></li>
-                <li className={`${hoverClassName} mobile-lg`}><a href={'/#capabilities'} onClick={()=> handleNavigation()}>Capabilities</a></li>
+                {/*<li className={`${hoverClassName} mobile-lg`}><a href={'/#capabilities'} onClick={()=> handleNavigation()}>Capabilities</a></li>*/}
                 <li className={`${hoverClassName} mobile-lg`}><a href={'/#feedback'} onClick={()=> handleNavigation()}>Review</a></li>
-                <li className={`${hoverClassName} mobile-lg`}><a href={'/#useCase'} onClick={()=> handleNavigation()}>Use Case</a></li>
+                {/*<li className={`${hoverClassName} mobile-lg`}><a href={'/#useCase'} onClick={()=> handleNavigation()}>Use Case</a></li>*/}
+                <li className={`${hoverClassName} mobile-lg`}>
+                    <DefaultMenuItem handlePress={handleNavigation} />
+                </li>
                 <li className={`${hoverClassName} mobile-lg`}><a href={'/#pricing'} onClick={()=> handleNavigation()}>Pricing</a></li>
                 <li className={`${hoverClassName} mobile-lg`}><a href={'/#waitlist'} onClick={()=> handleNavigation()}>Waitlist</a></li>
                 <li className={`${hoverClassName} mobile-lg`}><a href={'/#faq'} onClick={()=> handleNavigation()}>FAQs</a></li>
