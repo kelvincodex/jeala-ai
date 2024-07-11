@@ -77,3 +77,7 @@ p{
 li > button {
   @apply bg-red-300
 }
+
+section {
+  @apply md:scroll-mt-[100px] scroll-mt-[80px]
+}

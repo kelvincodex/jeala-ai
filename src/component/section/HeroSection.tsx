@@ -6,6 +6,7 @@ import {FramerConfigUtil} from "@/util/FramerConfigUtil.ts";
 import {importsUtil} from "@/util/importsUtil.ts";
 import {useSelector} from "react-redux";
 import {RootState} from "@/store";
+import {DefaultHeader} from "@/component/header/DefaultHeader.tsx";
 
 export const HeroSection = () => {
     const themeState = useSelector((state: RootState) => state.theme);
@@ -18,13 +19,13 @@ export const HeroSection = () => {
 
     return (
         <section id={'overview'} className={'w-full'}>
-            <div className={'container-responsive relative border  -top-10 -left-16'}>
+            <div className={'container-responsive relative   -top-10 -left-16'}>
                 <img
                     className={'md:w-[300px] w-[100px] h-[200px] absolute object-bottom '}
                     src={importsUtil.image.heroTop} alt={''}/>
             </div>
             <div
-                className={'flex flex-col w-full justify-center min-h-[calc(100svh-70px)] overflow-hidden md:min-h-[calc(100vh-100px)] relative pt-10 gap-10 md:gap-20'}
+                className={'flex flex-col w-full justify-center min-h-[calc(100svh-80px)] overflow-hidden md:min-h-[calc(100vh-100px)] relative pt-10 gap-10 md:gap-20'}
             >
                 <motion.img
                     initial={{opacity: 0.5, y: -100}}
