@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import {RoutesConstant} from "@/util/constant/RoutesConstant.ts";
 import MenuIcon from '@/assets/icon/menu-close.svg'
 import CloseIcon from '@/assets/icon/close-md.svg'
@@ -11,14 +11,17 @@ import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "@/store";
 import {theme} from "@/store/module/theme.ts";
 import {DefaultMenuItem} from "@/component/header/DefaultMenuItem.tsx";
+import {StringUtil} from "@/util/StringUtil.ts";
 
 export const DefaultHeader = ()=>{
     const [isClose, setIsClose] = useState<boolean>(false)
     const staggerMenuItems = stagger(0.1, { startDelay: 0.10 });
     const themeState = useSelector((state: RootState) => state.theme);
     const dispatch = useDispatch();
+
     // const hoverClassName = 'hover:border-b hover:text-primary-100 hover:border-b-primary-100  transition-all duration-300'
-    const hoverClassName = ""
+    // const hoverClassName = ""
+
     function themeChange(){
         if (themeState.theme == "light"){
             dispatch(theme.mutation.updateTheme("dark"))
@@ -27,6 +30,7 @@ export const DefaultHeader = ()=>{
         }
 
     }
+
 
     useEffect(() => {
         animate(
@@ -75,14 +79,14 @@ export const DefaultHeader = ()=>{
                                    className={'w-[30px] h-[30px] cursor-pointer block xl:hidden'}/>
                 }
                 <ul className={`menu menu-horizontal ${themeState.theme == 'light' ? 'text-black' : 'text-white'} items-center gap-5 md:text-[18px] text-[14px] leading-[32px]  xl:flex hidden font-poppins font-light`}>
-                    <li className={hoverClassName}><a href={'/#overview'} onClick={()=> handleNavigation() }>Overview</a></li>
-                    <li className={hoverClassName}><a href={'/#feedback'} onClick={()=> handleNavigation() }>Review</a></li>
-                    <li className={hoverClassName}><a href={'/#pricing'} onClick={()=> handleNavigation()}>Pricing</a></li>
-                    <li className={hoverClassName}><a href={'/#waitlist'} onClick={()=> handleNavigation()}>Waitlist</a></li>
+                    <li className={`${StringUtil.useUrlSuffix(['#overview', '#', '/']) && 'text-primary-100'}`}><a href={'/#overview'} onClick={()=> handleNavigation() }>Overview</a></li>
+                    <li className={`${StringUtil.useUrlSuffix(['#feedback']) && 'text-primary-100'}`}><a href={'/#feedback'} onClick={()=> handleNavigation() }>Review</a></li>
+                    <li className={`${StringUtil.useUrlSuffix(['#pricing']) && 'text-primary-100'}`}><a href={'/#pricing'} onClick={()=> handleNavigation()}>Pricing</a></li>
+                    <li className={`${StringUtil.useUrlSuffix(['#waitlist']) && 'text-primary-100'}`}><a href={'/#waitlist'} onClick={()=> handleNavigation()}>Waitlist</a></li>
                     <li className={``}>
                         <DefaultMenuItem   />
                     </li>
-                    <li className={hoverClassName}><a href={'/#faq'} onClick={() => handleNavigation()}>FAQs</a></li>
+                    <li className={`${StringUtil.useUrlSuffix(['#faq']) && 'text-primary-100'}`}><a href={'/#faq'} onClick={() => handleNavigation()}>FAQs</a></li>
                     <li className={''}><Link className={'btn border-0 bg-primary-100 text-white'}
                         to={RoutesConstant.page.home}>Get
                         Started</Link></li>
@@ -99,16 +103,16 @@ export const DefaultHeader = ()=>{
 
             {/*todo mobile*/}
             <ul className={`xl:hidden menu  md:text-[20px] text-[14px] pt-10 absolute ${themeState.theme == 'light' ? 'bg-white text-black' : 'bg-dark-400 text-white'} top-20 gap-5 pl-14 min-w-full ${isClose ? 'left-0' : '-left-[100%]'} transition-left duration-150  h-svh w-full flex flex-col items-left`}>
-                <li className={`${hoverClassName} mobile-lg`}><a href={'/#overview'} onClick={()=> handleNavigation()}>Overview</a></li>
+                <li className={`${StringUtil.useUrlSuffix(['#overview', '#', '/']) && 'text-primary-100'} mobile-lg`}><a href={'/#overview'} onClick={()=> handleNavigation()}>Overview</a></li>
                 {/*<li className={`${hoverClassName} mobile-lg`}><a href={'/#capabilities'} onClick={()=> handleNavigation()}>Capabilities</a></li>*/}
-                <li className={`${hoverClassName} mobile-lg`}><a href={'/#feedback'} onClick={()=> handleNavigation()}>Review</a></li>
+                <li className={`${StringUtil.useUrlSuffix(['#feedback']) && 'text-primary-100'} mobile-lg`}><a href={'/#feedback'} onClick={()=> handleNavigation()}>Review</a></li>
                 {/*<li className={`${hoverClassName} mobile-lg`}><a href={'/#useCase'} onClick={()=> handleNavigation()}>Use Case</a></li>*/}
-                <li className={`${hoverClassName} mobile-lg`}>
+                <li className={`mobile-lg`}>
                     <DefaultMenuItem handlePress={handleNavigation} />
                 </li>
-                <li className={`${hoverClassName} mobile-lg`}><a href={'/#pricing'} onClick={()=> handleNavigation()}>Pricing</a></li>
-                <li className={`${hoverClassName} mobile-lg`}><a href={'/#waitlist'} onClick={()=> handleNavigation()}>Waitlist</a></li>
-                <li className={`${hoverClassName} mobile-lg`}><a href={'/#faq'} onClick={()=> handleNavigation()}>FAQs</a></li>
+                <li className={`${StringUtil.useUrlSuffix(['#pricing']) && 'text-primary-100'} mobile-lg`}><a href={'/#pricing'} onClick={()=> handleNavigation()}>Pricing</a></li>
+                <li className={`${StringUtil.useUrlSuffix(['#waitlist']) && 'text-primary-100'} mobile-lg`}><a href={'/#waitlist'} onClick={()=> handleNavigation()}>Waitlist</a></li>
+                <li className={`${StringUtil.useUrlSuffix(['#faq']) && 'text-primary-100'} mobile-lg`}><a href={'/#faq'} onClick={()=> handleNavigation()}>FAQs</a></li>
                 <li className={'text-primary-100 mobile-lg'}><Link to={RoutesConstant.page.home}>Get
                     Started</Link></li>
                 <li className={''}><a href={'#'} onClick={themeChange}>

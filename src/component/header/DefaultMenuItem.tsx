@@ -1,6 +1,7 @@
 import {useEffect, useRef} from "react";
 import {useSelector} from "react-redux";
 import {RootState} from "@/store";
+import {StringUtil} from "@/util/StringUtil.ts";
 
 interface DefaultMenuItemProps {
     handlePress?: () => void;
@@ -41,10 +42,10 @@ export const DefaultMenuItem = ({handlePress=()=>{}, }: DefaultMenuItemProps)=>{
         <details ref={detailsRef}>
             <summary>Solution</summary>
             <ul className={`bg-base-100 rounded-t-none p-2 ${themeState.theme == 'light' ? 'text-black bg-white' : 'text-white bg-dark-400'}`}>
-                <li className={hoverClassName}><a href={'/#useCase'} onClick={handleNavigation}>Use
+                <li className={`${StringUtil.useUrlSuffix(['#useCase']) && 'text-primary-100'}`}><a href={'/#useCase'} onClick={handleNavigation}>Use
                     Case</a></li>
-                <li className={hoverClassName}><a href={'/#capabilities'}
-                                                  onClick={handleNavigation}>Capabilities</a>
+                <li className={`${StringUtil.useUrlSuffix(['#capabilities']) && 'text-primary-100'}`}><a href={'/#capabilities'}
+                                                                              onClick={handleNavigation}>Capabilities</a>
                 </li>
             </ul>
         </details>
