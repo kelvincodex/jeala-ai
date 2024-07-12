@@ -1,4 +1,4 @@
-import {Link, useLocation} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {RoutesConstant} from "@/util/constant/RoutesConstant.ts";
 import MenuIcon from '@/assets/icon/menu-close.svg'
 import CloseIcon from '@/assets/icon/close-md.svg'
@@ -79,7 +79,7 @@ export const DefaultHeader = ()=>{
                                    className={'w-[30px] h-[30px] cursor-pointer block xl:hidden'}/>
                 }
                 <ul className={`menu menu-horizontal ${themeState.theme == 'light' ? 'text-black' : 'text-white'} items-center gap-5 md:text-[18px] text-[14px] leading-[32px]  xl:flex hidden font-poppins font-light`}>
-                    <li className={`${StringUtil.useUrlSuffix(['#overview', '#', '/']) && 'text-primary-100'}`}><a href={'/#overview'} onClick={()=> handleNavigation() }>Overview</a></li>
+                    <li className={`${StringUtil.useUrlSuffix(['#overview']) && 'text-primary-100'}`}><a href={'/#overview'} onClick={()=> handleNavigation() }>Overview</a></li>
                     <li className={`${StringUtil.useUrlSuffix(['#feedback']) && 'text-primary-100'}`}><a href={'/#feedback'} onClick={()=> handleNavigation() }>Review</a></li>
                     <li className={`${StringUtil.useUrlSuffix(['#pricing']) && 'text-primary-100'}`}><a href={'/#pricing'} onClick={()=> handleNavigation()}>Pricing</a></li>
                     <li className={`${StringUtil.useUrlSuffix(['#waitlist']) && 'text-primary-100'}`}><a href={'/#waitlist'} onClick={()=> handleNavigation()}>Waitlist</a></li>
@@ -103,7 +103,7 @@ export const DefaultHeader = ()=>{
 
             {/*todo mobile*/}
             <ul className={`xl:hidden menu  md:text-[20px] text-[14px] pt-10 absolute ${themeState.theme == 'light' ? 'bg-white text-black' : 'bg-dark-400 text-white'} top-20 gap-5 pl-14 min-w-full ${isClose ? 'left-0' : '-left-[100%]'} transition-left duration-150  h-svh w-full flex flex-col items-left`}>
-                <li className={`${StringUtil.useUrlSuffix(['#overview', '#', '/']) && 'text-primary-100'} mobile-lg`}><a href={'/#overview'} onClick={()=> handleNavigation()}>Overview</a></li>
+                <li className={`${StringUtil.useUrlSuffix(['#overview']) && 'text-primary-100'} mobile-lg`}><a href={'/#overview'} onClick={()=> handleNavigation()}>Overview</a></li>
                 {/*<li className={`${hoverClassName} mobile-lg`}><a href={'/#capabilities'} onClick={()=> handleNavigation()}>Capabilities</a></li>*/}
                 <li className={`${StringUtil.useUrlSuffix(['#feedback']) && 'text-primary-100'} mobile-lg`}><a href={'/#feedback'} onClick={()=> handleNavigation()}>Review</a></li>
                 {/*<li className={`${hoverClassName} mobile-lg`}><a href={'/#useCase'} onClick={()=> handleNavigation()}>Use Case</a></li>*/}

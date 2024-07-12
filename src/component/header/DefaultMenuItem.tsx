@@ -8,7 +8,6 @@ interface DefaultMenuItemProps {
 }
 export const DefaultMenuItem = ({handlePress=()=>{}, }: DefaultMenuItemProps)=>{
     const themeState = useSelector((state: RootState) => state.theme);
-    const hoverClassName = ""
 
     const detailsRef = useRef<HTMLDetailsElement>(null);
 
