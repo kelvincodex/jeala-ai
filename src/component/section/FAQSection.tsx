@@ -17,14 +17,14 @@ export const FAQSection = ()=>{
         <section id={'faq'} className={'md:py-18 py-10 md:min-h-[800px] z-[9999999] max-h-full min-h-[500px] bg-faq'}>
 
             <div
-                className={'container-responsive flex flex-col items-center h-full justify-center '}>
+                className={'md:w-[60%] w-[95%] flex flex-col h-full mx-auto justify-center '}>
 
                     <motion.h2
                         variants={FramerConfigUtil.fadeDown}
                         initial={'hidden'}
                         whileInView={'show'}
                         transition={{duration: 1, ease: 'easeOut', delay:0.2}}
-                        className={`font-urbanist font-semibold mb-5 text-center ${themeState.theme == 'light' ? 'text-black' : 'text-white'}`}>
+                        className={`font-urbanist font-semibold mb-5 ${themeState.theme == 'light' ? 'text-black' : 'text-white'}`}>
                         Frequently Asked Questions
                     </motion.h2>
 
@@ -33,7 +33,7 @@ export const FAQSection = ()=>{
                     initial={'hidden'}
                     whileInView={'show'}
 
-                    className={'h-full w-full'}>
+                    className={'h-full w-full '}>
                 {
                         FAQData.map((value, index) => {
                             return (
