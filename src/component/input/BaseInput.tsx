@@ -19,7 +19,7 @@ export const BaseInput = ({leftIcon: LeftIcon, rightIcon: RightIcon, containerCl
         <div className={'w-full h-full relative '}>
             {
                 label && (
-                    <label className={`font-urbanist  font-light px-1 ${themeState.theme == 'light' ? 'bg-white' : 'bg-dark-400'}  absolute -top-3 left-5`}>{label}</label>
+                    <label className={`font-urbanist  font-light px-1 ${themeState.theme == 'light' ? 'bg-white' : 'bg-dark-400 text-white'}  absolute -top-3 left-5`}>{label}</label>
                 )
             }
             <div
