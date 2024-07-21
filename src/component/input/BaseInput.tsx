@@ -1,4 +1,6 @@
 import React, { InputHTMLAttributes, SVGProps} from "react";
+import {useSelector} from "react-redux";
+import {RootState} from "@/store";
 
 interface BaseInputProps extends InputHTMLAttributes<HTMLInputElement> {
     leftIcon?: React.FC<SVGProps<SVGSVGElement>> | string,
@@ -11,12 +13,13 @@ interface BaseInputProps extends InputHTMLAttributes<HTMLInputElement> {
     inputType?: 'outline'|'border'|'normal',
 }
 export const BaseInput = ({leftIcon: LeftIcon, rightIcon: RightIcon, containerClassName, label, inputType='normal', rightIconSize='50px', leftIconSize='50px', className, ...props}: BaseInputProps)=>{
+    const themeState = useSelector((state: RootState) => state.theme);
 
     return (
         <div className={'w-full h-full relative '}>
             {
                 label && (
-                    <label className={'font-urbanist  font-light px-1 bg-white absolute -top-3 left-5'}>{label}</label>
+                    <label className={`font-urbanist  font-light px-1 ${themeState.theme == 'light' ? 'bg-white' : 'bg-dark-400'}  absolute -top-3 left-5`}>{label}</label>
                 )
             }
             <div
