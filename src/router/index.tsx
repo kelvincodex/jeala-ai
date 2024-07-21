@@ -1,9 +1,10 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {routes} from "@/router/routes";
 
-export const Router = () => {
+
+export const AppRouter = () => {
   return(
-      <BrowserRouter>
+      <BrowserRouter >
           <Routes>
               {
                   routes.map((value, index)=>{

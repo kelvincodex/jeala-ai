@@ -8,7 +8,6 @@ export const RouteUtil = ()=>{
         login: ()=> navigate(RoutesConstant.auth.login),
         register: ()=> navigate(RoutesConstant.auth.register),
         verifyEmailAddress:()=> navigate(RoutesConstant.auth.verifyEmailAddress),
-
         overview: ()=> navigate(RoutesConstant.dashboard.overview),
     }
 }

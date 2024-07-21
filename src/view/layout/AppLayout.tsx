@@ -1,5 +1,5 @@
 import  { useEffect} from "react";
-import {Router} from "@/router";
+import {AppRouter} from "@/router";
 import  "@/assets/style/index.scss"
 
 export const AppLayout = () => {
@@ -16,6 +16,6 @@ export const AppLayout = () => {
 
 
   return (
-      <Router />
+      <AppRouter />
   )
 }

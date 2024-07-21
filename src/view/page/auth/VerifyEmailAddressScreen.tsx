@@ -2,6 +2,7 @@ import {AuthLayout} from "@/view/layout/AuthLayout.tsx";
 import {DefaultButton} from "@/component/button/DefaultButton.tsx";
 import {OtpInput} from "@/component/input/OtpInput.tsx";
 import {useState} from "react";
+import {RouteUtil} from "@/util/RouteUtil.tsx";
 
 export const VerifyEmailAddressScreen = () => {
     const [otp, setOtp] = useState<string>("")
@@ -16,7 +17,7 @@ export const VerifyEmailAddressScreen = () => {
                     <a href="#" className={'text-center'}><p className={'text-[18px] text-gray-500'}>Resend code</p></a>
                 </div>
             </div>
-            <DefaultButton size={'medium'} className={'w-full mt-10 text-[20px]'}>Verify Code</DefaultButton>
+            <DefaultButton onClick={RouteUtil().login} size={'medium'} className={'w-full mt-10 text-[20px]'}>Verify Code</DefaultButton>
         </AuthLayout>
     )
 }

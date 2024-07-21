@@ -5,8 +5,8 @@ import {DefaultButton} from "@/component/button/DefaultButton.tsx";
 import {RouteUtil} from "@/util/RouteUtil.tsx";
 
 export const RegisterScreen = () => {
-    function handleSubmit(){
-        RouteUtil().overview()
+    function useHandleSubmit(){
+         RouteUtil().verifyEmailAddress()
     }
 
     return (
@@ -18,7 +18,7 @@ export const RegisterScreen = () => {
                 <BaseInput label={'Password'} inputType={'border'} className={'w-full h-[60px]'}/>
                 <DefaultCheckbox label={'Remember me'}/>
             </div>
-            <DefaultButton onClick={handleSubmit} size={'medium'} className={'w-full my-5 text-[20px]'}>Get Started</DefaultButton>
+            <DefaultButton onClick={useHandleSubmit} size={'medium'} className={'w-full my-5 text-[20px]'}>Get Started</DefaultButton>
             <p onClick={RouteUtil().login} className={'text-center text-[19px] cursor-pointer'}>Already have an account? <span className={'text-primary-100'}>Log In</span></p>
         </AuthLayout>
     )
