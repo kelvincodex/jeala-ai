@@ -1,6 +1,9 @@
+
 export const RoutesConstant = {
     auth: {
-        login: '/login'
+        login: '/login',
+        register: '/register',
+        verifyEmailAddress: '/verify/email-address',
     },
     page: {
         notFound: '*',

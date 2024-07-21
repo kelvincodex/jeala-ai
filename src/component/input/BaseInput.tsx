@@ -1,22 +1,40 @@
 import React, { InputHTMLAttributes, SVGProps} from "react";
 
-interface BaseInputProps  {
-    leftIcon: React.FC<SVGProps<SVGSVGElement>> | string,
+interface BaseInputProps extends InputHTMLAttributes<HTMLInputElement> {
+    leftIcon?: React.FC<SVGProps<SVGSVGElement>> | string,
+    rightIcon?: React.FC<SVGProps<SVGSVGElement>> | string,
     className?: string,
-    iconSize?: string
+    containerClassName?: string,
+    rightIconSize?: string,
+    leftIconSize?: string,
+    label?: string,
+    inputType?: 'outline'|'border'|'normal',
 }
-export const BaseInput = ({leftIcon: LeftIcon, iconSize='50px', className, ...props}: BaseInputProps & InputHTMLAttributes<HTMLInputElement>)=>{
+export const BaseInput = ({leftIcon: LeftIcon, rightIcon: RightIcon, containerClassName, label, inputType='normal', rightIconSize='50px', leftIconSize='50px', className, ...props}: BaseInputProps)=>{
 
     return (
-        <div className={'w-full h-full flex items-center gap-2'}>
+        <div className={'w-full h-full relative '}>
             {
-                LeftIcon && (
-                    <LeftIcon width={iconSize} height={iconSize}  />
+                label && (
+                    <label className={'font-urbanist  font-light px-1 bg-white absolute -top-3 left-5'}>{label}</label>
                 )
             }
-            <input
-                className={`outline-0  placeholder:text-black font-urbanist  ${className}`} {...props} />
+            <div
+                className={`flex  ${inputType == 'border' && 'border rounded-xl overflow-hidden'} items-center px-2 gap-2 w-full h-full ${containerClassName}`}>
 
+                {
+                    LeftIcon && (
+                        <LeftIcon width={leftIconSize} height={leftIconSize}/>
+                    )
+                }
+                <input
+                    className={`focus:outline-0 grow focus:border-0 border-0  placeholder:text-black font-urbanist  ${className}`} {...props} />
+                {
+                    RightIcon && (
+                        <RightIcon width={rightIconSize} height={rightIconSize}/>
+                    )
+                }
+            </div>
         </div>
     )
 }

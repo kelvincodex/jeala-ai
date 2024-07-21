@@ -40,10 +40,10 @@ export const CapabilitiesSection=()=>{
                             const isThird = index === 2
                             const isLast = index === (CapabilitiesData.length - 1)
 
-                            const firstClass: string = 'col-start-1 row-span-3 '
+                            const firstClass: string = 'col-start-1 row-span-2'
                             const lastClass: string = ''
                             const secondClass: string = ''
-                            const thirdClass: string = 'row-span-3'
+                            const thirdClass: string = 'row-span-2 '
                             return (
                                 <CapabilitiesCard key={index} containerClassName={`${isFirst ? firstClass : isLast ? lastClass : isSecond ?  secondClass : isThird ? thirdClass :  '' }`} index={index} item={item}/>
                             )

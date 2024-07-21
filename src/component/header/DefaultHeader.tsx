@@ -88,7 +88,7 @@ export const DefaultHeader = ()=>{
                     </li>
                     <li className={`${StringUtil.useUrlSuffix(['#faq']) && 'text-primary-100'}`}><a href={'/#faq'} onClick={() => handleNavigation()}>FAQs</a></li>
                     <li className={''}><Link className={'btn border-0 bg-primary-100 text-white'}
-                        to={RoutesConstant.page.home}>Get
+                        to={RoutesConstant.auth.register}>Get
                         Started</Link></li>
 
                     <li className={''}><a href={'#'} onClick={themeChange}>
