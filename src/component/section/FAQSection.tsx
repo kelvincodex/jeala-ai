@@ -32,7 +32,6 @@ export const FAQSection = ()=>{
                     variants={FramerConfigUtil.stagParent}
                     initial={'hidden'}
                     whileInView={'show'}
-
                     className={'h-full w-full '}>
                 {
                         FAQData.map((value, index) => {

@@ -3,11 +3,17 @@ import {BaseInput} from "@/component/input/BaseInput.tsx";
 import {DefaultCheckbox} from "@/component/checkbox/DefaultCheckbox.tsx";
 import {DefaultButton} from "@/component/button/DefaultButton.tsx";
 import {RouteUtil} from "@/util/RouteUtil.tsx";
+import {useSelector} from "react-redux";
+import {RootState} from "@/store";
 
 export const LoginScreen = () => {
+    const routeUtil = RouteUtil()
+
     function handleSubmit(){
-        RouteUtil().overview()
+        routeUtil.overview()
     }
+    const themeState = useSelector((state: RootState) => state.theme);
+
 
     return (
         <AuthLayout>
@@ -17,11 +23,11 @@ export const LoginScreen = () => {
                 <BaseInput label={'Password'} inputType={'border'} className={'w-full h-[60px]'}/>
                 <div className={'flex items-center justify-between w-full'}>
                     <DefaultCheckbox label={'Remember me'}/>
-                    <a href="#"><p className={'text-[14px] font-medium'}>Forgot Password?</p></a>
+                    <a href="#"><p className={`text-[14px] font-medium ${themeState.theme == 'dark' && 'text-white'}`}>Forgot Password?</p></a>
                 </div>
             </div>
             <DefaultButton onClick={handleSubmit} size={'medium'} className={'w-full my-5 text-[20px]'}>Log In</DefaultButton>
-            <p onClick={RouteUtil().register} className={'text-center text-[19px] cursor-pointer'}>Don’t have an account? <span className={'text-primary-100 font-medium'}>Get Started</span></p>
+            <p onClick={RouteUtil().register} className={`text-center text-[19px] cursor-pointer ${themeState.theme == 'dark' && 'text-white'}`}>Don’t have an account? <span className={'text-primary-100 font-medium'}>Get Started</span></p>
         </AuthLayout>
     )
 }

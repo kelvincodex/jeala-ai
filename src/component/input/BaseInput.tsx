@@ -31,7 +31,7 @@ export const BaseInput = ({leftIcon: LeftIcon, rightIcon: RightIcon, containerCl
                     )
                 }
                 <input
-                    className={`focus:outline-0 grow focus:border-0 border-0 bg-transparent  placeholder:text-black font-urbanist  ${className}`} {...props} />
+                    className={`focus:outline-0 grow focus:border-0 border-0 bg-transparent  placeholder:text-black font-urbanist ${themeState.theme == 'light' ? 'text-dark' : 'text-white'}  ${className}`} {...props} />
                 {
                     RightIcon && (
                         <RightIcon width={rightIconSize} height={rightIconSize}/>

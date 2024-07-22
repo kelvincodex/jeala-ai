@@ -10,3 +10,16 @@
     width: 95%;
   }
 }
+
+.dashboard-content-responsive{
+  width: 1400px;
+  margin: auto;
+
+  @media screen and (min-width: 1400px) and (max-width: 1500px){
+    width: 95%;
+  }
+
+  @media screen and (max-width: 1400px) {
+    width: 95%;
+  }
+}

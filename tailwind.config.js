@@ -28,6 +28,7 @@ export default {
         'urbanist': 'urbanist',
       },
       colors:{
+        'primary-20': 'rgba(91, 145, 245, 0.08)',
         'primary-50': 'hsla(226, 87%, 69%, 1)',
         'primary-100': 'hsla(219, 89%, 66%, 1)',
         'primary-150': 'hsla(211, 91%, 65%, 1)',
