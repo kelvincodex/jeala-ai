@@ -1,50 +1,35 @@
 export const FAQData = [
     {
         title: " What is Jeala AI?",
-        text: " Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown" +
-            " printer took a galley of type and scrambled it to make a type specimen book. It has survived not " +
-            "only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged" +
-            ". It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, " +
-            "and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        text: "Jeala AI is an advanced language modeI, designed to understand and generate human-like text based on the" +
+            " input it receives. It is a versatile and powerful tool that leverages the capabilities of advanced natural" +
+            " language processing to assist users in a wide range of tasks, making it a valuable asset in both professional and personal contexts."
     },
     {
         title: "How does Jeala AI work?",
-        text: "Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance." +
-            " The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32."
+        text: "Jeala AI is trained on a diverse dataset that includes a wide range of internet text. This allows it to" +
+            " have a broad understanding of various topics. It quickly identifies and compiles relevant and up-to-date" +
+            " results, saving researchers significant time and effort."
     },
     {
-        title: "How accurate is Jeala AI?",
-        text: "used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de " +
-            "Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham."
+        title: "What can Jeala AI do?",
+        text: "Jeala AI excels in content creation across various genres and serves as a comprehensive knowledge base." +
+            " Additionally, Jeala AI functions as an adept coding companion, offering support in multiple programming" +
+            " languages to enhance developers' productivity and code quality."
     },
     {
         title: "How does Jeala AI handle data privacy?",
-        text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration" +
-            " in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to u"
+        text: "Jeala AI adheres to strict data privacy and security standards. All user data is encrypted and handled" +
+            " in compliance with relevant regulations to ensure the highest level of protection."
+    },
+    {
+        title: "Is the tool user-friendly for individuals who are not tech-savvy?",
+        text: "Yes, Jeala AI features an intuitive and user-friendly interface, making it accessible and easy " +
+            "to navigate even for users who are not very tech-savvy."
     },
     {
         title: "What kind of support is available for Jeala AI users?",
-        text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration " +
-            "in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to u"
-    },
-    {
-        title: "What kind of support is available for Jeala AI users?",
-        text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration " +
-            "in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to u"
-    },
-    {
-        title: "What kind of support is available for Jeala AI users?",
-        text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration " +
-            "in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to u"
-    },
-    {
-        title: "What kind of support is available for Jeala AI users?",
-        text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration " +
-            "in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to u"
-    },
-    {
-        title: "What kind of support is available for Jeala AI users?",
-        text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration " +
-            "in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to u"
+        text: "Jeala AI offers comprehensive support, including documentation and a dedicated customer support team" +
+            " available to help with any questions or issues."
     },
 ]

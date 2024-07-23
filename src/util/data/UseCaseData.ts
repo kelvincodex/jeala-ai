@@ -3,7 +3,7 @@ import {importsUtil} from "@/util/importsUtil.ts";
 export const  UseCaseData = [
     {
         image: importsUtil.image.education,
-        title: 'Health'
+        title: 'Healthcare'
     },
     {
         image: importsUtil.image.gaming,
@@ -11,7 +11,7 @@ export const  UseCaseData = [
     },
     {
         image: importsUtil.image.engineer,
-        title: 'Gaming'
+        title: 'Business intelligence'
     },
     {
         image: importsUtil.image.health,

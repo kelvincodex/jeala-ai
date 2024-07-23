@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import {FramerConfigUtil} from "@/util/FramerConfigUtil.ts";
 import {useSelector} from "react-redux";
 import {RootState} from "@/store";
+import {FeedbackData} from "@/util/data/FeedbackData.ts";
 
 export const FeedbackSection = ()=>{
     const sliderRef = useRef<Slider>(null)
@@ -70,11 +71,11 @@ export const FeedbackSection = ()=>{
                     settings={settings}
                 >
                     {
-                        Array(5).fill('').map((_, index) => {
+                        FeedbackData.map((value, index) => {
                             return (
                                 <div
                                     key={index}>
-                                    <FeedbackContainerCard  />
+                                    <FeedbackContainerCard title={value.title} subtitle={value.subtitle} rating={value.rating} text={value.text} department={value.department}  />
                                 </div>
                             )
                         })
