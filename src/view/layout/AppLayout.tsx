@@ -1,6 +1,7 @@
 import  { useEffect} from "react";
 import {AppRouter} from "@/router";
 import  "@/assets/style/index.scss"
+import {ToastContainer} from "react-toastify";
 
 export const AppLayout = () => {
   useEffect(() => {
@@ -16,6 +17,9 @@ export const AppLayout = () => {
 
 
   return (
-      <AppRouter />
+      <>
+        <AppRouter />
+        <ToastContainer />
+      </>
   )
 }

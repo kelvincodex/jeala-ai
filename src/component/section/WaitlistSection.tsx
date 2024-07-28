@@ -1,6 +1,3 @@
-import {DefaultButton} from "@/component/button/DefaultButton.tsx";
-import {BaseInput} from "@/component/input/BaseInput.tsx";
-import EmailIcon from "@/assets/icon/light-email.svg"
 import { motion } from "framer-motion";
 import {FramerConfigUtil} from "@/util/FramerConfigUtil.ts";
 import {useSelector} from "react-redux";
@@ -32,7 +29,7 @@ export const WaitlistSection = ()=>{
                              alt={''}/>
                     )
                 }
-                <FeedbackInput containerClassName={'md:h-[90px] h-[70px]'} />
+                <FeedbackInput buttonClassName={'lg:btn-lg md:btn-md btn-sm text-[13px]'} containerClassName={'md:h-[90px] h-[70px]'} />
             </div>
         </section>
     )

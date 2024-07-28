@@ -6,7 +6,10 @@ import {dashboardRoute} from "@/router/routes/dashboard-route.ts";
 export type RouteType = {
     path: string,
     component: React.ComponentType,
-    options: object
+    options: Options
+}
+type Options = {
+    hasSidebar?: boolean,
 }
 
 const initRoute  = ([] as RouteType[]);

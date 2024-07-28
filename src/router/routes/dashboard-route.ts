@@ -6,7 +6,6 @@ export const dashboardRoute : RouteType[] = [
     {
         path: RoutesConstant.dashboard.overview,
         component: OverviewDashboard,
-        options: {}
-
+        options: {hasSidebar: true}
     }
 ]
