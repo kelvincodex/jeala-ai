@@ -16,7 +16,7 @@ export const DefaultFooter = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ease:'easeOut', duration: 1, delay: 0.2}}
                 className={'container-responsive flex h-full flex-col items-center gap-4'}>
-                <div className={' w-full gap-2  flex lg:flex-row flex-col items-center justify-between'}>
+                <div className={' w-full gap-3  flex lg:flex-row flex-col items-center justify-between'}>
                     <div className={'lg:w-1/2 w-full text-center lg:text-end'}>
                         <h2 className={'md:text-[20px] text-[18px] font-poppins-medium font-bold md:leading-[30px] leading-[20px] text-white mb-4'}>Contact us</h2>
                         <p className={`font-[200] md:text-[16px] text-[14px] text-white md:leading-[25px] cursor-pointer  leading-[20px] inline-block  ${hoverClassName}`}>info@gramenpetroserve.com;,</p>
@@ -27,20 +27,20 @@ export const DefaultFooter = () => {
                             ,  <a className={`${hoverClassName}`}>+234-903-855-1651</a>,
                         </p>
                     </div>
-                    <div className={' lg:w-1/2 w-[60%] flex flex-col items-center'}>
+                    <div className={'lg:w-1/2 w-full flex flex-col items-center'}>
                         <h2 className={'md:text-[20px] text-[18px] mb-4 font-poppins-medium font-bold md:leading-[30px] leading-[20px] text-white'}>
                             secure your spot on the Jeala AI waitlist!
                         </h2>
-                        <FeedbackInput buttonClassName={' md:btn-md btn-sm text-[13px] '} containerClassName={'w-full h-[70px]'} />
+                        <FeedbackInput containerClassName={'w-full h-[70px]'} />
                     </div>
                 </div>
                 <div className={'border-t border-white w-full gap-2 flex flex-col lg:flex-row  items-center justify-between  pt-3'}>
                     <div className={'flex items-center  gap-2'}>
-                        <RoundedTwitter />
-                        <RoundedEmail />
-                        <RoundedFacebook />
-                        <RoundedInstagram />
-                        <RoundedLinkin />
+                        <RoundedTwitter className={'w-[40px]'} />
+                        <RoundedEmail className={'w-[40px]'} />
+                        <RoundedFacebook className={'w-[40px]'} />
+                        <RoundedInstagram className={'w-[40px]'} />
+                        <RoundedLinkin className={'w-[40px]'} />
                     </div>
                     <div className={'flex flex-col items-end '}>
                         <p className={'text-white text-sm'}>Copyright © 2024 •Jeala AI</p>
