@@ -10,15 +10,15 @@ export const DefaultFooter = () => {
     const hoverClassName = 'hover:border-b hover:text-primary-100 hover:border-b-primary-100  transition-all duration-300'
 
     return(
-        <footer className={'py-5  bg-black-200'}>
+        <footer className={'py-5 lg:py-12 bg-black-200'}>
             <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ease:'easeOut', duration: 1, delay: 0.2}}
                 className={'container-responsive flex h-full flex-col items-center gap-4'}>
-                <div className={' w-full gap-3  flex lg:flex-row flex-col items-center justify-between'}>
-                    <div className={'lg:w-1/2 w-full text-center lg:text-end'}>
-                        <h2 className={'md:text-[20px] text-[18px] font-poppins-medium font-bold md:leading-[30px] leading-[20px] text-white mb-4'}>Contact us</h2>
+                <div className={' w-full gap-3  flex lg:flex-row flex-col items-center  justify-between'}>
+                    <div className={'lg:w-1/2 w-full text-center lg:text-start'}>
+                        <h2 className={'md:text-[20px] text-[18px]  font-poppins-medium font-bold md:leading-[30px] leading-[20px] text-white mb-4'}>Contact us</h2>
                         <p className={`font-[200] md:text-[16px] text-[14px] text-white md:leading-[25px] cursor-pointer  leading-[20px] inline-block  ${hoverClassName}`}>info@gramenpetroserve.com;,</p>
                         <p className={`font-[200] md:text-[16px] text-[14px] text-white md:leading-[25px] cursor-pointer  leading-[20px]`}>Plot 18 Chevron Clinic Road, Off NPA DSC-Expressway,</p>
                         <p className={`font-[200] md:text-[16px] text-[14px]  text-white md:leading-[25px] cursor-pointer  leading-[20px]  `}> Edjeba, Warri, Delta State.</p>
