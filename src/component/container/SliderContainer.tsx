@@ -37,6 +37,15 @@ export const SliderContainer = forwardRef(({settings, containerClassName, childr
                 }
             },
             {
+                breakpoint: 1255,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    // infinite: true,
+                    // dots: true
+                }
+            },
+            {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
