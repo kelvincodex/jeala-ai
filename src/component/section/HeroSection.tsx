@@ -24,7 +24,7 @@ export const HeroSection = () => {
                     src={importsUtil.image.heroTop} alt={''}/>
             </div>
             <div
-                className={'flex flex-col w-full justify-center min-h-[calc(100svh-80px)] overflow-hidden md:min-h-[calc(100vh-100px)] relative pt-10 gap-10 md:gap-20'}
+                className={'flex flex-col w-full justify-center min-h-[calc(100svh-80px)] overflow-hidden md:min-h-[calc(100vh-100px)] relative'}
             >
                 <motion.img
                     initial={{opacity: 0.5, y: -100}}
@@ -38,32 +38,25 @@ export const HeroSection = () => {
                     className={'absolute '} src={importsUtil.image.heroRipple} alt={''}/>
 
                 <div className={`${themeState.theme == 'light' ? 'text-black' : 'text-white'}`}>
-
                     <motion.h2
                         variants={FramerConfigUtil.fadeDown}
                         initial={'hidden'}
                         whileInView={'show'}
                         transition={{ease:'easeOut', duration: 1, delay: 0.2}}
-
-                        className={`text-center capitalize  font-semibold ${themeState.theme == 'light' ? 'text-black' : 'text-white'}`}>
+                        className={`text-center capitalize   font-semibold ${themeState.theme == 'light' ? 'text-black' : 'text-white'}`}>
                         <span className={'text-primary-100'}>Discover and explore</span> The <br/> Future of
                         intelligent
                         solutions <br/> with Jeala AI
                     </motion.h2>
-
                     <motion.p
                         variants={FramerConfigUtil.fadeUp}
                         initial={'hidden'}
                         whileInView={'show'}
                         transition={{ease:'easeOut', duration: 1, delay: 0.2}}
-                        className={`md:text-[28px] text-[20px]  md:leading-[40px] leading-[30px] ${themeState.theme == 'light' ? 'text-black' : 'text-white'} text-center font-urbanist mt-10  font-light`}>
-                        Whether you're streamlining business operations, enhancing customer <br/> experiences,
-                        or
-                        exploring
-                        new realms of creativity, Jeala AI is here to <br/> elevate your journey in all works of
-                        life.
+                        className={`md:text-[28px]  text-[20px]  md:leading-[40px] leading-[30px] ${themeState.theme == 'light' ? 'text-black' : 'text-white'} text-center font-urbanist mt-10  font-light`}>
+                        Whether you're streamlining business operations, enhancing customer <br/> experiences, or exploring
+                        new realms of creativity, Jeala AI is here to <br/> elevate your journey in all works of life.
                     </motion.p>
-
                 </div>
 
                 <img
@@ -75,8 +68,8 @@ export const HeroSection = () => {
                     initial={'hidden'}
                     whileInView={'show'}
 
-                    className={'md:mt-10 w-full'}>
-                    <SliderContainer containerClassName={'md:mt-10 w-full'} settings={settings}>
+                    className={'w-full mt-10 md:md-0'}>
+                    <SliderContainer containerClassName={'w-full'} settings={settings}>
                         {heroConfigData.map((item, i) => (
                             <div
                                 key={i}
