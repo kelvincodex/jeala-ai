@@ -29,7 +29,7 @@ export const WaitlistSection = ()=>{
                              alt={''}/>
                     )
                 }
-                <FeedbackInput buttonClassName={'lg:btn-lg md:btn-md btn-sm text-[13px]'} containerClassName={'md:h-[90px] h-[70px]'} />
+                <FeedbackInput buttonClassName={'lg:btn-lg md:btn-md btn-sm text-[13px]'} containerClassName={' lg:w-[70%] md:h-[90px] h-[70px]'} />
             </div>
         </section>
     )
