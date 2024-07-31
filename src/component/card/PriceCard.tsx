@@ -16,7 +16,7 @@ export const PriceCard = ({item}: PriceCardProps)=>{
     return (
         <motion.div
             variants={FramerConfigUtil.stagChildren}
-            className={` ${themeState.theme == 'light' ? 'shadow' : 'shadow shadow-white'} min-h-[500px]  flex flex-col rounded-lg  p-7 gap-0`}>
+            className={` ${themeState.theme == 'light' ? 'shadow' : 'shadow shadow-white'} min-h-[400px]  flex flex-col rounded-lg  p-7 gap-0`}>
             <div className={''}>
                 <h2 className={`md:text-[28px] text-[23px] font-poppins-medium ${themeState.theme == 'light' ? 'text-black' : 'text-white'}  md:leading-[31px] leading-[25px] capitalize`}>
                     {item.title}
@@ -25,11 +25,7 @@ export const PriceCard = ({item}: PriceCardProps)=>{
                     USD ${item.price}
                 </h2>
             </div>
-
-            {/*<Button  className={'md:!py-4 !py-2 md:!my-8 !my-5 !text-[28px] !font-poppins'}*/}
-            {/*        variant="contained">Current plan</Button>*/}
-
-            <DefaultButton  className={'md:my-8 my-3 md:btn-lg btn-md md:text-[25px] text-[20px]'}>Current plan</DefaultButton>
+            <DefaultButton className={'md:my-8 my-3 md:btn-lg btn-md'}>Current plan</DefaultButton>
 
             {
                 item.tags?.map((value, index)=>{

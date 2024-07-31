@@ -9,8 +9,8 @@ interface SidebarListProps {
 export const SidebarList = ({active = false, children}: SidebarListProps) => {
     const [isFocused, setIsFocused] = useState<boolean>(false)
     return (
-        <li onMouseEnter={()=> setIsFocused(true)} onMouseLeave={()=> setIsFocused(false)} className={`btn ${!active ? 'bg-transparent border-0 text-black' : 'bg-primary-20 text-primary-100'}   w-full flex justify-between  font-light text-[20px]`}>
-            {children} {(active || isFocused) && <MoreOne/>}</li>
+        <div onMouseEnter={()=> setIsFocused(true)} onMouseLeave={()=> setIsFocused(false)}  className={`btn ${!active ? 'bg-transparent border-0' : 'bg-primary-20'} w-full flex min-w-0 items-center gap-2 justify-between`}>
+            <p className={`${!active ? ' text-black' : ' text-primary-100'} text-[15px] font-light  flex-1 text-start whitespace-nowrap overflow-hidden text-ellipsis`}> {children}</p>{(active || isFocused) && <div className={'flex-shrink-0'}><MoreOne className={''}/></div> }</div>
     )
 }
 

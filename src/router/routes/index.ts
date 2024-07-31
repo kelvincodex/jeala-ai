@@ -10,6 +10,8 @@ export type RouteType = {
 }
 type Options = {
     hasSidebar?: boolean,
+    isAuthenticated?: boolean,
+    redirectTo?: string,
 }
 
 const initRoute  = ([] as RouteType[]);

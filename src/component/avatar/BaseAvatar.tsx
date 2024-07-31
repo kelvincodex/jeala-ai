@@ -8,7 +8,7 @@ interface BaseAvatarProps {
 }
 export const BaseAvatar = ({type='svg',src, size=50, icon: Icon}: BaseAvatarProps)=>{
     return (
-        <div className={'rounded-full border'} style={{width: size, height: size}}>
+        <div className={'rounded-full border cursor-pointer'} style={{width: size, height: size}}>
             {
                 type == 'svg' ?
                     Icon &&  <Icon /> :
