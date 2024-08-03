@@ -42,7 +42,7 @@ export const DefaultAccordion = ({title, text, onPress=()=>{}, showText=false}: 
                                     <RoundedMinus color={'white'} className={'max-w-6 max-h-6'}/> :
                                     <LightRoundedPlus className={'max-w-6 max-h-6'}/>
                         }
-                        <p className={`lg:text-[20px] md:text-[18px] text-[14px] text-left ${themeState.theme == 'light' ? 'text-black' : 'text-white'}`}>{title}</p>
+                        <p className={`lg:text-[20px] md:text-[18px] text-[14px] text-left ${themeState.theme == 'dark' ? 'text-white' : 'text-black'}`}>{title}</p>
                     </button>
             }
 

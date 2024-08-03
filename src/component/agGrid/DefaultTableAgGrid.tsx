@@ -10,7 +10,6 @@ import Export from "@/component/agGrid/assets/icons/export.svg"
 import Reload from "@/component/agGrid/assets/icons/reload.svg"
 import Search from "@/component/agGrid/assets/icons/search.svg"
 import {useCallback, useRef} from "react";
-import {RandomUtil} from "@/util/help/RandomUtil.ts";
 export interface DefaultTableAgGridProps extends GridOptions{
     action?: {view?: boolean, delete?: boolean, edit?: boolean, all?: boolean};
     renderViewActions?: (value: any)=>void,
@@ -45,7 +44,7 @@ export const DefaultTableAgGrid = ({action, name,reloadAction, floatingFilter=fa
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    function onGridReady(value){
+    function onGridReady(value: any){
         console.log(value)
     }
 
@@ -104,7 +103,7 @@ export const DefaultTableAgGrid = ({action, name,reloadAction, floatingFilter=fa
                         <div className={'dropdown dropdown-bottom join-item'}>
                             <button tabIndex={0}
                                     className={' btn btn-sm btn-primary text-white    flex '}
-                                    onClick={onGridReady}>
+                            >
                                 <Export
                                     className={'w-5 h-5'}/> Export
                             </button>
