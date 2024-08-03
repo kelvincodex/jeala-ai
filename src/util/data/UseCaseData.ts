@@ -11,7 +11,7 @@ export const  UseCaseData = [
     },
     {
         image: importsUtil.image.engineer,
-        title: 'Business intelligence'
+        title: 'Business Intelligence'
     },
     {
         image: importsUtil.image.health,

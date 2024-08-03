@@ -40,12 +40,14 @@ export const DefaultMenuItem = ({handlePress=()=>{}, }: DefaultMenuItemProps)=>{
     return (
         <details ref={detailsRef}>
             <summary>Solution</summary>
-            <ul className={`bg-base-100 rounded-t-none p-2 ${themeState.theme == 'light' ? 'text-black bg-white' : 'text-white bg-dark-400'}`}>
-                <li className={`${StringUtil.useUrlSuffix(['#useCase']) && 'text-primary-100'}`}><a href={'/#useCase'} onClick={handleNavigation}>Use
-                    Case</a></li>
-                <li className={`${StringUtil.useUrlSuffix(['#capabilities']) && 'text-primary-100'}`}><a href={'/#capabilities'}
-                                                                              onClick={handleNavigation}>Capabilities</a>
+            <ul className={`bg-base-100  rounded-t-none  p-1 ${themeState.theme == 'light' ? 'text-black bg-white' : 'text-white bg-dark-400'}`}>
+                <li className={`${StringUtil.useUrlSuffix(['#capabilities']) && 'text-primary-100'}`}><a
+                    href={'/#capabilities'}
+                    onClick={handleNavigation}>Capabilities</a>
                 </li>
+                <li className={`${StringUtil.useUrlSuffix(['#useCase']) && 'text-primary-100'}`}><a
+                    href={'/#useCase'}
+                    onClick={handleNavigation}>Use Case</a></li>
             </ul>
         </details>
     )
