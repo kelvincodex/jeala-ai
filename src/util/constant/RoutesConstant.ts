@@ -10,6 +10,7 @@ export const RoutesConstant = {
         home: '/',
     },
     dashboard: {
-        overview: '/overview'
+        overview: '/overview',
+        testDashboard: '/testDashboard',
     }
 }

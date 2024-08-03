@@ -1,3 +1,4 @@
-export const ModalConstant = {
-    sampleModal: 'SampleModal'
+export enum ModalConstant {
+    sampleModal= 'SampleModal',
+    shareModal= 'ShareModal'
 }

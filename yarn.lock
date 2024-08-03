@@ -183,7 +183,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.24.7"
 
-"@babel/runtime@^7.12.1", "@babel/runtime@^7.23.9", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.12.1", "@babel/runtime@^7.9.2":
   version "7.24.7"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.24.7.tgz#f4f0d5530e8dbdf59b3451b9b3e594b6ba082e12"
   integrity sha512-UwgBRMjJP+xv857DCngvqXI3Iq6J4v0wXmwc6sapg+zyhbwmQX67LUEFrkK5tbyJ30jGuG3ZvWpBiB9LCy1kWw==
@@ -445,13 +445,6 @@
   dependencies:
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
-
-"@mui/icons-material@^5.15.19":
-  version "5.15.19"
-  resolved "https://registry.yarnpkg.com/@mui/icons-material/-/icons-material-5.15.19.tgz#0602da80d814af662812659eab891e435ec0d5c0"
-  integrity sha512-RsEiRxA5azN9b8gI7JRqekkgvxQUlitoBOtZglflb8cUDyP12/cP4gRwhb44Ea1/zwwGGjAj66ZJpGHhKfibNA==
-  dependencies:
-    "@babel/runtime" "^7.23.9"
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -881,6 +874,26 @@ acorn@^8.9.0:
   version "8.11.3"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.11.3.tgz#71e0b14e13a4ec160724b38fb7b0f233b1b81d7a"
   integrity sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==
+
+ag-charts-types@10.0.2:
+  version "10.0.2"
+  resolved "https://registry.yarnpkg.com/ag-charts-types/-/ag-charts-types-10.0.2.tgz#fe4d7aa3cdc4ba6f354d7b4bbf65818e242f2fd6"
+  integrity sha512-Nxo5slHOXlaeg0gRIsVnovAosQzzlYfWJtdDy0Aq/VvpJru/PJ+5i2c9aCyEhgRxhBjImsoegwkgRj7gNOWV6Q==
+
+ag-grid-community@32.0.2:
+  version "32.0.2"
+  resolved "https://registry.yarnpkg.com/ag-grid-community/-/ag-grid-community-32.0.2.tgz#a69d99ee944fa07ab5faa103f6f930fbd2d4b432"
+  integrity sha512-vLJJUjnsG9hNK41GNuW2EHu1W264kxA/poOpcX4kmyrjU5Uzvelsbj3HdKAO9POV28iqyRdKGYfAWdn8QzA7KA==
+  dependencies:
+    ag-charts-types "10.0.2"
+
+ag-grid-react@^32.0.2:
+  version "32.0.2"
+  resolved "https://registry.yarnpkg.com/ag-grid-react/-/ag-grid-react-32.0.2.tgz#675b477f23f1f1338af0c15f174f9da3c68baec9"
+  integrity sha512-IWYsoyJ/Z763rWbE5/9SaT1n5xwIKrm/QzOG14l7i8z5J6JdJwfV0aQFATmEE8Xws2H48vlLcLdW1cv4hwV3eg==
+  dependencies:
+    ag-grid-community "32.0.2"
+    prop-types "^15.8.1"
 
 ajv@^6.12.4:
   version "6.12.6"
@@ -2380,7 +2393,7 @@ prelude-ls@^1.2.1:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prop-types@^15.6.1:
+prop-types@^15.6.1, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==

@@ -33,7 +33,7 @@ export const FeedbackInput = ({containerClassName, buttonClassName, inputClassNa
 
             className={`w-full border h-[60px] ${themeState.theme == 'light' ? 'bg-white' : 'bg-transparent'} rounded-[10px] overflow-hidden  flex items-center px-2 ${containerClassName}`}>
             <EmailIcon className={'w-[50px]'} />
-            <input placeholder={'Email Address'} className={`outline0-0 focus:outline-none h-full grow bg-transparent px-2 ${inputClassName}`} />
+            <input placeholder={'Email Address'} className={`outline0-0 ${themeState.theme == 'light' ? 'text-dark' : 'text-white'} focus:outline-none h-full grow bg-transparent px-2 ${inputClassName}`} />
             <button className={`btn bg-primary-100 border-0 text-white ${buttonClassName}`}>Join Waitlist</button>
         </motion.div>
     )

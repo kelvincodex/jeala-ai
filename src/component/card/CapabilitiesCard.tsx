@@ -23,10 +23,10 @@ export const CapabilitiesCard = ({ item, containerClassName}: CapabilitiesCardPr
                     <item.icon color={`${themeState.theme == 'light' ? 'black' : 'white'}`} className={'md:w-[40px] w-[30px] md:h-[40px] h-[30px] self-end'}/>
                 )
             }
-            <h2 className={'md:text-[30px] text-[20px] text-primary-100 md:leading-[35px] leading-[25px]'}>
+            <h2 className={'md:text-[30px] font-poppins text-[20px] text-primary-100 md:leading-[35px] leading-[25px]'}>
                 {item.title}
             </h2>
-            <p className={`md:text-[20px] text-[18px] ${themeState.theme == 'light' ? 'text-black-200' : 'text-white'} font-[200] md:leading-[37px] leading-[30px] `}>
+            <p className={`md:text-[20px] text-[17px] font-lexend ${themeState.theme == 'light' ? 'text-black-200' : 'text-white'} font-[200] md:leading-[37px] leading-[30px] `}>
                 {item.subTitle}
             </p>
         </motion.div>

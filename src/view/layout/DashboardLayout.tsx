@@ -8,13 +8,16 @@ import ShareIcon from "@/assets/icon/share.svg";
 import BellIcon from "@/assets/icon/bell-icon.svg";
 import {BaseAvatar} from "@/component/avatar/BaseAvatar.tsx";
 import React, {useState} from "react";
+import {useDispatch} from "react-redux";
+import {base} from "@/store/module/base.ts";
+import {ModalConstant} from "@/util/constant/ModalConstant.ts";
 
 interface DashboardLayoutProps {
     children?: React.ReactNode;
 }
 export const DashboardLayout = ({children}: DashboardLayoutProps) => {
     const [openSidebar, setOpenSidebar] = useState<boolean>(true)
-
+    const dispatch = useDispatch();
     const items = [
         {
             label: 'Today',
@@ -116,8 +119,12 @@ export const DashboardLayout = ({children}: DashboardLayoutProps) => {
                 },
             ]
         },
-
     ]
+
+    function handleShare(){
+        dispatch(base.mutation.setModal({show: true, component: ModalConstant.shareModal}))
+    }
+
     return (
         <div className={'flex'}>
             <div
@@ -166,7 +173,9 @@ export const DashboardLayout = ({children}: DashboardLayoutProps) => {
                     <div className={'flex items-center justify-between h-[60px] w-full'}>
                         <ToggleSide className={'cursor-pointer w-[30px]'} onClick={() => setOpenSidebar(!openSidebar)}/>
                         <div className={'flex items-center gap-1'}>
-                            <DefaultButton size={'small'} className={'!h-[30px]'}>Share <ShareIcon className={'w-[25px]'} /></DefaultButton>
+
+                            <DefaultButton onClick={handleShare} size={'small'} className={'!h-[30px]'}>Share <ShareIcon className={'w-[25px]'} /></DefaultButton>
+
                             <DefaultButton size={'small'} className={'mr-3'} buttonType={'outline'}><ShareIcon
                                 className={'rotate-[-90deg] w-[25px]'}/> Logout </DefaultButton>
                             <BellIcon className={'w-[25px] cursor-pointer'}/>

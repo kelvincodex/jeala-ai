@@ -1,11 +1,10 @@
 import {DefaultModal} from "@/component/modal/DefaultModal.tsx";
 
-
-export const SampleModal = ()=>{
+export const ShareModal = ()=>{
 
     return (
-        <DefaultModal >
-            <p>Hello</p>
+        <DefaultModal>
+            Hello Shared
         </DefaultModal>
     )
 }
